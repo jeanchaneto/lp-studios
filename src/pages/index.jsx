@@ -1,10 +1,12 @@
-
+import Image from "next/image";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className=" font-boucher " >Hello LAP STUDIOS</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dicta quibusdam, autem quo consequuntur excepturi necessitatibus amet repellat delectus adipisci voluptate recusandae animi repudiandae nulla labore accusantium esse quaerat explicabo!</p>
-    </main>
-  )
+    <div className="bg-zinc-950">
+      <Header />
+      <Hero />
+    </div>
+  );
 }
