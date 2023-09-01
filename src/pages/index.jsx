@@ -8,10 +8,7 @@ import CustomCta from "@/components/CustomCta";
 export default function Home() {
   return (
     <div className="">
-      <div className="bg-zinc-950">
-        <Header />
-        <Hero />
-      </div>
+      <Hero />
       <TrackShowcase />
       <Benefits />
       <CustomCta />

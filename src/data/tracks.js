@@ -38,4 +38,17 @@ export const tracks = [
       url: "#",
       previewUrl: "/audio/testaudio3.mp3",
     },
+    {
+      id: 4,
+      title: "Bio",
+      genre: "Organic House",
+      bpm: 121,
+      songKey: "Cminor",
+      image: "/images/albumcover.jpg",
+      description:
+        "An emotional Afro house track suitable for label like Get Physical",
+      price: 999,
+      url: "#",
+      previewUrl: "/audio/testaudio4.mp3",
+    },
   ];

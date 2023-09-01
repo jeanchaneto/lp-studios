@@ -39,7 +39,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <div className="bg-zinc-950">
+    <section className="bg-zinc-950">
       <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
         <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
@@ -59,9 +59,9 @@ const Benefits = () => {
               />
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 text-base ">
+          <ul className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 text-base ">
             {benefits.map((benefit,i) => (
-              <div key={i} className="sm:flex lg:block">
+              <li key={i} className="sm:flex lg:block">
                 <div className="sm:flex-shrink-0 ">
                 <Image 
               src={benefit.icon}
@@ -75,12 +75,12 @@ const Benefits = () => {
                   <h3 className="font-medium text-teal-600 ">{benefit.name}</h3>
                   <p className="mt-2  text-zinc-400 ">{benefit.description}</p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
