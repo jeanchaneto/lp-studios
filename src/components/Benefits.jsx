@@ -11,7 +11,7 @@ const benefits = [
     {
       name: 'Industry-Standard Excellence',
       icon: "/icons/headphones.png",
-      description: "Each track is meticulously produced, mixed, and mastered to meet the highest standards—ready to impress labels and perform flawlessly across varied sound systems.",
+      description: "Each track is meticulously produced, mixed, and mastered to meet the highest standards, ready to impress labels and perform flawlessly across varied sound systems.",
     },
     {
       name: '100% Exclusivity',
