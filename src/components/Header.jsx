@@ -47,7 +47,7 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-zinc-100"
+              className="text-base font-semibold leading-6 text-zinc-100"
             >
               {item.name}
             </Link>
