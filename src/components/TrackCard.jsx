@@ -19,7 +19,7 @@ const TrackCard = (props) => {
             image={props.image}
           />
           <div className=" mt-4 md:mt-0 flex flex-col md:flex-row justify-between w-full items-baseline flex-shrink-0 ">
-            <div className="flex items-baseline flex-2 w-full">
+            <div className="flex items-baseline flex-2 sm:flex-1 w-full">
               <h3 className="text-lg font-bold text-zinc-300 mr-4 w-1/3 sm:w-1/4  ">
                 {props.title}
               </h3>
