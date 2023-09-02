@@ -15,6 +15,8 @@ const [active, setActive] = useState(false);
         url={props.previewUrl}
         className=" w-full  "
         image={props.image}
+        coverWidth={112}
+        coverHeight={112}
       />
       <div className=" mt-4 md:mt-0 flex flex-col md:flex-row justify-between w-full items-baseline flex-shrink-0 ">
         <div className="flex items-baseline flex-2 lg:flex-1 w-full">
@@ -50,7 +52,7 @@ const [active, setActive] = useState(false);
           </Link>
 
           <Link
-            href="/"
+            href={`/ghost-produced-tracks/${props.id}`}
             className="  whitespace-nowrap  h-7 flex items-center gap-x-1.5 rounded-md bg-cyan-900/50 px-2.5 py-1.5 text-sm font-semibold text-zinc-300  hover:bg-cyan-800/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
           >
             <svg

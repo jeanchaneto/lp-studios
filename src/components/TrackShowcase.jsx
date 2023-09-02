@@ -23,7 +23,7 @@ const TrackShowcase = () => {
       </div>
       <div className=" flex justify-center pt-6">
         <Link
-          href="#"
+          href="/ghost-produced-tracks"
           className="text-sm font-semibold leading-6 text-teal-300 flex gap-2 "
         >
           <p>Listen to all</p>{" "}

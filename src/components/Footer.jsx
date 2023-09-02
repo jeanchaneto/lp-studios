@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const navigation = {
     services: [
-      { name: 'Tracks', href: '/tracks' },
+      { name: 'Tracks', href: '/ghost-produced-tracks' },
       { name: 'Ghost Production', href: '#' },
     ],
     info: [
