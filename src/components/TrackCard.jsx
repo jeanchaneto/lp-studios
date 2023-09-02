@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import WaveSurferPlayer from "./WaveSurferPlayer";
 import Link from "next/link";
 
 const TrackCard = (props) => {
+
+const [active, setActive] = useState(false);
+
   return (
-    <div className=" justify-between  border w-full  border-zinc-400/20 rounded-lg p-2  sm:mx-0 bg-zinc-800/50  max-w-7xl ">
+    <div className=" justify-between  border w-full  border-zinc-400/20 rounded-lg p-2  sm:mx-0 bg-zinc-800/30  max-w-7xl ">
       <WaveSurferPlayer
         height={112}
         waveColor="#042f2e"

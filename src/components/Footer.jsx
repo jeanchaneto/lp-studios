@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const navigation = {
     services: [
-      { name: 'Tracks', href: '#' },
+      { name: 'Tracks', href: '/tracks' },
       { name: 'Ghost Production', href: '#' },
     ],
     info: [
@@ -116,7 +116,7 @@ const navigation = {
             </div>
           </div>
           <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-            <p className="text-sm leading-5 text-gray-400">&copy; {currentYear} LAP Studios. All rights reserved. Created by <a href="https://webdevelap.com/" className=" font-semibold text-zinc-200 "  >WebDeveLap</a></p>
+            <p className="text-sm leading-5 text-zinc-400">&copy; {currentYear} LAP Studios. All rights reserved. Created by <a href="https://webdevelap.com/" target="blank" className=" font-semibold text-zinc-200 "  >WebDeveLap</a></p>
           </div>
         </div>
       </footer>

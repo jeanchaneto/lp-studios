@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PlayIcon, PauseIcon } from "@heroicons/react/20/solid";
+import React from "react";
 
 // Create a React component that will render wavesurfer.
 import WaveSurfer from "wavesurfer.js";
@@ -15,7 +16,7 @@ const formatTime = (seconds) => {
 };
 
 // Props are wavesurfer options.
-const WaveSurferPlayer = (props) => {
+const WaveSurferPlayer = React.memo((props) => {
   const containerRef = useRef();
   const [currentTime, setCurrentTime] = useState(0);
 
@@ -88,6 +89,6 @@ const WaveSurferPlayer = (props) => {
       <div ref={containerRef} className="w-full " />
     </div>
   );
-};
+});
 
 export default WaveSurferPlayer;

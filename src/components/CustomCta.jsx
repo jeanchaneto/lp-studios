@@ -10,11 +10,11 @@ const CustomCta = () => {
           <h2 className="mx-auto max-w-2xl text-4xl font-bold tracking-tight text-teal-600 sm:text-5xl">
           Craft Your Unique Sound Today
           </h2>
-          <p className="mx-auto  max-w-xl mt-4 text-zinc-400 text-xl ">
+          <p className="mx-auto max-w-xl mt-4 text-zinc-400 text-xl ">
           Take your music to the next level with our custom ghost production services. Get tracks tailor-made to your style and vision, produced to industry-leading standards.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link href="#" className="text-sm font-semibold leading-6 text-teal-300 flex gap-2 ">
+            <Link href="/ghost-production" className="text-sm font-semibold leading-6 text-teal-300 flex gap-2 ">
               <p>Learn more</p> <Image src="/icons/right-arrow.png" width={14} height={14} alt="Learn more"/>
             </Link >
           </div>
