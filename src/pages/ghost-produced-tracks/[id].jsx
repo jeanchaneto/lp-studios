@@ -1,17 +1,20 @@
 import Benefits from "@/components/Benefits";
 import WaveSurferPlayer from "@/components/WaveSurferPlayer";
 import { tracks } from "@/data/tracks";
-import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from 'next/router';
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 const TrackPage = ({ track }) => {
-  const router = useRouter();
 
-  const goBack = () => {
-    router.back();
-  };
+  const pages = [
+    {
+      name: "ghost-produced-tracks",
+      href: "/ghost-produced-tracks",
+      current: false,
+    },
+    { name: track.title, href: `/tracks/${track.id}`, current: true },
+  ];
 
   return (
     <section className="bg-zinc-950">
@@ -28,15 +31,46 @@ const TrackPage = ({ track }) => {
           aria-hidden="true"
         />
         <div className="mx-auto max-w-7xl px-6 lg:px-8 z-20 ">
-          <div
-            className=" text-zinc-500 flex items-center gap-2 mb-8 cursor-pointer "
-            onClick={goBack}
-          >
-            <div>
-              <ChevronLeftIcon className="h-4 w-4" />
-            </div>
-            <p className=" ">Back</p>
-          </div>
+          <nav className="flex mb-6 " aria-label="Breadcrumb">
+            <ol
+              role="list"
+              className="flex items-center text-zinc-500  space-x-4"
+            >
+              <li>
+                <div>
+                  <Link href="/" className=" hover:text-gray-500">
+                    <HomeIcon
+                      className="h-5 w-5 flex-shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span className="sr-only">Home</span>
+                  </Link>
+                </div>
+              </li>
+              {pages.map((page) => (
+                <li key={page.name}>
+                  <div className="flex items-center">
+                    <svg
+                      className="h-5 w-5 flex-shrink-0 "
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                    </svg>
+                    <a
+                      href={page.href}
+                      className="ml-4 text-sm text-zinc-500 "
+                      aria-current={page.current ? "page" : undefined}
+                    >
+                      {page.name}
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </nav>
+
           <div className="mx-auto flex gap-6 sm:gap-16 items-baseline lg:mx-0">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl pb-10">
               {track.title}
