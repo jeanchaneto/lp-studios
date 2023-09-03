@@ -4,9 +4,9 @@ import { tracks } from "@/data/tracks";
 import Image from "next/image";
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/solid";
+import ProjectFileFeatures from "@/components/ProjectFileFeatures";
 
 const TrackPage = ({ track }) => {
-
   const pages = [
     {
       name: "ghost-produced-tracks",
@@ -141,6 +141,7 @@ const TrackPage = ({ track }) => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
         <Benefits />
       </div>
+      <ProjectFileFeatures />
     </section>
   );
 };

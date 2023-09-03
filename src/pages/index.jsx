@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import TrackShowcase from "@/components/TrackShowcase";
 import BenefitsSection from "@/components/BenefitsSection";
 import CustomCta from "@/components/CustomCta";
+import ProjectFileFeatures from "@/components/ProjectFileFeatures";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <TrackShowcase />
       <BenefitsSection />
+      <ProjectFileFeatures />
       <CustomCta />
     </div>
   );
