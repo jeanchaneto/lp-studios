@@ -2,33 +2,7 @@ import Link from "next/link";
 import TrackCard from "@/components/TrackCard";
 import { tracks } from "@/data/tracks";
 import Image from "next/image";
-
-const features = [
-  {
-    name: "100% Ownership",
-    icon: "/icons/ownership.png",
-  },
-  {
-    name: "Release-Ready",
-    icon: "/icons/release.png",
-  },
-  {
-    name: "Exclusive license",
-    icon: "/icons/exclusive.png",
-  },
-  {
-    name: "WAV + project files",
-    icon: "/icons/music-file.png",
-  },
-  {
-    name: "Unique production",
-    icon: "/icons/unique.png",
-  },
-  {
-    name: "100% Confidential",
-    icon: "/icons/incognito.png",
-  },
-];
+import { features } from "@/libs/constants";
 
 export default function Tracks() {
   return (

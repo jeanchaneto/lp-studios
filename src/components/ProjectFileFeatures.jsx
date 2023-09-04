@@ -29,7 +29,7 @@ const ProjectFileFeatures = () => {
               <h2 className="text-base font-semibold leading-7 text-teal-400">Learn from the Pros</h2>
               <p className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">Inside Pro Music Production</p>
               <p className="mt-6 text-lg text-zinc-400">
-              Unlock your full creative potential with our meticulously structured project files. Not only do you get a professionally produced track, but you also gain an insider's look into the craft of producing an industry-standard music.
+              Unlock your full creative potential with our meticulously structured project files. Not only do you get a professionally produced track, but you also gain an insider's look into the craft of producing premier quality music.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base text-zinc-400 lg:max-w-none">
                 {features.map((feature) => (
