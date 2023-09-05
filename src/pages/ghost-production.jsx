@@ -1,3 +1,4 @@
+import TimeLine from "@/components/TimeLine";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 
@@ -12,8 +13,8 @@ const benefits = [
 
 const GhostProduction = () => {
   return (
-    <section className=" bg-zinc-950  py-24 sm:py-32">
-      <div className=" py-24 sm:py-32">
+    <main className=" bg-zinc-950  py-24 sm:py-32">
+      <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-base font-semibold  text-teal-300">
@@ -31,9 +32,9 @@ const GhostProduction = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className=" py-24 sm:py-32">
+      <section className=" py-24 sm:py-32">
         <div className="relative isolate">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
@@ -80,9 +81,9 @@ const GhostProduction = () => {
             </div>
           </div>
         </div>
-      </div>
-      
-    </section>
+      </section>
+      <TimeLine />
+    </main>
   );
 };
 
