@@ -18,8 +18,8 @@ const Hero = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="#"
-              className="rounded-md bg-cyan-700 px-3.5 py-2.5 text-sm font-semibold text-zinc-100 hover:bg-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 
-              shadow-sm shadow-cyan-700/40"
+              className="rounded-md bg-blue-700 px-3.5 py-2.5 text-sm font-semibold text-zinc-100 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 
+              shadow-sm shadow-blue-700/40"
             >
               Get started
             </a>

@@ -72,7 +72,8 @@ const Form = () => {
               name="message"
               rows={4}
               aria-describedby="message-description"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-zinc-100 shadow-sm ring-1 ring-inset ring-zinc-100/20 placeholder:text-zinc-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 text-base  bg-zinc-900"
+              className="block w-full rounded-md border-0 px-3.5 py-2 text-zinc-100 shadow-sm ring-1 ring-inset ring-zinc-100/20 placeholder:text-zinc-500 
+              placeholder:text-sm focus:ring-2 focus:ring-inset focus:ring-teal-600 text-base  bg-zinc-900"
               defaultValue={""}
               placeholder="Send us at least one reference track. Feel free to share the styles, other reference tracks, labels, or artists that inspire you. What specific elements do you love in your references? The more we know, the better we can bring your musical vision to life."
               required

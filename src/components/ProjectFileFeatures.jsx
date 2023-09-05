@@ -26,8 +26,8 @@ const ProjectFileFeatures = () => {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pl-4 lg:pt-4">
             <div className="lg:max-w-xl rounded-lg bg-teal-950/20 px-8 py-8 ">
-              <h2 className="text-base font-semibold leading-7 text-teal-400">Learn from the Pros</h2>
-              <p className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">Inside Pro Music Production</p>
+              <h2 className="text-base font-semibold text-teal-400">Learn from the Pros</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Inside Pro Music Production</p>
               <p className="mt-6 text-lg text-zinc-400">
               Unlock your full creative potential with our meticulously structured project files. Not only do you get a professionally produced track, but you also gain an insider's look into the craft of producing premier quality music.
               </p>

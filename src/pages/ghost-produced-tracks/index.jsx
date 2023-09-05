@@ -10,10 +10,10 @@ export default function Tracks() {
       <div className=" pt-24 sm:pt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <p className="text-base font-semibold text-teal-700">
+            <p className="text-base font-semibold text-teal-300">
               Discover Your Next Hit
             </p>
-            <h2 className="mt-2 text-5xl font-bold tracking-tight text-teal-500 sm:text-6xl">
+            <h2 className="mt-2 text-5xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
               Ghost Produced Tracks
             </h2>
             <p className="mt-6 text-xl text-zinc-400">
@@ -56,7 +56,7 @@ export default function Tracks() {
 
       <div className="bg-zinc-950">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-400 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
             Looking for a custom track ?
             <br />
             Explore our tailored ghost production services.
@@ -81,10 +81,10 @@ export default function Tracks() {
       <div className="bg-zinc-950 py-16 sm:py-24 ">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative isolate overflow-hidden bg-zinc-900/40 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
-            <h2 className="mx-auto max-w-2xl text-center text-4xl font-bold tracking-tight text-teal-600 sm:text-5xl">
-              Be the First to Know: Secure Your Track Before It's Gone !
+            <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              Be the First to Know: <br /> Secure Your Track Before It's Gone !
             </h2>
-            <p className="mx-auto mt-2 max-w-xl text-center leading-8 text-zinc-400 text-xl">
+            <p className="mx-auto mt-2 max-w-xl text-center leading-8 text-zinc-400 text-base">
               We're a small team of ghost producers committed to quality over
               quantity, which means we only release a limited number of tracks.
               These usually get snatched up quickly! Register your email now to
@@ -105,31 +105,11 @@ export default function Tracks() {
               />
               <button
                 type="submit"
-                className="flex-none rounded-md bg-cyan-500 px-3.5 py-2.5 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="flex-none rounded-md bg-blue-700 text-zinc-100 px-3.5 py-2.5 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
               >
                 Notify me
               </button>
             </form>
-            {/* <svg
-            viewBox="0 0 1024 1024"
-            className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
-            aria-hidden="true"
-          >
-            <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
-            <defs>
-              <radialGradient
-                id="759c1415-0410-454c-8f7c-9a820de03641"
-                cx={0}
-                cy={0}
-                r={1}
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(512 512) rotate(90) scale(512)"
-              >
-                <stop stopColor="#06b6d4" />
-                <stop offset={1} stopColor="#14b8a6" stopOpacity={0} />
-              </radialGradient>
-            </defs>
-          </svg> */}
           </div>
         </div>
       </div>

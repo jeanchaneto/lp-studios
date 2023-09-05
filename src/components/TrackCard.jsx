@@ -37,7 +37,7 @@ const [active, setActive] = useState(false);
         <div className=" flex gap-2  w-full flex-1 items-center md:justify-end mt-2 ">
           <Link
             href="/"
-            className=" h-7 min-w-[88px] whitespace-nowrap items-center flex justify-between gap-x-1.5 rounded-md bg-cyan-700 px-2.5 py-1.5 text-sm font-semibold text-zinc-100 shadow-sm shadow-cyan-700/40 hover:bg-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700"
+            className=" h-7 min-w-[88px] whitespace-nowrap items-center flex justify-between gap-x-1.5 rounded-md bg-blue-700 px-2.5 py-1.5 text-sm font-semibold text-zinc-100 shadow-sm shadow-cyan-700/40 hover:bg-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700"
           >
             <svg
               id="Layer_1"
@@ -53,7 +53,7 @@ const [active, setActive] = useState(false);
 
           <Link
             href={`/ghost-produced-tracks/${props.id}`}
-            className="  whitespace-nowrap  h-7 flex items-center gap-x-1.5 rounded-md bg-cyan-900/50 px-2.5 py-1.5 text-sm font-semibold text-zinc-300  hover:bg-cyan-800/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
+            className="  whitespace-nowrap  h-7 flex items-center gap-x-1.5 rounded-md bg-blue-950/50 px-2.5 py-1.5 text-sm font-semibold text-zinc-300  hover:bg-cyan-800/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
           >
             <svg
               className="-ml-0.5 h-4 w-4 "
