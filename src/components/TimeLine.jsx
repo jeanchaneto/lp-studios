@@ -29,10 +29,10 @@ const timelineData = [
 
 const TimeLine = () => {
   return (
-    <section className=" bg-zinc-950 ">
+    <section className=" bg-zinc-950 mt-24 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 md:text-center ">
       <h2 className=" text-zinc-100 mx-auto text-4xl font-bold tracking-tight sm:text-5xl ">The Process:<br /> Bespoke Production, Tailored to You</h2>
-      <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-teal-300 before:to-transparent mt-6 ">
+      <div className=" text-base space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-teal-300 before:to-transparent mt-6 ">
       {timelineData.map((item) => (
         <div key={item.id} className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group ${item.isActive ? "is-active" : ""}`}>
           <div className="flex items-center justify-center w-10 h-10 rounded-full border border-zinc-100 bg-zinc-800 group-[.is-active]:bg-teal-600 text-zinc-500 group-[.is-active]:text-teal-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
