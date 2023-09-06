@@ -135,7 +135,7 @@ const GhostProduction = () => {
             src="/images/contact-photo.jpg"
             width={707}
             height={1000}
-            className="h-64 w-full  object-cover sm:h-80 lg:absolute lg:h-full lg:rounded-lg "
+            className="h-64 w-full  object-cover sm:h-80 lg:absolute lg:h-full lg:rounded-lg mix-blend-plus-lighter brightness-50 contrast-125"
             alt="Studio headphones"
           />
         </div>

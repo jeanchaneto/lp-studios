@@ -8,7 +8,7 @@ import Link from "next/link";
 const navigation = [
   { name: "Tracks", href: "/ghost-produced-tracks" },
   { name: "Ghost Production", href: "/ghost-production" },
-  { name: "About Us", href: "#" },
+  { name: "About Us", href: "/about-us" },
   { name: "Blog", href: "#" },
   { name: "Contact Us", href: "#" },
 ];

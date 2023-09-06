@@ -6,8 +6,8 @@ import { features } from "@/libs/constants";
 
 export default function Tracks() {
   return (
-    <section className="bg-zinc-950 py-24 sm:py-32">
-      <div className=" pt-24 sm:pt-32">
+    <main className="bg-zinc-950 py-24 sm:py-32">
+      <section className=" pt-24 sm:pt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <p className="text-base font-semibold text-teal-300">
@@ -40,8 +40,8 @@ export default function Tracks() {
             </dl>
           </div>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         role="list"
         className="space-y-3 px-6 lg:px-8 bg-zinc-950 pt-24 sm:pt-32 lg:pt-40 "
       >
@@ -52,9 +52,9 @@ export default function Tracks() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="bg-zinc-950">
+      <section className="bg-zinc-950">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
             Looking for a custom track ?
@@ -76,9 +76,9 @@ export default function Tracks() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-zinc-950 py-16 sm:py-24 ">
+      <section className="bg-zinc-950 py-16 sm:py-24 ">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative isolate overflow-hidden bg-zinc-900/40 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
             <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
@@ -112,7 +112,7 @@ export default function Tracks() {
             </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }

@@ -8,12 +8,12 @@ import ProjectFileFeatures from "@/components/ProjectFileFeatures";
 
 export default function Home() {
   return (
-    <div className="">
+    <main className="">
       <Hero />
       <TrackShowcase />
       <BenefitsSection />
       <ProjectFileFeatures />
       <CustomCta />
-    </div>
+    </main>
   );
 }

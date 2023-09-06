@@ -77,7 +77,7 @@ const TrackPage = ({ track }) => {
             </h1>
             <Link
               href="/"
-              className=" h-7 min-w-[88px] whitespace-nowrap items-center flex justify-between gap-x-1.5 rounded-md bg-cyan-700 px-3.5 py-2.5 text-lg font-semibold text-zinc-100 shadow-sm shadow-cyan-700/40 hover:bg-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700"
+              className=" h-7 min-w-[88px] whitespace-nowrap items-center flex justify-between gap-x-1.5 rounded-md bg-blue-700 px-3.5 py-2.5 text-lg font-semibold text-zinc-100 shadow-sm shadow-blue-700/40 hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
             >
               <svg
                 id="Layer_1"
