@@ -9,8 +9,8 @@ const navigation = [
   { name: "Tracks", href: "/ghost-produced-tracks" },
   { name: "Ghost Production", href: "/ghost-production" },
   { name: "About Us", href: "/about-us" },
-  { name: "Blog", href: "#" },
-  { name: "Contact Us", href: "#" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 const Header = () => {
