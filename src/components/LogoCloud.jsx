@@ -1,5 +1,3 @@
-import Image from "next/image";
-import React from "react";
 
 const logos = [
   { src: "/images/logo-cloud/ableton-logo 1.png", alt: "Ableton logo" },
