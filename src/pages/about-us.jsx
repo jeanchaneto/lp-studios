@@ -10,7 +10,7 @@ const values = [
   {
     name: "Specialized in Genres We Love",
     description:
-      "Unlike many in the industry, we chose to specialize in genres that we are passionate about. As Afro House ghost producers, along with expertise in Melodic Techno, Organic House, and Deep House, we ensure that each production resonates with authentic flavor and technical prowess.",
+      "Unlike many in the industry, we chose to specialize in genres that we are passionate about. As Afro House ghost producers, along with expertise in Melodic House & Techno, Organic House, and Deep House, we ensure that each production resonates with authentic flavor and technical prowess.",
   },
   {
     name: "Expert Insight into Industry Expectations",

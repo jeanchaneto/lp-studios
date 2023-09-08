@@ -2,7 +2,7 @@ import Link from "next/link";
 import TrackCard from "./TrackCard";
 import { tracks } from "@/data/tracks";
 import Image from "next/image";
-import VolumeSlider from "./VolumeSlider";
+
 
 const TrackShowcase = () => {
   return (
@@ -35,8 +35,7 @@ const TrackShowcase = () => {
             alt="Learn more"
           />
         </Link>
-      </div>
-      <VolumeSlider />
+      </div>   
     </section>
   );
 };

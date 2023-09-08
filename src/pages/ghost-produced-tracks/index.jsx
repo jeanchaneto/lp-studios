@@ -13,12 +13,12 @@ export default function Tracks() {
             <p className="text-base font-semibold text-teal-300">
               Discover Your Next Hit
             </p>
-            <h2 className="mt-2 text-5xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
+            <h1 className="mt-2 text-5xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
               Ghost Produced Tracks
-            </h2>
+            </h1>
             <p className="mt-6 text-xl text-zinc-400">
               Explore our release-ready ghost-produced
-              tracks in Afro House, Melodic Techno, and Organic House.
+              tracks in Afro House, Melodic House & Techno, and Organic House.
             </p>
 
             <dl className="mt-6 grid max-w-lg grid-cols-1 gap-2 text-base text-zinc-400 sm:grid-cols-2 lg:mx-0  lg:gap-x-16 whitespace-nowrap ">

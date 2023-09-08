@@ -17,7 +17,7 @@ export const tracks = [
     {
       id: 2,
       title: "Festival",
-      genre: "Melodic Techno",
+      genre: "Melodic house & Techno",
       bpm: 122,
       duration: "5:30",
       songKey: "Amajor",

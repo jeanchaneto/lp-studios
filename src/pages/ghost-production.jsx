@@ -27,7 +27,7 @@ const GhostProduction = () => {
               Where Your Vision Meets Our Expertise
             </h2>
             <p className="mt-6 text-xl  text-zinc-400">
-              Are you aiming for unparalleled Afro House, Melodic Techno,
+              Are you aiming for unparalleled Afro House, Melodic House & Techno,
               Organic House, or Deep House? You're in the right place. Welcome
               to a highly exclusive opportunity offered by a small, in-demand
               team that has enabled tracks to get signed on top labels and gain
@@ -99,7 +99,7 @@ const GhostProduction = () => {
             </h2>
             <p className="mt-6 text-lg text-zinc-400">
               At LAP Studios, our focus is on delivering professional Afro
-              House, Melodic Techno, Organic House, or Deep House. Our pricing
+              House, Melodic House & Techno, Organic House, or Deep House. Our pricing
               is both transparent and fixed, mirroring our dedication to
               quality.
             </p>

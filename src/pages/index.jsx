@@ -5,6 +5,7 @@ import TrackShowcase from "@/components/TrackShowcase";
 import BenefitsSection from "@/components/BenefitsSection";
 import CustomCta from "@/components/CustomCta";
 import ProjectFileFeatures from "@/components/ProjectFileFeatures";
+import LogoCloud from "@/components/LogoCloud";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <BenefitsSection />
       <ProjectFileFeatures />
       <CustomCta />
+      <LogoCloud />
     </main>
   );
 }
