@@ -13,7 +13,7 @@ const Privacy = () => {
         </p>
         <div className="mt-10 max-w-3xl">
           <h2 className=" text-2xl font-bold tracking-tight text-zinc-300">
-            Information Collection
+            1.Information Collection
           </h2>
           <p className="mt-6">
             We collect various types of information in connection with the
@@ -23,7 +23,7 @@ const Privacy = () => {
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
-            Cookies and Web Beacons
+            2.Cookies and Web Beacons
           </h2>
           <p className="mt-6">
             We may use cookies to personalize your online experience. A cookie
@@ -33,7 +33,7 @@ const Privacy = () => {
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
-            Use of Google Analytics
+            3.Use of Google Analytics
           </h2>
           <p className="mt-6">
             We utilize Google Analytics, a web analytics service provided by
@@ -46,7 +46,7 @@ const Privacy = () => {
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
-            Your Rights
+            4.Your Rights
           </h2>
           <p className="mt-6">
             In accordance with the GDPR and the French Data Protection Act, you
@@ -56,7 +56,7 @@ const Privacy = () => {
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
-            Third-Party Websites
+            5.Third-Party Websites
           </h2>
           <p className="mt-6">
             Our site may have links to third-party websites. We do not oversee
@@ -66,7 +66,7 @@ const Privacy = () => {
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
-            Security
+            6.Security
           </h2>
           <p className="mt-6">
             We prioritize the safeguarding of your personal data. To this end,
@@ -76,7 +76,7 @@ const Privacy = () => {
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
-            Updates to this Privacy Policy
+            7.Updates to this Privacy Policy
           </h2>
           <p className="mt-6">
             Periodically, we may update our Privacy Policy. We will inform you
@@ -86,7 +86,7 @@ const Privacy = () => {
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
-            Contact Information
+            8.Contact Information
           </h2>
           <p className="mt-6">
             Should you have inquiries about this Privacy Policy or wish to
