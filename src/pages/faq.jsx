@@ -43,7 +43,7 @@ const faqs = [
     question: "What do I get with a ghost-produced track?",
     answer: [
       "Once your purchase a track from us you will receive:",
-      <ol>
+      <ol key="What do I get with a ghost-produced track?" >
         <li className="indent-4">1.The master version of the track</li>
         <li className="indent-4">2.A mixdown version</li>
         <li className="indent-4">3.The audio stems</li>
@@ -55,7 +55,7 @@ const faqs = [
     question: "What rights do I acquire after purchasing a track?",
     answer: [
       "When you buy a track from us, you secure a broad set of rights under an exclusive, perpetual license. These rights encompass:",
-      <ol>
+      <ol key="What rights do I acquire after purchasing a track?" >
         <li className="indent-4">
           1.Representing the track under your name, pseudonym, brand, or other
           designation.
