@@ -31,9 +31,8 @@ export default function Blog() {
           </h1>
           <p className="mt-2 text-xl text-zinc-400">
             Delve into the intricacies of the music industry, from ghost
-            production to DJing techniques, and uncover the secrets to leaving a
-            lasting impression. Your journey through the electronic music realm
-            begins here. Dive in.
+            production to DJing, and uncover the secrets to leaving a
+            lasting impression.
           </p>
           <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20 ">
             {posts.map((post) => (
