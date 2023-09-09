@@ -66,7 +66,7 @@ const Terms = () => {
             </span>{" "}
             In the event of an inadvertent or mistaken purchase, and if a refund
             request is made before the transfer of files, a 5% fee will be
-            deducted from the refund amount to cover payment gateway fees.
+            deducted from the refund amount to cover the non refundable payment gateway fees.
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
@@ -120,8 +120,7 @@ const Terms = () => {
           <p className="mt-6">
             <span className="text-zinc-300 font-semibold">Ownership:</span>{" "}
             Until full payment of our fee has been made, LAP Studios remains the
-            sole owner of the track produced, regardless of any input or
-            suggestions the user might have added to it. Upon completion of the
+            sole owner of the music produced, regardless of any contributions from the user. Upon completion of the
             transaction and full payment, the intellectual property rights will
             be transferred to the client, unless otherwise specified in a
             separate agreement.

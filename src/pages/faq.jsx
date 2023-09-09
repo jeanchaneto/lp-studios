@@ -43,7 +43,7 @@ const faqs = [
     question: "What do I get with a ghost-produced track?",
     answer: [
       "Once your purchase a track from us you will receive:",
-      <ol key="What do I get with a ghost-produced track?" >
+      <ol key="What do I get with a ghost-produced track?">
         <li className="indent-4">1.The master version of the track</li>
         <li className="indent-4">2.A mixdown version</li>
         <li className="indent-4">3.The audio stems</li>
@@ -55,7 +55,7 @@ const faqs = [
     question: "What rights do I acquire after purchasing a track?",
     answer: [
       "When you buy a track from us, you secure a broad set of rights under an exclusive, perpetual license. These rights encompass:",
-      <ol key="What rights do I acquire after purchasing a track?" >
+      <ol key="What rights do I acquire after purchasing a track?">
         <li className="indent-4">
           1.Representing the track under your name, pseudonym, brand, or other
           designation.
@@ -86,7 +86,8 @@ const faqs = [
       "Exclusivity ensures that the track you purchase from us is uniquely yours. This not only gives you a competitive edge in the music industry but also protects your brand's authenticity. With an exclusive track, you can confidently promote your music, knowing it's genuinely one-of-a-kind.",
   },
   {
-    question: "Can I resell the track or files on ghost production platforms or as a sample pack?",
+    question:
+      "Can I resell the track or files on ghost production platforms or as a sample pack?",
     answer:
       "No, reselling tracks on other ghost production platforms or repackaging them as sample packs is strictly prohibited. When you acquire a track from LAP Studios, it's tailored for your exclusive use, whether for personal listening or releasing on music platforms. Furthermore, reselling could inadvertently put you at risk of redistributing royalty-free samples, which is not permitted. Such actions compromise the unique and exclusive nature of our offerings and can lead to legal consequences. It's essential to uphold originality and adhere to the terms of our exclusivity agreement.",
   },
@@ -99,6 +100,11 @@ const faqs = [
     question: "Do you offer discounts for multiple orders?",
     answer:
       "Our pricing remains fixed, reflecting the years of expertise and dedication we've invested to reach our current level. We ensure every project receives our utmost attention and the quality you deserve.",
+  },
+  {
+    question: "I am a music producer. Can I sell some tracks on your platform?",
+    answer:
+      "We appreciate your interest, but LAP Studios operates with a closed team. Currently, we do not accept external tracks or collaborations. Thank you for understanding.",
   },
   {
     question: "How can I contact you?",
@@ -125,7 +131,8 @@ const faqs = [
       "Absolutely! At LAP Studios, we love collaborating with artists and helping them realize their vision. If you have a project that you'd like assistance with, contact us with the details and let's discuss how we can bring it to life.",
   },
   {
-    question: "Which DAWs (digital audio workstation) do you primarily work with?",
+    question:
+      "Which DAWs (digital audio workstation) do you primarily work with?",
     answer:
       "We primarily use Ableton Live and Logic Pro X. However, we are adaptable and skilled across various DAWs. Should you have a specific requirement, please let us know, and we'll do our best to accommodate.",
   },
@@ -151,11 +158,7 @@ const faqs = [
   },
 ];
 
-
 export default function Faq() {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
   return (
     <main className="bg-zinc-950">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
