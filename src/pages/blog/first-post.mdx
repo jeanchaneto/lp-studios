@@ -1,0 +1,34 @@
+---
+title: 'first post title'
+excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/images/blog/albumcover.jpg'
+imageAlt: 'test blog image'
+---
+import Link from "next/link";
+import BlogPostLayout from "../../components/BlogPostLayout.jsx"
+import InlineLink from "../../components/InlineLink.jsx"
+
+export const meta = {
+  title: 'first post title',
+  excerpt: 'Lorem ipsum ... morbi tempus.',
+  coverImage: '/images/blog/albumcover.jpg',
+  imageAlt: 'test blog image'
+}
+
+
+## H2 title
+
+parpcezc  da zea  daaz <InlineLink href="/faq" > test link</InlineLink>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+
+## H2 title
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+
+
+
+export default ({ children }) => <BlogPostLayout meta={meta} >{children}</BlogPostLayout>
