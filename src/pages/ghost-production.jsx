@@ -150,11 +150,10 @@ const GhostProduction = () => {
               <h2 
               
               className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-                Let's make music
+                Let's make some music
               </h2>
               <p className="mt-2 text-lg text-zinc-400">
-                Ready to transform your musical ideas into reality? Fill out the
-                form below to kick-start your collaboration with us.
+              Got a tune in your head? Let us bring it to life. Fill out the form below and receive a free demo, no strings attached.
               </p>
               <Form />
             </div>

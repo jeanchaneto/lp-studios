@@ -8,7 +8,7 @@ const timelineData = [
   },
   {
     id: 2,
-    status: "Exclusive Demo Creation",
+    status: "Free Demo Creation",
     description: "We bring your vision to life in a demo. You get to review it and suggest any revisions, ensuring that the end result is precisely what you were hoping for.",
     isActive: true,
   },

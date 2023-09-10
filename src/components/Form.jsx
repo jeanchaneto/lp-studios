@@ -63,7 +63,7 @@ const Form = () => {
               htmlFor="message"
               className="block text-base font-semibold leading-6 text-zinc-100"
             >
-              Tell Us About Your Vision
+              Tell Us About Your Style
             </label>
           </div>
           <div className="mt-2.5">

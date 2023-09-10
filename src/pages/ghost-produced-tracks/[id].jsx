@@ -13,7 +13,7 @@ const TrackPage = ({ track }) => {
       href: "/ghost-produced-tracks",
       current: false,
     },
-    { name: track.title, href: `/tracks/${track.id}`, current: true },
+    { name: track.title, href: `/ghost-produced-tracks/${track.id}`, current: true },
   ];
 
   return (
@@ -25,6 +25,7 @@ const TrackPage = ({ track }) => {
           height={845}
           alt="Album cover"
           className="absolute opacity-50 blur-xl inset-0 -z-20 h-full w-full object-cover object-right-top"
+          quality={1}
         />
         <div
           className="absolute inset-0 -z-10 bg-gradient-to-t from-zinc-950 to-zinc-950/0 "
