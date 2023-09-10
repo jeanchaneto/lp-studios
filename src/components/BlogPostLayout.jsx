@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/solid";
+import { FadeIn } from "@/components/FadeIn";
 
 export default function BlogPostLayout({ children, meta }) {
   const pages = [
@@ -15,6 +16,7 @@ export default function BlogPostLayout({ children, meta }) {
 
   return (
     <main className="bg-zinc-950 py-24 sm:py-32 lg:py-48 lg:px-8 relative ">
+     
       <Head>
         <title>{meta.title} | LAP Studios</title>
         <meta name="description" content={meta.excerpt} />
@@ -24,9 +26,8 @@ export default function BlogPostLayout({ children, meta }) {
         <meta property="og:description" content={meta.excerpt} />
         <meta property="og:image" content={meta.coverImage} />
         <meta property="article:author" content="LAP Studios Team" />
-<meta property="article:tag" content={meta.tag} />
-
-      </Head>
+        <meta property="article:tag" content={meta.tag} />
+      </Head> 
       <div className="-z-10 ">
         <Image
           src={meta.coverImage}
@@ -77,7 +78,7 @@ export default function BlogPostLayout({ children, meta }) {
           ))}
         </ol>
       </nav>
-
+      <FadeIn>
       <div className="bg-zinc-900 w-fit mx-auto rounded-xl pb-32 isolate shadow-xl overflow-hidden">
         <Image
           className=" mx-auto aspect-video  bg-zinc-950 object-cover shadow-lg z-20 "
@@ -101,6 +102,7 @@ export default function BlogPostLayout({ children, meta }) {
           </address>
         </div>
       </div>
+      </FadeIn>
     </main>
   );
 }

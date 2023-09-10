@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import WaveSurferPlayer from "./WaveSurferPlayer";
 import Link from "next/link";
+import { FadeIn } from "./FadeIn";
 
 const TrackCard = (props) => {
 
 const [active, setActive] = useState(false);
 
   return (
+    <FadeIn>
     <div className=" justify-between  border w-full  border-zinc-400/20 rounded-lg p-2  sm:mx-0 bg-zinc-800/30  max-w-7xl ">
       <WaveSurferPlayer
         height={112}
@@ -102,6 +104,7 @@ const [active, setActive] = useState(false);
         </div>
       </div>
     </div>
+    </FadeIn>
   );
 };
 

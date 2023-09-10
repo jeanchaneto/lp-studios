@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import ProjectFileFeatures from "@/components/ProjectFileFeatures";
+import InlineLink from "@/components/InlineLink";
 
 const TrackPage = ({ track }) => {
   const pages = [
@@ -13,7 +14,11 @@ const TrackPage = ({ track }) => {
       href: "/ghost-produced-tracks",
       current: false,
     },
-    { name: track.title, href: `/ghost-produced-tracks/${track.id}`, current: true },
+    {
+      name: track.title,
+      href: `/ghost-produced-tracks/${track.id}`,
+      current: true,
+    },
   ];
 
   return (
@@ -136,9 +141,18 @@ const TrackPage = ({ track }) => {
                 <p>{track.daw} project</p>
               </li>
             </ul>
+            <p className="text-zinc-400 mt-10">
+              Love the track but require modifications?{" "}
+              <InlineLink href="/contact">Contact us</InlineLink>{" "}
+              <span className="  underline underline-offset-4">
+                before purchasing
+              </span>
+              , and we'll tailor it to your preferences.
+            </p>
           </div>
         </div>
       </div>
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
         <Benefits />
       </div>
