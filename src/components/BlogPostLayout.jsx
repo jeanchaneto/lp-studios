@@ -19,6 +19,13 @@ export default function BlogPostLayout({ children, meta }) {
         <title>{meta.title} | LAP Studios</title>
         <meta name="description" content={meta.excerpt} />
         <meta name="author" content="LAP Studios Team" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.excerpt} />
+        <meta property="og:image" content={meta.coverImage} />
+        <meta property="article:author" content="LAP Studios Team" />
+<meta property="article:tag" content={meta.tag} />
+
       </Head>
       <div className="-z-10 ">
         <Image

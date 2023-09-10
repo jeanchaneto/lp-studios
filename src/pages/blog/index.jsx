@@ -1,10 +1,18 @@
 import { getAllPostsMeta } from "@/libs/posts";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Blog({ posts }) {
   return (
     <main className="bg-zinc-950 py-24 sm:py-32 lg:py-48">
+      <Head>
+        <title>Blog | LAP Studios</title>
+        <meta
+          name="description"
+          content="Delve into the intricacies of the music industry, from ghost production to DJing, and discover the keys to achieving success and making a lasting impact."
+        />
+      </Head>
       <div className="mx-auto max-w-7xl px-6 lg:px-8  ">
         <div className="mx-auto max-w-2xl lg:max-w-4xl ">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-100 ">
@@ -12,8 +20,8 @@ export default function Blog({ posts }) {
           </h1>
           <p className="mt-2 text-xl text-zinc-400">
             Delve into the intricacies of the music industry, from ghost
-            production to DJing, and uncover the secrets to leaving a lasting
-            impression.
+            production to DJing, and discover the keys to achieving success and
+            making a lasting impact.
           </p>
           <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20 ">
             {posts.map((post) => (
