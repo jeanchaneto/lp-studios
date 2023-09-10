@@ -23,30 +23,21 @@ html {
   font-family: "Nunito Sans", sans-serif;
 }
 
-/* MDX custom
-h2 {
-  margin-top: 2.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: -0.025em;
-  color: #d4d4d8;
+::-webkit-scrollbar {
+  width: 0.5rem;
 }
 
-@media (min-width: 640px) {
-  .h2 {
-    font-size: 1.875rem;
-  }
+::-webkit-scrollbar-track {
+ background-color:  hsl(240, 6%, 10%);
 }
 
-.p {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  color: #a1a1aa;
-  background-color: red;
+::-webkit-scrollbar-thumb {
+   background-color:  hsl(172, 66%, 50%, 0.20);
+  border-radius: 100vw;
+ 
 }
 
-@media (min-width: 640px) {
-  .p {
-    font-size: 1.125rem;
-  }
-} */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(172, 66%, 50%, 0.4) hsl(240, 6%, 10%);
+}
