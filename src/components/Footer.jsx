@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../public/images/logo.png";
+import logo from "../../public/images/logo.svg";
 import Link from "next/link";
 
 const navigation = {

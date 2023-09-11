@@ -13,7 +13,7 @@ export default function Tracks() {
             <p className="text-base font-semibold text-teal-300">
               Discover Your Next Hit
             </p>
-            <h1 className="mt-2 text-5xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
+            <h1 className="mt-2 text-5xl font-kallisto text-zinc-100 sm:text-6xl">
               Ghost Produced Tracks
             </h1>
             <p className="mt-6 text-xl text-zinc-400">

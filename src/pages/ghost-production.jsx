@@ -1,8 +1,6 @@
 import Form from "@/components/Form";
 import TimeLine from "@/components/TimeLine";
-import {
-  CheckCircleIcon,
-} from "@heroicons/react/20/solid";
+import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 
 const benefits = [
@@ -20,18 +18,18 @@ const GhostProduction = () => {
       <section className=" py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h1 className="text-base font-semibold  text-teal-300">
-              Custom Ghost Production{" "}
+            <p className="text-base font-semibold  text-teal-300">
+              Bespoke Sonic Expertise
+            </p>
+            <h1 className="mt-2 text-4xl font-kallisto text-zinc-100 sm:text-6xl">
+              Custom Ghost Production
             </h1>
-            <h2 className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
-              Where Your Vision Meets Our Expertise
-            </h2>
             <p className="mt-6 text-xl  text-zinc-400">
-              Are you aiming for unparalleled Afro House, Melodic House & Techno,
-              Organic House, or Deep House? You're in the right place. Welcome
-              to a highly exclusive opportunity offered by a small, in-demand
-              team that has enabled tracks to get signed on top labels and gain
-              recognition from leading DJs globally.
+              Are you aiming for unparalleled Afro House, Melodic House &
+              Techno, Organic House, or Deep House? You're in the right place.
+              Welcome to a highly exclusive opportunity offered by a small,
+              in-demand team that has enabled tracks to get signed on top labels
+              and gain recognition from leading DJs globally.
             </p>
           </div>
         </div>
@@ -80,7 +78,10 @@ const GhostProduction = () => {
                   ))}
                 </ul>
                 <div className="mt-10 flex">
-                  <a href="#contact-ghost-production" className="text-sm font-semibold text-teal-300">
+                  <a
+                    href="#contact-ghost-production"
+                    className="text-sm font-semibold text-teal-300"
+                  >
                     Get started <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
@@ -99,8 +100,8 @@ const GhostProduction = () => {
             </h2>
             <p className="mt-6 text-lg text-zinc-400">
               At LAP Studios, our focus is on delivering professional Afro
-              House, Melodic House & Techno, Organic House, or Deep House. Our pricing
-              is both transparent and fixed, mirroring our dedication to
+              House, Melodic House & Techno, Organic House, or Deep House. Our
+              pricing is both transparent and fixed, mirroring our dedication to
               quality.
             </p>
           </div>
@@ -127,9 +128,10 @@ const GhostProduction = () => {
         </div>
       </section>
 
-      <section 
-      id="contact-ghost-production"
-      className="relative bg-zinc-950 my-24 sm:my-32 ">
+      <section
+        id="contact-ghost-production"
+        className="relative bg-zinc-950 my-24 sm:my-32 "
+      >
         <div className="lg:absolute lg:inset-0 lg:left-1/2">
           <Image
             src="/images/contact-photo.jpg"
@@ -144,16 +146,17 @@ const GhostProduction = () => {
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <div className=" sm:mb-8 sm:flex pb-12 sm:pb-0 ">
                 <div className="relative rounded-full px-6 py-1 text-xs  text-yellow-500 ring-1 ring-yellow-200/30 ">
-                While we wish we could collaborate with everyone, our commitment to quality and high demand means we can only take on a limited number of projects.{" "}
+                  While we wish we could collaborate with everyone, our
+                  commitment to quality and high demand means we can only take
+                  on a limited number of projects.{" "}
                 </div>
               </div>
-              <h2 
-              
-              className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
                 Let's make some music
               </h2>
               <p className="mt-2 text-lg text-zinc-400">
-              Got a tune in your head? Let us bring it to life. Fill out the form below and receive a free demo, no strings attached.
+                Got a tune in your head? Let us bring it to life. Fill out the
+                form below and receive a free demo, no strings attached.
               </p>
               <Form />
             </div>

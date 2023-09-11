@@ -4,9 +4,9 @@ const Hero = () => {
     <section className="relative isolate pt-14 bg-zinc-950 ">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-        <h2 className="text-base font-semibold leading-7 text-teal-300">Afro House | Melodic house & Techno | Organic House | Deep House</h2>
-          <h1 className="mt-6 max-w-lg text-5xl font-bold tracking-tight text-zinc-100 sm:text-7xl">
-            <span className="text-teal-500" >Premium</span> Ghost Production<span className="text-teal-500" ><br />Exclusive</span> Tracks
+        <h2 className="text-base font-kallisto leading-7 text-teal-500">Afro House | Melodic house & Techno | Organic House | Deep House</h2>
+          <h1 className="mt-6 max-w-7xl text-5xl font-kallisto font-bold text-zinc-100 sm:text-7xl">
+            Ghost Production<span className="text-teal-500" ><br />Exclusive</span> Tracks
           </h1>
           <p className="mt-6 text-xl leading-8 text-zinc-400">
             Kickstart your career in music with tracks that the top DJs rave

@@ -15,7 +15,7 @@ export default function BlogPostLayout({ children, meta }) {
   ];
 
   return (
-    <main className="bg-zinc-950 py-24 sm:py-32 lg:py-48 lg:px-8 relative ">
+    <main className="bg-zinc-950 py-24 sm:py-32 lg:py-40 lg:px-8 relative ">
      
       <Head>
         <title>{meta.title} | LAP Studios</title>

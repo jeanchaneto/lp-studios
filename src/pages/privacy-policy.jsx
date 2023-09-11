@@ -2,14 +2,13 @@ const Privacy = () => {
   return (
     <main className="bg-zinc-950 px-6 py-32 lg:px-8">
       <div className="mx-auto max-w-3xl text-base leading-7 text-zinc-400">
-        <h1 className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
+        <h1 className="mt-2 text-4xl font-kallisto text-zinc-100 sm:text-5xl">
           Privacy Policy
         </h1>
         <p className="mt-6 text-xl leading-8">
-          Welcome to LAP Studios' Privacy Policy. We value your privacy and
-          strive to protect your personal information in accordance with French
-          laws, including the General Data Protection Regulation (GDPR) and the
-          French Data Protection Act.
+          We value your privacy and strive to protect your personal information
+          in accordance with French laws, including the General Data Protection
+          Regulation (GDPR) and the French Data Protection Act.
         </p>
         <div className="mt-10 max-w-3xl">
           <h2 className=" text-2xl font-bold tracking-tight text-zinc-300">

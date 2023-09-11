@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap");
 
-@font-face {
-  font-family: "Bouchers Sans 2.0";
-  src: url("https://db.onlinewebfonts.com/t/f8df3f2465a12c3ec9ff31b3af1be0dd.eot");
-  src: url("https://db.onlinewebfonts.com/t/f8df3f2465a12c3ec9ff31b3af1be0dd.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/f8df3f2465a12c3ec9ff31b3af1be0dd.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/f8df3f2465a12c3ec9ff31b3af1be0dd.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/f8df3f2465a12c3ec9ff31b3af1be0dd.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/f8df3f2465a12c3ec9ff31b3af1be0dd.svg#Bouchers Sans 2.0")
-      format("svg");
-}
+@import url("https://use.typekit.net/qmj6eos.css");
 
 @tailwind base;
 @tailwind components;

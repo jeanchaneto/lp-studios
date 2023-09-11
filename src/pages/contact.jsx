@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <main className="relative isolate bg-zinc-950">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <section className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+        <section className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-40">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
               <div
@@ -21,9 +21,10 @@ export default function Contact() {
                 />
               </div>
             </div>
-            <h2 className="text-4xl sm:text-6xl  font-bold tracking-tight text-zinc-100 ">
+            <p className="text-base font-semibold  text-teal-300">Connect</p>
+            <h1 className="text-4xl sm:text-6xl  font-kallisto text-zinc-100 ">
               Tune In with Us
-            </h2>
+            </h1>
             <p className="mt-6 text-lg  text-zinc-400">
               At LAP Music Studios, we believe that clear communication paves
               the way for every successful collaboration.

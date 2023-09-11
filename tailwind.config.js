@@ -28,8 +28,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        boucher: ['"Bouchers Sans 2.0"'],
         nunito: ["Nunito Sans", "sans-serif"],
+        kallisto: ["kallisto", "sans-serif"],
       },
       animation: {
         "infinite-scroll": "infinite-scroll 90s linear infinite",

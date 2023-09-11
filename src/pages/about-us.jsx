@@ -43,7 +43,10 @@ export default function AboutUs() {
           <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 ">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
+                <p className="text-base font-semibold  text-teal-300">
+                  About us
+                </p>
+                <h1 className=" mt-2 text-4xl font-kallisto text-zinc-100 sm:text-6xl">
                   Your Trusted Ghost Producers
                 </h1>
                 <p className="relative mt-6 text-xl leading-8 text-zinc-400 sm:max-w-md lg:max-w-none">

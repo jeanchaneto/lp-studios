@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/FadeIn";
 
 export default function Blog({ posts }) {
   return (
-    <main className="bg-zinc-950 py-24 sm:py-32 lg:py-48">
+    <main className="bg-zinc-950 py-24 sm:py-32 lg:py-40">
       <Head>
         <title>Blog | LAP Studios</title>
         <meta
@@ -17,7 +17,8 @@ export default function Blog({ posts }) {
       <FadeIn>
         <div className="mx-auto max-w-7xl px-6 lg:px-8  ">
           <div className="mx-auto max-w-2xl lg:max-w-4xl ">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-100 ">
+            <p className="text-base font-semibold  text-teal-300">The Blog</p>
+            <h1 className=" mt-2 text-4xl sm:text-5xl font-kallisto text-zinc-100 ">
               Ghost Production Chronicles
             </h1>
             <p className="mt-2 text-xl text-zinc-400">
@@ -26,13 +27,12 @@ export default function Blog({ posts }) {
               and making a lasting impact.
             </p>
             <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20 ">
-              {posts.map((post) => (<FadeIn key={post.slug}>
-                <article
-                  
-                  className="relative isolate  pt-16 before:absolute after:absolute before:bg-teal-300 after:bg-teal-300/10 before:left-0 before:top-0 before:h-px before:w-6 after:left-8 after:right-0 after:top-0 after:h-px 
+              {posts.map((post) => (
+                <FadeIn key={post.slug}>
+                  <article
+                    className="relative isolate  pt-16 before:absolute after:absolute before:bg-teal-300 after:bg-teal-300/10 before:left-0 before:top-0 before:h-px before:w-6 after:left-8 after:right-0 after:top-0 after:h-px 
               "
-                >
-                  
+                  >
                     <Link
                       href={`/blog/${post.slug}`}
                       className="flex flex-col gap-8 lg:flex-row bg-zinc-900/50 rounded-2xl overflow-hidden"
@@ -58,8 +58,8 @@ export default function Blog({ posts }) {
                         </p>
                       </div>
                     </Link>
-                  
-                </article></FadeIn>
+                  </article>
+                </FadeIn>
               ))}
             </div>
           </div>
