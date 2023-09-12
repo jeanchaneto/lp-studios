@@ -24,7 +24,7 @@ export default function Tracks() {
             <dl className="mt-6 grid max-w-lg grid-cols-1 gap-2 text-base text-zinc-400 sm:grid-cols-2 lg:mx-0  lg:gap-x-16 whitespace-nowrap ">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-9">
-                  <dt className="inline font-semibold text-zinc-400">
+                  <dt className="inline text-zinc-400">
                     <Image
                       src={feature.icon}
                       className=" absolute left-1 top-1 object-cover object-center"

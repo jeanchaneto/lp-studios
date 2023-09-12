@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "How much does ghost production cost?",
     answer:
-      "We provide high-quality ready-made tracks priced between €800-€1000. For a custom track tailored to your specific style, the cost is €1200. Our focus is on delivering the utmost quality for your investment.",
+      "We provide high-quality ready-made tracks priced between €800-€1000. For a custom track tailored to your specific style, the cost is €1199. Our focus is on delivering the utmost quality for your investment.",
   },
   {
     question: "Do I get the project file?",

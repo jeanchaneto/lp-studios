@@ -113,7 +113,7 @@ const GhostProduction = () => {
                 </p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
                   <span className="text-5xl font-bold tracking-tight text-zinc-100">
-                    1200 €
+                  €1199 €
                   </span>
                 </p>
                 <a
