@@ -9,13 +9,14 @@ import LogoCloud from "@/components/LogoCloud";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className=" bg-zinc-950 ">
+      <div className=" bg-gradient-radial from-zinc-900/50  to-zinc-950 ">
       <Hero />
       <TrackShowcase />
       <BenefitsSection />
       <ProjectFileFeatures />
       <CustomCta />
-      <LogoCloud />
+      <LogoCloud /></div>
     </main>
   );
 }

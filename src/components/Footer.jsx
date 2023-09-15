@@ -51,7 +51,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-zinc-950" aria-labelledby="footer-heading">
+    <footer className="bg-gradient-to-tr from-teal-950/10  to bg-zinc-950" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

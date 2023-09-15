@@ -8,7 +8,8 @@ const TrackShowcase = () => {
   return (
     <section
       role="list"
-      className="space-y-3 px-6 lg:px-8 bg-zinc-950 py-24 sm:py-32 lg:py-40 "
+      className="space-y-3 px-6 lg:px-8 py-24 sm:py-32 lg:py-40 "
+      id="latest-tracks"
     >
       <div className="mx-auto max-w-7xl ">
         <h2 className=" text-3xl sm:4xl font-bold tracking-tight text-zinc-100 mb-6 ">

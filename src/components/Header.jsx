@@ -64,7 +64,7 @@ const Header = () => {
             <NavbarItem key={item.name}>
               <Link
                 href={item.href}
-                className="text-base font-semibold tracking-wider relative px-3 py-1.5 "
+                className="text-base font-semibold tracking-wider relative px-3 py-1.5 hover:opacity-60 transition-opacity duration-300 "
                 onClick={() => setActiveNav(item.href)}
               >
                 <AnimatePresence>
