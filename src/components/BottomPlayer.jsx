@@ -1,6 +1,6 @@
 import WaveSurfer from "wavesurfer.js";
 import { useAudio } from "@/context/audioContext";
-import { useState, useCallback, useRef, useEffect } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import { PlayIcon, PauseIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -58,7 +58,7 @@ const useWavesurfer = (containerRef, options) => {
 
 // Create a React component that will render wavesurfer.
 // Props are wavesurfer options.
-const WaveSurferPlayer = (props) => {
+const WaveSurferPlayer = React.memo((props) => {
   const containerRef = useRef();
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -182,7 +182,7 @@ const WaveSurferPlayer = (props) => {
       </div>
     </div>
   );
-};
+});
 
 
 const BottomPLayer = () => {
