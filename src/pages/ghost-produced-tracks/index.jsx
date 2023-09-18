@@ -45,7 +45,7 @@ export default function Tracks() {
         role="list"
         className="space-y-3 px-6 lg:px-8 bg-zinc-950 pt-24 sm:pt-32 lg:pt-40 "
       >
-        <div className="grid grid-cols-1 gap-6 mx-auto max-w-7xl ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto max-w-7xl ">
           {tracks.map((track) => (
             <div key={track.id}>
               <TrackCard {...track} />

@@ -4,6 +4,7 @@ import React, { useState, useCallback, useRef, useEffect, use } from "react";
 import { PlayIcon, PauseIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const variants = {
   hidden: {
@@ -166,7 +167,7 @@ const WaveSurferPlayer = React.memo((props) => {
       </div>
       <div className="flex  items-center gap-8 w-full mt-2 md:mt-0 ">
         <div className="w-full flex-shrink-1 " ref={containerRef} />
-        <a
+        <Link
           href="#"
           className=" hidden md:block relative rounded min-w-fit max-w-fit px-2 py-1 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300"
         >
@@ -183,7 +184,7 @@ const WaveSurferPlayer = React.memo((props) => {
             </svg>
             <span className="relative whitespace-nowrap">1000 €</span>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
