@@ -33,7 +33,7 @@ const useWavesurfer = (containerRef, options) => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Create a canvas gradient
+    // Create canvas gradient
     const ctx = document.createElement("canvas").getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 0, 128);
     gradient.addColorStop(0, "#042f2e");
@@ -203,7 +203,10 @@ const BottomPLayer = () => {
             height={64}
             progressColor="#042f2e"
             url={audioUrl}
+            barGap="1"
             barWidth="1"
+            cursorWidth="1"
+            cursorColor="#f4f4f5"
           />
         </motion.div>
       )}

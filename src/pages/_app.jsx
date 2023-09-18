@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import { WaveSurferProvider } from "../context/waveSurferContext";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Providers } from "@/context/Providers";
@@ -13,12 +12,10 @@ export default function App({ Component, pageProps }) {
     <Providers>
       <AudioProvider>
         <MDXProvider components={MDXComponents}>
-          <WaveSurferProvider>
             <Header />
             <Component {...pageProps} />
             <Footer />
             <BottomPLayer />
-          </WaveSurferProvider>
         </MDXProvider>
       </AudioProvider>
     </Providers>

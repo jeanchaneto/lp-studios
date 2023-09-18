@@ -4,7 +4,6 @@ import React from "react";
 
 // Create a React component that will render wavesurfer.
 import WaveSurfer from "wavesurfer.js";
-import { useWaveSurferCtx } from "../context/waveSurferContext";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -15,53 +14,64 @@ const formatTime = (seconds) => {
   return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
 };
 
-// Props are wavesurfer options.
-const WaveSurferPlayer = React.memo((props) => {
-  const containerRef = useRef();
-  const [currentTime, setCurrentTime] = useState(0);
+// WaveSurfer hook
+const useWavesurfer = (containerRef, options) => {
+  const [wavesurfer, setWavesurfer] = useState(null)
 
-  const {
-    waveSurferInstances,
-    setWaveSurferInstances,
-    currentlyPlaying,
-    setCurrentlyPlaying,
-  } = useWaveSurferCtx();
-
+  // Initialize wavesurfer when the container mounts
+  // or any of the props change
   useEffect(() => {
-    const ws = WaveSurfer.create({
-      container: containerRef.current,
-      ...props,
-    });
+    if (!containerRef.current) return
 
-    setWaveSurferInstances((prev) => ({ ...prev, [props.url]: ws }));
+    const ws = WaveSurfer.create({
+      ...options,
+      container: containerRef.current,
+    })
+
+    setWavesurfer(ws)
 
     return () => {
-      ws.destroy();
-    };
-  }, [props, setWaveSurferInstances]);
-
-  const onPlayClick = useCallback(() => {
-    const wavesurfer = waveSurferInstances[props.url];
-
-    if (!wavesurfer) return;
-
-    if (wavesurfer.isPlaying()) {
-      wavesurfer.pause();
-      setCurrentlyPlaying(null);
-      setCurrentTime(0);
-    } else {
-      if (currentlyPlaying && currentlyPlaying !== props.url) {
-        waveSurferInstances[currentlyPlaying].pause();
-      }
-
-      wavesurfer.play();
-      setCurrentlyPlaying(props.url);
-      wavesurfer.on("timeupdate", (currentTime) => setCurrentTime(currentTime));
+      ws.destroy()
     }
-  }, [waveSurferInstances, currentlyPlaying, setCurrentlyPlaying, props.url]);
+  }, [options, containerRef])
+
+  return wavesurfer
+}
+
+// Create a React component that will render wavesurfer.
+// Props are wavesurfer options.
+const WaveSurferPlayer = React.memo((props) => {
+  const containerRef = useRef()
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [currentTime, setCurrentTime] = useState(0)
+  const wavesurfer = useWavesurfer(containerRef, props)
+
+  // On play button click
+  const onPlayClick = useCallback(() => {
+    wavesurfer.isPlaying() ? wavesurfer.pause() : wavesurfer.play()
+  }, [wavesurfer])
+
+  // Initialize wavesurfer when the container mounts
+  // or any of the props change
+  useEffect(() => {
+    if (!wavesurfer) return
+
+    setCurrentTime(0)
+    setIsPlaying(false)
+
+    const subscriptions = [
+      wavesurfer.on('play', () => setIsPlaying(true)),
+      wavesurfer.on('pause', () => setIsPlaying(false)),
+      wavesurfer.on('timeupdate', (currentTime) => setCurrentTime(currentTime)),
+    ]
+
+    return () => {
+      subscriptions.forEach((unsub) => unsub())
+    }
+  }, [wavesurfer])
 
   return (
-    <div className= {`w-full mr-4 flex ${props.singlePage ? 'flex-col md:flex-row gap-6 items-center ' : ''}`} >
+    <div className= "w-full mr-4 flex flex-col md:flex-row gap-6 items-center " >
       <div
         className=" group mr-4 max-w-fit rounded-lg flex-shrink-0 cursor-pointer relative bg-zinc-950 "
         onClick={onPlayClick}
@@ -74,15 +84,15 @@ const WaveSurferPlayer = React.memo((props) => {
           className=" rounded-lg opacity-80 object-cover "
         />
 
-        {currentlyPlaying === props.url ? (
+        {isPlaying ? (
           <div >
-            <PauseIcon className={` ${!props.singlePage && 'h-12'} absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 `} />
-            <p className={ `text-zinc-300 absolute left-1/2 -translate-x-1/2 bottom-1 ${props.singlePage && "text-xl font-bold " }` } >
+            <PauseIcon className= "absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 w-16 h-16"  />
+            <p className= "text-zinc-300 absolute left-1/2 -translate-x-1/2 bottom-1 text-xl font-bold"  >
               {formatTime(currentTime)}
             </p>
           </div>
         ) : (
-          <PlayIcon className={` ${!props.singlePage && 'h-12'}  absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 `} />
+          <PlayIcon className=  "absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 w-16 h-16"  />
         )}
       </div>
       <div ref={containerRef} className="w-full " />
