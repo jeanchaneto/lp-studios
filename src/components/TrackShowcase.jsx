@@ -5,6 +5,10 @@ import Image from "next/image";
 
 
 const TrackShowcase = () => {
+
+const latestTracks = tracks.slice(0, 2);
+console.log(latestTracks);
+
   return (
     <section
       role="list"
@@ -16,12 +20,12 @@ const TrackShowcase = () => {
           Latest Tracks
         </h2>
       </div>
-      <div className="grid grid-cols-1 gap-6 mx-auto max-w-7xl ">
-        {tracks.map((track) => (
-          <div key={track.id}>
-            <TrackCard {...track} />
-          </div>
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl ">
+          {tracks.map((track) => (
+            <div key={track.id}>
+              <TrackCard {...track} />
+            </div>
+          ))}
       </div>
       <div className=" flex justify-center pt-6">
         <Link

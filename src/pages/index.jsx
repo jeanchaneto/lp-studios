@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <div className=" bg-gradient-radial from-zinc-900/90  to-zinc-950 ">
         <Hero />
-        {/* <TrackShowcase /> */}
+        <TrackShowcase />
         <BenefitsSection />
         <ProjectFileFeatures />
         <CustomCta />

@@ -6,7 +6,7 @@ export const useAudio = () => useContext(AudioContext);
 export const AudioProvider = ({ children }) => {
   const [audioUrl, setAudioUrl] = useState(null);
   const [bottomPlayerOn, setBottomPlayerOn] = useState(false);
-  const [ contextTrack, setContextTrack ] = useState(null);
+  const [contextTrack, setContextTrack] = useState(null);
 
   return (
     <AudioContext.Provider
@@ -15,6 +15,8 @@ export const AudioProvider = ({ children }) => {
         setAudioUrl,
         bottomPlayerOn,
         setBottomPlayerOn,
+        contextTrack,
+        setContextTrack,
       }}
     >
       {children}
