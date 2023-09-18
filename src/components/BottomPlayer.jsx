@@ -1,11 +1,21 @@
 import WaveSurfer from "wavesurfer.js";
 import { useAudio } from "@/context/audioContext";
 import { useState, useCallback, useRef, useEffect } from "react";
-import {
-  PlayIcon,
-  PauseIcon,
-  InformationCircleIcon,
-} from "@heroicons/react/20/solid";
+import { PlayIcon, PauseIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+
+const variants = {
+  hidden: {
+    y: "80px",
+    opacity: 0,
+  },
+  visible: {
+    y: "0",
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+};
 
 //format time
 const formatTime = (seconds) => {
@@ -25,10 +35,10 @@ const useWavesurfer = (containerRef, options) => {
 
     // Create a canvas gradient
     const ctx = document.createElement("canvas").getContext("2d");
-    const gradient = ctx.createLinearGradient(0, 0, 0, 64);
-    gradient.addColorStop(0, "#14b8a6");
-    gradient.addColorStop(0.5, "#5eead4");
-    gradient.addColorStop(1, "#14b8a6");
+    const gradient = ctx.createLinearGradient(0, 0, 0, 128);
+    gradient.addColorStop(0, "#042f2e");
+    gradient.addColorStop(0.5, "#99f6e4");
+    gradient.addColorStop(1, "#042f2e");
 
     const ws = WaveSurfer.create({
       ...options,
@@ -53,6 +63,14 @@ const WaveSurferPlayer = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const wavesurfer = useWavesurfer(containerRef, props);
+  const [volume, setVolume] = useState(1);
+
+  //Volume
+  const handleVolumeChange = (e) => {
+    const volumeValue = parseFloat(e.target.value);
+    wavesurfer.setVolume(volumeValue);
+    setVolume(volumeValue);
+  };
 
   // On play button click
   const onPlayClick = useCallback(() => {
@@ -71,7 +89,7 @@ const WaveSurferPlayer = (props) => {
       wavesurfer.on("play", () => setIsPlaying(true)),
       wavesurfer.on("pause", () => setIsPlaying(false)),
       wavesurfer.on("timeupdate", (currentTime) => setCurrentTime(currentTime)),
-      // wavesurfer.on("ready", () => wavesurfer.play()) // Auto play when ready
+      wavesurfer.on("ready", () => wavesurfer.play()) // Auto play when ready
     ];
 
     return () => {
@@ -80,26 +98,31 @@ const WaveSurferPlayer = (props) => {
   }, [wavesurfer]);
 
   return (
-    <div className="  h-full flex-col md:flex md:flex-row md:gap-8  justify-between items-center text-xs px-6 lg:px-8 z-50 ">
-      <div className="flex gap-6 items-center justify-between  min-[520px]:gap-8">
+    <div className="  h-full flex-col md:flex md:flex-row md:gap-8  justify-between items-center text-xs px-6 lg:px-8  ">
+      <div className="flex mt-2 md:mt-0 gap-6 items-center justify-between  min-[520px]:gap-8">
         <div
           onClick={onPlayClick}
           className=" relative flex-shrink-0 w-16 h-16 cursor-pointer group"
         >
-          <img
+          <Image
             src="/images/albumcover.jpg"
             alt="album cover"
-            className=" rounded-lg opacity-80 object-cover   "
+            width={64}
+            height={64}
+            className=" rounded-lg opacity-70 object-cover   "
           />
           <button style={{ marginTop: "1em" }}>
             {isPlaying ? (
-              <PauseIcon className=" absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300" />
+              <PauseIcon className=" absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 w-8 h-8 " />
             ) : (
-              <PlayIcon className=" absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300" />
+              <PlayIcon className=" absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 w-8 h-8" />
             )}
           </button>
         </div>
-        <a href="#" className=" whitespace-nowrap font-semibold flex hover:opacity-80 transition-opacity duration-300 ">
+        <a
+          href="#"
+          className=" whitespace-nowrap font-semibold flex hover:opacity-80 transition-opacity duration-300 "
+        >
           Track Title
         </a>
         <p className=" whitespace-nowrap hidden min-[430px]:block text-zinc-300 ">
@@ -126,8 +149,17 @@ const WaveSurferPlayer = (props) => {
             <span className="relative whitespace-nowrap">1000 €</span>
           </div>
         </a>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value={volume}
+          onChange={handleVolumeChange}
+          className="h-1 bg-zinc-500 rounded-lg appearance-none focus:outline-none  w-12 cursor-pointer volume-slider hidden sm:block "
+        />
       </div>
-      <div className="flex  items-center gap-8 w-full">
+      <div className="flex  items-center gap-8 w-full mt-2 md:mt-0 ">
         <div className="w-full flex-shrink-1 " ref={containerRef} />
         <a
           href="#"
@@ -152,24 +184,30 @@ const WaveSurferPlayer = (props) => {
   );
 };
 
-// Another React component that will render two wavesurfers
+
 const BottomPLayer = () => {
   const { audioUrl, bottomPlayerOn, setBottomPlayerOn } = useAudio();
 
-  // Render the wavesurfer component
-  // and a button to load a different audio file
   return (
-    <div className=" w-full fixed bottom-0 inset-x-0 h-40 md:h-20 text-zinc-100 backdrop-blur-xl border-t border-white/20 ">
-      {/* {bottomPlayerOn && (
-        <WaveSurferPlayer height={64} progressColor="#042f2e" url={audioUrl} />
-      )} */}
-      <WaveSurferPlayer
-        height={64}
-        progressColor="#042f2e"
-        url={audioUrl}
-        cursorColor="#f0fdfa"
-      />
-    </div>
+    <AnimatePresence>
+      {bottomPlayerOn && (
+        <motion.div
+          className=" w-full fixed bottom-0 inset-x-0 h-40 md:h-20 text-zinc-100 backdrop-blur-xl border-t border-white/20 z-20 "
+          key="bottom-player"
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+        >
+          <WaveSurferPlayer
+            height={64}
+            progressColor="#042f2e"
+            url={audioUrl}
+            barWidth="1"
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

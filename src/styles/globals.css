@@ -10,6 +10,7 @@ html {
   font-family: "Nunito Sans", sans-serif;
 }
 
+/* Custom scroll bar */
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -27,4 +28,23 @@ html {
 * {
   scrollbar-width: thin;
   scrollbar-color: hsl(172, 66%, 50%, 0.4) hsl(240, 6%, 10%);
+}
+
+/* Custom range input for volume slide */
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border: none;
 }
