@@ -1,6 +1,6 @@
 import WaveSurfer from "wavesurfer.js";
 import { useAudio } from "@/context/audioContext";
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import React, { useState, useCallback, useRef, useEffect, use } from "react";
 import { PlayIcon, PauseIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -64,6 +64,11 @@ const WaveSurferPlayer = React.memo((props) => {
   const [currentTime, setCurrentTime] = useState(0);
   const wavesurfer = useWavesurfer(containerRef, props);
   const [volume, setVolume] = useState(1);
+  const {
+    audioUrl,
+    bottomPlayerOn,
+    setBottomPlayerOn,
+  } = useAudio();
 
   //Volume
   const handleVolumeChange = (e) => {
@@ -84,18 +89,18 @@ const WaveSurferPlayer = React.memo((props) => {
 
     setCurrentTime(0);
     setIsPlaying(true);
-
     const subscriptions = [
       wavesurfer.on("play", () => setIsPlaying(true)),
       wavesurfer.on("pause", () => setIsPlaying(false)),
       wavesurfer.on("timeupdate", (currentTime) => setCurrentTime(currentTime)),
-      wavesurfer.on("ready", () => wavesurfer.play()) // Auto play when ready
+      wavesurfer.on("ready", () => wavesurfer.play()), // Auto play when ready
     ];
 
     return () => {
       subscriptions.forEach((unsub) => unsub());
     };
   }, [wavesurfer]);
+
 
   return (
     <div className="  h-full flex-col md:flex md:flex-row md:gap-8  justify-between items-center text-xs px-6 lg:px-8  ">
@@ -184,9 +189,8 @@ const WaveSurferPlayer = React.memo((props) => {
   );
 });
 
-
 const BottomPLayer = () => {
-  const { audioUrl, bottomPlayerOn, setBottomPlayerOn } = useAudio();
+  const { audioUrl, bottomPlayerOn } = useAudio();
 
   return (
     <AnimatePresence>

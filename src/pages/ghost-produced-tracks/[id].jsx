@@ -77,25 +77,28 @@ const TrackPage = ({ track }) => {
             </ol>
           </nav>
 
-          <div className="mx-auto flex gap-6 sm:gap-16 items-baseline lg:mx-0">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl pb-10">
+          <div className="mx-auto flex gap-6 sm:gap-16 items-center lg:mx-0 pb-10">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl ">
               {track.title}
             </h1>
             <Link
-              href="/"
-              className=" h-7 min-w-[88px] whitespace-nowrap items-center flex justify-between gap-x-1.5 rounded-md bg-blue-700 px-3.5 py-2.5 text-lg font-semibold text-zinc-100 shadow-sm shadow-blue-700/40 hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+          href="#"
+          className=" hidden md:block relative rounded min-w-fit max-w-fit px-2 py-1 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300"
+        >
+          <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+          <div className="flex items-center">
+            <svg
+              id="Layer_1"
+              fill="#f4f4f5"
+              viewBox="0 0 24 24"
+              className="mr-1 h-4 w-4 text-zinc-100"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                id="Layer_1"
-                fill="#f4f4f5"
-                viewBox="0 0 24 24"
-                className="-ml-0.5 h-5 w-5 text-zinc-100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="m22.294 7.827a1.622 1.622 0 0 0 -1.314-.674h-13.924l-.837-2.4a2 2 0 0 0 -1.891-1.345h-2.328a.6.6 0 0 0 0 1.2h2.328a.8.8 0 0 1 .758.539l.972 2.792.009.025 2.246 6.463a3.407 3.407 0 0 0 3.217 2.289h6.044a3.4 3.4 0 0 0 3.226-2.323l1.714-5.1a1.626 1.626 0 0 0 -.22-1.466zm-.916 1.08-1.713 5.1a2.206 2.206 0 0 1 -2.092 1.5h-6.044a2.207 2.207 0 0 1 -2.084-1.482l-1.972-5.671h13.506a.42.42 0 0 1 .4.554zm-8.457 10.44a1.275 1.275 0 1 1 -1.275-1.275 1.275 1.275 0 0 1 1.275 1.276zm6.26 0a1.275 1.275 0 1 1 -1.275-1.275 1.275 1.275 0 0 1 1.275 1.276z" />
-              </svg>
-              {track.price} €
-            </Link>
+              <path d="m22.294 7.827a1.622 1.622 0 0 0 -1.314-.674h-13.924l-.837-2.4a2 2 0 0 0 -1.891-1.345h-2.328a.6.6 0 0 0 0 1.2h2.328a.8.8 0 0 1 .758.539l.972 2.792.009.025 2.246 6.463a3.407 3.407 0 0 0 3.217 2.289h6.044a3.4 3.4 0 0 0 3.226-2.323l1.714-5.1a1.626 1.626 0 0 0 -.22-1.466zm-.916 1.08-1.713 5.1a2.206 2.206 0 0 1 -2.092 1.5h-6.044a2.207 2.207 0 0 1 -2.084-1.482l-1.972-5.671h13.506a.42.42 0 0 1 .4.554zm-8.457 10.44a1.275 1.275 0 1 1 -1.275-1.275 1.275 1.275 0 0 1 1.275 1.276zm6.26 0a1.275 1.275 0 1 1 -1.275-1.275 1.275 1.275 0 0 1 1.275 1.276z" />
+            </svg>
+            <span className="relative whitespace-nowrap">{track.price} €</span>
+          </div>
+        </Link>
           </div>
 
           <div className="mx-auto  lg:mx-0  z-20">

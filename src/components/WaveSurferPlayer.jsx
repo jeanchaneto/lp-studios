@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { PlayIcon, PauseIcon } from "@heroicons/react/20/solid";
 import React from "react";
-
+import { useAudio } from "@/context/audioContext";
 // Create a React component that will render wavesurfer.
 import WaveSurfer from "wavesurfer.js";
 
@@ -45,9 +45,11 @@ const WaveSurferPlayer = React.memo((props) => {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const wavesurfer = useWavesurfer(containerRef, props)
+  const { setBottomPlayerOn } = useAudio()
 
   // On play button click
   const onPlayClick = useCallback(() => {
+    setBottomPlayerOn(false);
     wavesurfer.isPlaying() ? wavesurfer.pause() : wavesurfer.play()
   }, [wavesurfer])
 

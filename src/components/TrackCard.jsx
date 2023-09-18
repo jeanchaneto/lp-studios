@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import WaveSurferPlayer from "./WaveSurferPlayer";
 import Link from "next/link";
 import { FadeIn } from "./FadeIn";
+import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+
+
 
 const TrackCard = (props) => {
 
@@ -9,17 +11,8 @@ const [active, setActive] = useState(false);
 
   return (
     <FadeIn>
-    <div className=" justify-between  border w-full  border-zinc-400/20 rounded-lg p-2  sm:mx-0 bg-zinc-800/30  max-w-7xl ">
-      <WaveSurferPlayer
-        height={112}
-        waveColor="#042f2e"
-        progressColor="#0f766e"
-        url={props.previewUrl}
-        className=" w-full  "
-        image={props.image}
-        coverWidth={112}
-        coverHeight={112}
-      />
+    {/* <div className=" justify-between  border w-full  border-zinc-400/20 rounded-lg p-2  sm:mx-0 bg-zinc-800/30  max-w-7xl ">
+
       <div className=" mt-4 md:mt-0 flex flex-col md:flex-row justify-between w-full items-baseline flex-shrink-0 ">
         <div className="flex items-baseline flex-2 lg:flex-1 w-full">
           <h3 className="text-lg font-bold text-zinc-300 mr-4 w-1/3 sm:w-1/4  ">
@@ -103,7 +96,12 @@ const [active, setActive] = useState(false);
           </Link>
         </div>
       </div>
-    </div>
+    </div> */}
+
+<Card>
+  
+</Card>
+
     </FadeIn>
   );
 };
