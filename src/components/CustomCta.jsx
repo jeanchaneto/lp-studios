@@ -6,12 +6,6 @@ import { FadeIn } from "./FadeIn";
 
 const CustomCta = () => {
 
-  const handlePlay = () => {
-    setAudioUrl(props.previewUrl);
-    setContextTrack(props);
-    setBottomPlayerOn(true);
-  };
-
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 

@@ -3,12 +3,14 @@ import TrackCard from "@/components/TrackCard";
 import { tracks } from "@/data/tracks";
 import Image from "next/image";
 import { features } from "@/libs/constants";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+
 
 export default function Tracks() {
   return (
-    <main className="bg-zinc-950 py-24 sm:py-32">
-      <section className=" pt-24 sm:pt-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <main className="bg-zinc-950 ">
+      <section className=" py-24 sm:py-32 bg-[url('/images/tracks-cover.jpg')] bg-cover backdrop-opacity-25 ">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <p className="text-base font-semibold text-teal-300">
               Discover Your Next Hit
@@ -17,13 +19,12 @@ export default function Tracks() {
               Ghost Produced Tracks
             </h1>
             <p className="mt-6 text-xl text-zinc-400">
-              Explore our release-ready ghost-produced
-              tracks in Afro House, Melodic House & Techno, and Organic House.
+              Explore our release-ready ghost-produced tracks in Afro House,
+              Melodic House & Techno, and Organic House.
             </p>
-
-            <dl className="mt-6 grid max-w-lg grid-cols-1 gap-2 text-base text-zinc-400 sm:grid-cols-2 lg:mx-0  lg:gap-x-16 whitespace-nowrap ">
+            <dl className="mt-6 grid max-w-lg grid-cols-1 gap-2 text-base text-zinc-400 min-[400px]:grid-cols-2 lg:mx-0  lg:gap-x-16 whitespace-nowrap ">
               {features.map((feature) => (
-                <div key={feature.name} className="relative pl-9">
+                <div key={feature.name} className="relative pl-9 font-light">
                   <dt className="inline text-zinc-400">
                     <Image
                       src={feature.icon}
@@ -32,7 +33,6 @@ export default function Tracks() {
                       width={20}
                       height={20}
                     />
-
                     {feature.name}
                   </dt>{" "}
                 </div>
@@ -41,9 +41,7 @@ export default function Tracks() {
           </div>
         </div>
       </section>
-      <section
-        className=" mx-auto max-w-7xl space-y-3 px-6 lg:px-8 bg-zinc-950 pt-24 sm:pt-32 lg:pt-40 "
-      >
+      <section className=" mx-auto max-w-7xl space-y-3 px-6 lg:px-8 bg-zinc-950 py-24 sm:py-32 lg:pt-40 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl ">
           {tracks.map((track) => (
             <div key={track.id}>
@@ -54,13 +52,21 @@ export default function Tracks() {
       </section>
 
       <section className="bg-zinc-950">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+        <div className="relative max-w-4xl mx-auto">
+          <div
+            className="absolute inset-0 flex px-6 items-center "
+            aria-hidden="true"
+          >
+            <div className="w-full border-t border-zinc-100/10" />
+          </div>
+        </div>
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 flex flex-col min-[550px]:flex-row lg:items-center lg:px-8 text-center min-[550px]:text-left ">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
             Looking for a custom track ?
             <br />
             Explore our tailored ghost production services.
           </h2>
-          <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+          <div className="mt-10 flex items-center gap-x-6 lg:mt-0 mx-auto flex-shrink-0">
             <Link
               href="/ghost-production"
               className="text-sm font-semibold leading-6 text-teal-300 flex gap-2 border py-2.5 px-3.5 rounded-md border-teal-300 "
@@ -73,6 +79,14 @@ export default function Tracks() {
                 alt="Learn more"
               />
             </Link>
+          </div>
+        </div>
+        <div className="relative max-w-4xl mx-auto">
+          <div
+            className="absolute inset-0 px-6 flex items-center "
+            aria-hidden="true"
+          >
+            <div className="w-full border-t border-zinc-100/10" />
           </div>
         </div>
       </section>
