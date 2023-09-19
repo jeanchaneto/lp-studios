@@ -30,7 +30,7 @@ const TrackCard = (props) => {
       <FadeIn>
         {props.inStock ? (
           <Card
-            className=" sm:max-w-xs  bg-gradient-to-b from-zinc-950 to-gray-950 text-zinc-100 relative group/card "
+            className=" sm:max-w-xs  bg-gradient-to-b from-zinc-950 to-gray-900 text-zinc-100 relative group/card "
             onMouseMove={handleMouseMove}
           >
             <motion.div

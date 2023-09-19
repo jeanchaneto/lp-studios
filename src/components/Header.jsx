@@ -30,8 +30,9 @@ const Header = () => {
   const { pathname } = useRouter();
 
   return (
-    <div className="absolute inset-x-0 top-0 z-50">
+    <div className=" z-50">
       <Navbar
+      position=""
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         isBlurred={false}

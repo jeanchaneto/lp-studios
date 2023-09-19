@@ -52,87 +52,97 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    
-    <footer className="bg-gradient-to-tr from-teal-950/10  to bg-zinc-950" aria-labelledby="footer-heading">
+    <footer
+      className="bg-gradient-to-tr from-teal-950/10  to bg-zinc-950 border-t border-white/10 "
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
-      </h2><FadeIn>
+      </h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Image src={logo} className=" w-48 " alt="LAP Studios logo" />
-            <p className="text-sm leading-6 text-zinc-300">
-              Crafting Tomorrow's Sound, Today.
-            </p>
-            <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-zinc-400 hover:text-zinc-100"
-                  target="blank"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
+            <FadeIn className="space-y-8">
+              <Image src={logo} className=" w-48 " alt="LAP Studios logo" />
+              <p className="text-sm leading-6 text-zinc-300">
+                Crafting Tomorrow's Sound, Today.
+              </p>
+              <div className="flex space-x-6">
+                {navigation.social.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-zinc-400 hover:text-zinc-100"
+                    target="blank"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
+            </FadeIn>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-teal-700 tracking-wider">
-                  Services
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.services.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-zinc-400 hover:text-zinc-100"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <FadeIn>
+                  <h3 className="text-sm font-semibold text-teal-700 tracking-wider">
+                    Services
+                  </h3>
+                  <ul role="list" className="mt-6 space-y-4">
+                    {navigation.services.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="text-sm text-zinc-400 hover:text-zinc-100"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </FadeIn>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold text-teal-700 tracking-wider">
-                  Info
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.info.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-zinc-400 hover:text-zinc-100"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <FadeIn>
+                  <h3 className="text-sm font-semibold text-teal-700 tracking-wider">
+                    Info
+                  </h3>
+                  <ul role="list" className="mt-6 space-y-4">
+                    {navigation.info.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="text-sm text-zinc-400 hover:text-zinc-100"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </FadeIn>
               </div>
             </div>
+
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-teal-700 tracking-wider">
-                  Legal
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-zinc-400 hover:text-zinc-100"
-                        
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <FadeIn>
+                  <h3 className="text-sm font-semibold text-teal-700 tracking-wider">
+                    Legal
+                  </h3>
+                  <ul role="list" className="mt-6 space-y-4">
+                    {navigation.legal.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="text-sm text-zinc-400 hover:text-zinc-100"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </FadeIn>
               </div>
             </div>
           </div>
@@ -149,8 +159,7 @@ export default function Footer() {
             </a>
           </p>
         </div>
-      </div></FadeIn>
+      </div>
     </footer>
-    
   );
 }
