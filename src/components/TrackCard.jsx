@@ -4,6 +4,7 @@ import { FadeIn } from "./FadeIn";
 import { Card, CardBody, Image } from "@nextui-org/react";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import { useAudio } from "@/context/audioContext";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 const TrackCard = (props) => {
   const [active, setActive] = useState(false);
@@ -15,30 +16,57 @@ const TrackCard = (props) => {
     setBottomPlayerOn(true);
   };
 
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }) {
+    let { left, top } = currentTarget.getBoundingClientRect();
+
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
   return (
     <FadeIn>
+      <Card
+        className=" sm:max-w-xs  bg-gradient-to-b from-zinc-950 to-gray-950 text-zinc-100 relative group/card "
+        onMouseMove={handleMouseMove}
+      >
+        <motion.div
+          className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover/card:opacity-100 z-0 "
+          style={{
+            background: useMotionTemplate`
+            radial-gradient(
+              350px circle at ${mouseX}px ${mouseY}px,
+              rgba(45, 212, 191, 0.10),
+              transparent 80%
+            )
+          `,
+          }}
+        />
 
-      <Card className=" sm:max-w-xs bg-transparent border border-white/20 text-zinc-100 ">
-        <CardBody className="  ">
+        <CardBody className=" ">
           <div
-            className="relative cursor-pointer group mb-2 min-[340px]:mb-6 "
+            className="relative cursor-pointer  mb-2 min-[340px]:mb-6 z-20 bg-zinc-950 rounded-xl group/image "
             onClick={handlePlay}
           >
-            <PlayIcon className=" absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100  transition-opacity duration-300 w-20 h-20 " />
-            <p className=" hidden min-[340px]:block absolute z-20 font-kallisto font-bold tracking-widest text-xl left-1/2 -translate-x-1/2 bottom-8 backdrop-blur-lg rounded-md py-2 px-1.5">
-              {props.title}
-            </p>
-            <Image
-              src={props.image}
-              alt="Album cover"
-              className=" group-hover:opacity-50 transition-opacity duration-300"
-            />
+            <div className="group-hover/image:opacity-20 transition-opacity duration-300">
+              <Image src={props.image} alt="Album cover" className="  " />
+            </div>
+            <PlayIcon className=" absolute top-1/2 left-1/2 z-30  text-zinc-100 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover/image:opacity-100  transition-opacity duration-300 w-20 h-20 " />
           </div>
           <Link
             href={`/ghost-produced-tracks/${props.id}`}
-            className=" cursor-pointer hover:opacity-50 transition-opacity duration-300"
+            className=" cursor-pointer group/link max-w-fit "
           >
-            <h2 className="font-bold text-lg">{props.title}</h2>
+            <div className="flex items-center gap-5">
+              <h2 className="font-bold text-lg ">{props.title}</h2>
+              <img
+                src="/icons/right-arrow.svg"
+                alt="Track infos"
+                className=" w-5 h-5 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300 "
+              />
+            </div>
             <p className=" text-teal-300 whitespace-nowrap ">{props.genre}</p>{" "}
           </Link>
           <div className=" my-4 flex gap-2">
@@ -53,9 +81,9 @@ const TrackCard = (props) => {
           <div className="w-full flex justify-end">
             <Link
               href="#"
-              className="relative rounded min-w-fit max-w-fit px-2 py-1 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300"
+              className="relative rounded min-w-fit max-w-fit px-2 py-1 overflow-hidden group/button bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-1 hover:ring-offset-1 hover:ring-blue-600 transition-all ease-out duration-300"
             >
-              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover/button:-translate-x-40 ease"></span>
               <div className="flex items-center">
                 <svg
                   id="Layer_1"

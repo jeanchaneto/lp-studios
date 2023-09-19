@@ -6,8 +6,7 @@ import Image from "next/image";
 
 const TrackShowcase = () => {
 
-const latestTracks = tracks.slice(0, 2);
-console.log(latestTracks);
+const latestTracks = tracks.slice(0, 4);
 
   return (
     <section
@@ -21,7 +20,7 @@ console.log(latestTracks);
         </h2>
       </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl ">
-          {tracks.map((track) => (
+          {latestTracks.map((track) => (
             <div key={track.id}>
               <TrackCard {...track} />
             </div>
