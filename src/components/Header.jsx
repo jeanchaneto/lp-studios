@@ -13,6 +13,7 @@ import {
   NavbarMenuToggle,
   NavbarMenuItem,
 } from "@nextui-org/react";
+import { FadeIn, FadeInStagger } from "./FadeIn";
 
 const navigation = [
   { name: "Tracks", href: "/ghost-produced-tracks" },
@@ -30,9 +31,8 @@ const Header = () => {
 
   return (
     <div className="absolute inset-x-0 top-0 z-50">
-
       <Navbar
-      isMenuOpen={isMenuOpen}
+        isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         isBlurred={false}
         className=" bg-transparent text-zinc-100 "
@@ -43,11 +43,7 @@ const Header = () => {
       >
         <NavbarContent>
           <NavbarBrand>
-            <Link
-              href="/"
-              className="-m-1.5 p-1.5"
-           
-            >
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">LAP Studios</span>
               <Image className="h-8 w-auto" src={logo} alt="LAP Studios logo" />
             </Link>
@@ -57,53 +53,58 @@ const Header = () => {
             className="md:hidden"
           />
         </NavbarContent>
-
-        <NavbarContent className="hidden md:flex lg:gap-x-12 " justify="end">
-          {navigation.map((item) => (
-            <NavbarItem key={item.name}>
-              <Link
-                href={item.href}
-                className="text-base font-semibold tracking-wider relative px-3 py-1.5 hover:opacity-60 transition-opacity duration-300 "
-
-              >
-                <AnimatePresence>
-                  {pathname === item.href && (
-                    <motion.span
-                      layoutId="bubble"
-                      className="absolute inset-0 -z-10 bg-teal-950/70 "
-                      style={{ borderRadius: 9999 }}
-                      transition={{
-                        type: "spring",
-                        bounce: 0.2,
-                        duration: 0.6,
-                      }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    />
-                  )}
-                </AnimatePresence>
-                {item.name}
-              </Link>
-            </NavbarItem>
-          ))}
-        </NavbarContent>
+        <FadeInStagger faster="true">
+          <NavbarContent className="hidden md:flex lg:gap-x-12 " justify="end">
+            {navigation.map((item) => (
+              <NavbarItem key={item.name}>
+                <FadeIn>
+                  <Link
+                    href={item.href}
+                    className="text-base font-semibold tracking-wider relative px-3 py-1.5 hover:opacity-60 transition-opacity duration-300 "
+                  >
+                    <AnimatePresence>
+                      {pathname === item.href && (
+                        <motion.span
+                          layoutId="bubble"
+                          className="absolute inset-0 -z-10 bg-teal-950/70 "
+                          style={{ borderRadius: 9999 }}
+                          transition={{
+                            type: "spring",
+                            bounce: 0.2,
+                            duration: 0.6,
+                          }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        />
+                      )}
+                    </AnimatePresence>
+                    {item.name}
+                  </Link>
+                </FadeIn>
+              </NavbarItem>
+            ))}
+          </NavbarContent>
+        </FadeInStagger>
 
         <NavbarMenu>
+
           {navigation.map((item) => (
             <NavbarMenuItem key={item.name}>
-              <Link
-                href={item.href}
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  console.log("clicked");
-                }}
-                className={`-mx-3 block rounded-lg px-3 py-1.5 text-base tracking-wider font-semibold leading-7 text-zinc-100 ${
-                  pathname === item.href && "bg-teal-900/30"
-                }`}
-              >
-                {item.name}
-              </Link>
+              <FadeIn>
+                <Link
+                  href={item.href}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    console.log("clicked");
+                  }}
+                  className={`-mx-3 block rounded-lg px-3 py-1.5 text-base tracking-wider font-semibold leading-7 text-zinc-100 ${
+                    pathname === item.href && "bg-teal-900/30"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </FadeIn>
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
