@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
       <title>LAP Studios | Ghost Production</title>
       </Head>
-      <div className=" bg-gradient-radial from-zinc-900/90  to-zinc-950 ">
+      <div className="   bg-zinc-950 ">
         <Hero />
         <TrackShowcase />
         <BenefitsSection />

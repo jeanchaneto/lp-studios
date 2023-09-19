@@ -83,7 +83,7 @@ const TrackPage = ({ track }) => {
             </h1>
             <Link
               href="#"
-              className="relative rounded min-w-fit max-w-fit px-2 py-1 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300"
+              className="relative rounded min-w-fit max-w-fit py-1.5 px-1.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-1 hover:ring-offset-1 hover:ring-blue-600 transition-all ease-out duration-300"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               <div className="flex items-center">
@@ -121,29 +121,60 @@ const TrackPage = ({ track }) => {
             <p className="mt-6 text-lg leading-8 text-zinc-300">
               {track.description}
             </p>
-            <ul className="flex flex-wrap mt-6  gap-x-8 gap-y-6 text-base font-semibold leading-7 text-zinc-300 md:flex lg:gap-x-10 whitespace-nowrap ">
-              <li className=" text-teal-300 ">
+            <ul className="flex flex-wrap mt-6  gap-x-8 gap-y-6 text-base font-normal text-zinc-300 md:flex lg:gap-x-10 whitespace-nowrap  ">
+              <li className=" text-teal-300 rounded-lg max-w-fit border border-teal-300 py-1.5 px-1.5 ">
                 <p>{track.genre}</p>
               </li>
-              <li className="px-2 py-1 bg-teal-950/60 rounded-lg max-w-fit ">
+              <li className="py-1.5 px-1.5 bg-teal-950 rounded-lg max-w-fit flex items-center gap-1 ">
+                <img src="/icons/clock.svg" alt="Duration" className=" w-4 h-4 " />
                 <p>{track.duration} min</p>
               </li>
-              <li className="px-2 py-1 bg-teal-950/60 rounded-lg max-w-fit">
+              <li className="py-1.5 px-1.5 bg-teal-950 rounded-lg max-w-fit flex items-center gap-1">
+              <img
+                  src="/icons/metronome.svg"
+                  alt="Track tempo"
+                  className=" w-4 h-4 "
+                />
                 <p>{track.bpm} Bpm</p>
               </li>
-              <li className="px-2 py-1 bg-cyan-950/60 rounded-lg max-w-fit ">
+              <li className="py-1.5 px-1.5 bg-cyan-950 rounded-lg max-w-fit flex items-center gap-1">
+              <img
+                  src="/icons/treble-clef.svg"
+                  alt="Track key"
+                  className=" w-4 h-4 "
+                />
                 <p>{track.songKey}</p>
               </li>
-              <li className="px-2 py-1 bg-zinc-800/60 rounded-lg max-w-fit ">
+              <li className="py-1.5 px-1.5 bg-gray-800 rounded-lg max-w-fit flex items-center gap-1">
+              <img
+                  src="/icons/music-file.svg"
+                  alt="Track file"
+                  className=" w-4 h-4 "
+                />
                 <p>Master</p>
               </li>
-              <li className="px-2 py-1 bg-zinc-800/60 rounded-lg max-w-fit ">
+              <li className="py-1.5 px-1.5 bg-gray-800 rounded-lg max-w-fit flex items-center gap-1">
+              <img
+                  src="/icons/music-file.svg"
+                  alt="Track file"
+                  className=" w-4 h-4 "
+                />
                 <p>Premaster</p>
               </li>
-              <li className="px-2 py-1 bg-zinc-800/60 rounded-lg max-w-fit ">
+              <li className="py-1.5 px-1.5 bg-gray-800 rounded-lg max-w-fit flex items-center gap-1">
+              <img
+                  src="/icons/music-file.svg"
+                  alt="Track file"
+                  className=" w-4 h-4 "
+                />
                 <p>Stems</p>
               </li>
-              <li className="px-2 py-1 bg-zinc-800/60 rounded-lg max-w-fit ">
+              <li className="py-1.5 px-1.5 bg-gray-800 rounded-lg max-w-fit flex items-center gap-1">
+              <img
+                  src="/icons/project-file.svg"
+                  alt="Track file"
+                  className=" w-4 h-4 "
+                />
                 <p>{track.daw} project</p>
               </li>
             </ul>
@@ -170,15 +201,20 @@ const TrackPage = ({ track }) => {
 export default TrackPage;
 
 export async function getStaticPaths() {
-  const paths = tracks.map((track) => ({
-    params: { id: track.id.toString() },
-  }));
+  const paths = tracks
+    .filter(track => track.inStock)
+    .map((track) => ({
+      params: { id: track.id.toString() },
+    }));
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const track = tracks.find((track) => track.id === parseInt(params.id));
+  const track = tracks
+    .filter(track => track.inStock)
+    .find((track) => track.id === parseInt(params.id));
+
 
   return {
     props: { track },

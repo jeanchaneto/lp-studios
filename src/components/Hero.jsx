@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroImage from "../../public/images/heroImage.svg";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -26,13 +27,13 @@ const Hero = () => {
             track tailored for you. Quality and vibe are our game.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#latest-tracks"
+            <Link
+              href="/ghost-produced-tracks"
               className="relative rounded px-5 py-2.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               <span className="relative">Get started</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0  ">

@@ -93,9 +93,6 @@ const WaveSurferPlayer = React.memo((props) => {
           height={256}
           className=" rounded-lg opacity-80 object-cover w-full "
         />
-         <p className=" hidden min-[340px]:block absolute z-20 font-kallisto font-bold tracking-widest text-xl left-1/2 -translate-x-1/2 bottom-10 backdrop-blur-lg rounded-md py-2 px-1.5 text-zinc-100 ">
-              {props.title}
-            </p>
         {isPlaying ? (
           <div>
             <PauseIcon className="absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 w-16 h-16" />

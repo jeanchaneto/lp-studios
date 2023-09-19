@@ -5,7 +5,7 @@ export const tracks = [
       genre: "Afro House",
       bpm: 120,
       duration: "5:30",
-      songKey: "Bmajor",
+      songKey: "B major",
       image: "/images/albumcover.jpg",
       description:
         "An emotional Afro house track suitable for label like Get Physical",
@@ -13,6 +13,7 @@ export const tracks = [
       daw: "Ableton Live 11",
       url: "#",
       previewUrl: "/audio/testaudio.mp3",
+      inStock: true
     },
     {
       id: 2,
@@ -20,13 +21,14 @@ export const tracks = [
       genre: "Melodic house & Techno",
       bpm: 122,
       duration: "5:30",
-      songKey: "Amajor",
+      songKey: "A major",
       image: "/images/albumcover.jpg",
       description:
         "An emotional Afro house track suitable for label like Get Physical",
       price: 1599,
       url: "#",
       previewUrl: "/audio/testaudio2.mp3",
+      inStock: true
     },
     {
       id: 3,
@@ -34,7 +36,7 @@ export const tracks = [
       genre: "Organic House",
       bpm: 121,
       duration: "5:30",
-      songKey: "Cminor",
+      songKey: "C minor",
       image: "/images/albumcover.jpg",
       description:
         "An emotional Afro house track suitable for label like Get Physical",
@@ -42,6 +44,7 @@ export const tracks = [
       daw: "Ableton Live 11",
       url: "#",
       previewUrl: "/audio/testaudio3.mp3",
+      inStock: true
     },
     {
       id: 4,
@@ -49,7 +52,7 @@ export const tracks = [
       genre: "Organic House",
       bpm: 121,
       duration: "5:30",
-      songKey: "Cminor",
+      songKey: "C minor",
       image: "/images/albumcover.jpg",
       description:
         "An emotional Afro house track suitable for label like Get Physical",
@@ -57,5 +60,54 @@ export const tracks = [
       daw: "Logic Pro X",
       url: "#",
       previewUrl: "/audio/testaudio4.mp3",
+      inStock: true
+    },
+    {
+      id: 5,
+      title: "Bio",
+      genre: "Organic House",
+      bpm: 121,
+      duration: "5:30",
+      songKey: "C minor",
+      image: "/images/albumcover.jpg",
+      description:
+        "An emotional Afro house track suitable for label like Get Physical",
+      price: 999,
+      daw: "Logic Pro X",
+      url: "#",
+      previewUrl: "/audio/testaudio4.mp3",
+      inStock: false
+    },
+    {
+      id: 6,
+      title: "Bio",
+      genre: "Organic House",
+      bpm: 121,
+      duration: "5:30",
+      songKey: "C minor",
+      image: "/images/albumcover.jpg",
+      description:
+        "An emotional Afro house track suitable for label like Get Physical",
+      price: 999,
+      daw: "Logic Pro X",
+      url: "#",
+      previewUrl: "/audio/testaudio4.mp3",
+      inStock: false
+    },
+    {
+      id: 8,
+      title: "Bio",
+      genre: "Organic House",
+      bpm: 121,
+      duration: "5:30",
+      songKey: "C minor",
+      image: "/images/albumcover.jpg",
+      description:
+        "An emotional Afro house track suitable for label like Get Physical",
+      price: 999,
+      daw: "Logic Pro X",
+      url: "#",
+      previewUrl: "/audio/testaudio4.mp3",
+      inStock: false
     },
   ];
