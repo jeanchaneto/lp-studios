@@ -26,8 +26,7 @@ const navigation = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter(); // Using useRouter to determine the active navigation item
-  const currentPage = router.pathname; // Getting the current page from useRouter
-  const [activeNav, setActiveNav] = useState(currentPage);
+  const { pathname } = useRouter();
 
   return (
     <div className="absolute inset-x-0 top-0 z-50">
@@ -47,7 +46,7 @@ const Header = () => {
             <Link
               href="/"
               className="-m-1.5 p-1.5"
-              onClick={() => setActiveNav("/")}
+           
             >
               <span className="sr-only">LAP Studios</span>
               <Image className="h-8 w-auto" src={logo} alt="LAP Studios logo" />
@@ -65,10 +64,10 @@ const Header = () => {
               <Link
                 href={item.href}
                 className="text-base font-semibold tracking-wider relative px-3 py-1.5 hover:opacity-60 transition-opacity duration-300 "
-                onClick={() => setActiveNav(item.href)}
+
               >
                 <AnimatePresence>
-                  {activeNav === item.href && (
+                  {pathname === item.href && (
                     <motion.span
                       layoutId="bubble"
                       className="absolute inset-0 -z-10 bg-teal-950/70 "
@@ -96,12 +95,11 @@ const Header = () => {
               <Link
                 href={item.href}
                 onClick={() => {
-                  setActiveNav(item.href);
                   setIsMenuOpen(false);
                   console.log("clicked");
                 }}
                 className={`-mx-3 block rounded-lg px-3 py-1.5 text-base tracking-wider font-semibold leading-7 text-zinc-100 ${
-                  activeNav === item.href && "bg-teal-900/30"
+                  pathname === item.href && "bg-teal-900/30"
                 }`}
               >
                 {item.name}

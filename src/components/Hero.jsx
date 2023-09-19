@@ -35,7 +35,7 @@ const Hero = () => {
               <span className="relative">Browse tracks</span>
             </Link>
             <Link
-              href="/ghost-produced-tracks"
+              href="/ghost-production"
               className="relative rounded px-5 py-[8px] overflow-hidden group border border-zinc-100/20 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-60 ease"></span>
