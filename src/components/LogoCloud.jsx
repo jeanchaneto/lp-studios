@@ -1,3 +1,4 @@
+import { FadeIn } from "./FadeIn";
 
 const logos = [
   { src: "/images/logo-cloud/ableton-logo 1.png", alt: "Ableton logo" },
@@ -24,10 +25,11 @@ const logos = [
 
 const LogoCloud = () => {
   return (
-    <section className="relative pt-32 sm:pt-48  pb-24 sm:pb-32  overflow-hidden">
+    <FadeIn>
+    <section className="relative pt-32   pb-24 sm:pb-32  overflow-hidden">
       <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)] "></div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-xl font-semibold  text-zinc-100">
+        <h2 className="text-center text-xl font-semibold  text-zinc-400">
           Our tools of choice
         </h2>
 
@@ -58,6 +60,7 @@ const LogoCloud = () => {
         </div>
       </div>
     </section>
+    </FadeIn>
   );
 };
 

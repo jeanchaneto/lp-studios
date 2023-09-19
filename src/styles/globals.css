@@ -27,7 +27,7 @@ html {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: hsl(172, 66%, 50%, 0.4) hsl(240, 6%, 10%);
+  scrollbar-color: #3f3f46 hsl(240, 6%, 10%);
 }
 
 /* Custom range input for volume slide */
