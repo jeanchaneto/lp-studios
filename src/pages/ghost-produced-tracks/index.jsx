@@ -3,9 +3,16 @@ import TrackCard from "@/components/TrackCard";
 import { tracks } from "@/data/tracks";
 import Image from "next/image";
 import { features } from "@/libs/constants";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Head from "next/head";
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import Banner from "../../../public/images/tracks-cover.jpg";
 
 export default function Tracks() {
   let mouseX = useMotionValue(0);
@@ -18,14 +25,30 @@ export default function Tracks() {
     mouseY.set(clientY - top);
   }
 
+  let { scrollYProgress } = useScroll();
+  let y = useTransform(scrollYProgress, [0, 0.25], [0, 100]);
+
   return (
-    <main className="bg-zinc-950 ">
+    <main className="bg-zinc-950 relative ">
       <Head>
         <title>Ghost Produced Tracks | LAP Studios</title>
       </Head>
-      <section className=" py-24 sm:py-32 bg-[url('/images/tracks-cover.jpg')] bg-cover  bg-right-bottom">
+
+      <section className=" isolate py-24 sm:py-32 relative sm:h-[560px] overflow-hidden 
+      ">
+        <motion.div
+          style={{ y }}
+          className=" absolute w-screen -top-40 inset-x-0  -z-10 h-[560px] -translate-y-52  "
+        >
+          <Image
+            src={Banner}
+            className=" w-full  h-[900px] object-cover  opacity-70  "
+            alt=""
+          />
+        </motion.div>
+
         <FadeIn>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 z-50 ">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <p className="text-base font-semibold text-teal-300">
                 Discover Your Next Hit
@@ -119,7 +142,7 @@ export default function Tracks() {
 
       <section className=" py-16 sm:py-24 ">
         <div
-          className="mx-auto max-w-7xl sm:px-6 border border-zinc-100/10  lg:px-8 relative group/newsletter"
+          className="mx-auto max-w-7xl rounded-3xl sm:px-6 border border-zinc-100/10  lg:px-8 relative group/newsletter"
           onMouseMove={handleMouseMove}
         >
           <motion.div

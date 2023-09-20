@@ -30,7 +30,7 @@ const TrackCard = (props) => {
       <FadeIn>
         {props.inStock ? (
           <Card
-            className=" mx-auto max-w-xs  bg-gradient-to-b from-zinc-950 to-gray-900 text-zinc-100 relative group/card "
+            className=" mx-auto max-w-xs bg-zinc-900/50  text-zinc-100 relative group/card "
             onMouseMove={handleMouseMove}
           >
             <motion.div
@@ -39,7 +39,7 @@ const TrackCard = (props) => {
                 background: useMotionTemplate`
             radial-gradient(
               350px circle at ${mouseX}px ${mouseY}px,
-              rgba(45, 212, 191, 0.10),
+              rgba(212, 212, 216, 0.10),
               transparent 80%
             )
           `,
@@ -117,21 +117,10 @@ const TrackCard = (props) => {
           </Card>
         ) : (
           <Card
-            className=" sm:max-w-xs  bg-gradient-to-b from-zinc-950 to-gray-950 text-zinc-100 relative group/card "
-            onMouseMove={handleMouseMove}
+            className=" sm:max-w-xs  bg-zinc-900/50 text-zinc-100 relative group/card "
+        
           >
-            <motion.div
-              className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover/card:opacity-100 z-0 "
-              style={{
-                background: useMotionTemplate`
-            radial-gradient(
-              350px circle at ${mouseX}px ${mouseY}px,
-              rgba(45, 212, 191, 0.10),
-              transparent 80%
-            )
-          `,
-              }}
-            />
+            
 
             <CardBody className=" ">
               <div className="relative mb-2 min-[340px]:mb-6 z-20 bg-zinc-950 rounded-xl group/image ">
@@ -144,7 +133,7 @@ const TrackCard = (props) => {
                   </p>
                 </div>
               </div>
-              <div className=" cursor-pointer group/link max-w-fit opacity-50 ">
+              <div className=" group/link max-w-fit opacity-50 ">
                 <div className="flex items-center gap-5">
                   <h2 className="font-bold text-lg ">{props.title}</h2>
                 </div>

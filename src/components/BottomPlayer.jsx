@@ -106,7 +106,7 @@ const WaveSurferPlayer = React.memo((props) => {
           className=" relative flex-shrink-0 w-16 h-16 cursor-pointer group"
         >
           <Image
-            src={contextTrack.image}
+            src={ `/images/covers/${contextTrack.id}.jpg`}
             alt="album cover"
             width={64}
             height={64}
