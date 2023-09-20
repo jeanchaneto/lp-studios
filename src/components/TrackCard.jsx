@@ -30,7 +30,7 @@ const TrackCard = (props) => {
       <FadeIn>
         {props.inStock ? (
           <Card
-            className=" sm:max-w-xs  bg-gradient-to-b from-zinc-950 to-gray-900 text-zinc-100 relative group/card "
+            className=" mx-auto max-w-xs  bg-gradient-to-b from-zinc-950 to-gray-900 text-zinc-100 relative group/card "
             onMouseMove={handleMouseMove}
           >
             <motion.div
@@ -52,7 +52,7 @@ const TrackCard = (props) => {
                 onClick={handlePlay}
               >
                 <div className="group-hover/image:opacity-20 transition-opacity duration-300">
-                  <Image src={props.image} alt="Album cover" className="  " />
+                  <Image src={`/images/covers/${props.id}.jpg`} alt="Album cover" className="  " />
                 </div>
                 <PlayIcon className=" absolute top-1/2 left-1/2 z-30  text-zinc-100 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover/image:opacity-100  transition-opacity duration-300 w-20 h-20 " />
               </div>
@@ -137,7 +137,7 @@ const TrackCard = (props) => {
               <div className="relative mb-2 min-[340px]:mb-6 z-20 bg-zinc-950 rounded-xl group/image ">
                 <div className=" relative">
                   <div className=" opacity-40 ">
-                    <Image src={props.image} alt="Album cover" />
+                    <Image src={`/images/covers/${props.id}.jpg`} alt="Album cover" />
                   </div>
                   <p className=" z-40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-kallisto font-bold tracking-widest text-red-700 border-3 border-red-700 rounded xl py-2 px-1.5 ">
                     SOLD

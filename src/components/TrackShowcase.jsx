@@ -21,7 +21,7 @@ const TrackShowcase = () => {
         </div>
       </FadeIn>
       <FadeInStagger>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl px-6 lg:px-8 ">
+        <div className="grid grid-cols-1 min-[556px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl px-6 lg:px-8 ">
           {latestTracks.map((track) => (
             <div key={track.id}>
               <TrackCard {...track} />

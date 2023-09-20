@@ -83,14 +83,14 @@ const WaveSurferPlayer = React.memo((props) => {
   return (
     <div className="w-full mr-4 flex flex-col sm:flex-row gap-6 items-center ">
       <div
-        className=" group mr-4 w-full md:max-w-fit rounded-lg cursor-pointer relative bg-zinc-950 "
+        className=" group mr-4 w-full sm:max-w-[280px] rounded-lg cursor-pointer relative bg-zinc-950 "
         onClick={onPlayClick}
       >
         <Image
           src={props.image}
           alt="album cover"
-          width={256}
-          height={256}
+          width={280}
+          height={280}
           className=" rounded-lg opacity-80 object-cover w-full "
         />
         {isPlaying ? (
