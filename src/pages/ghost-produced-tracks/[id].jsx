@@ -6,6 +6,7 @@ import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import ProjectFileFeatures from "@/components/ProjectFileFeatures";
 import InlineLink from "@/components/InlineLink";
+import Head from "next/head";
 
 const TrackPage = ({ track }) => {
   const pages = [
@@ -22,7 +23,11 @@ const TrackPage = ({ track }) => {
   ];
 
   return (
-    <section className="bg-zinc-950">
+    <main className="bg-zinc-950">
+      <Head>
+        <title>{track.title} | LAP Studios</title>
+        <meta name="robots" content="noindex, follow" />
+      </Head>
       <div className=" bg-zinc-950 relative isolate overflow-hidden  pt-24 sm:pt-32 pb-8 sm:pb-16">
         <Image
           src={track.image}
@@ -194,7 +199,7 @@ const TrackPage = ({ track }) => {
         <Benefits />
       </div>
       <ProjectFileFeatures />
-    </section>
+    </main>
   );
 };
 

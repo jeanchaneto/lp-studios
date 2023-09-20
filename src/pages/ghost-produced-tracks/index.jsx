@@ -4,12 +4,25 @@ import { tracks } from "@/data/tracks";
 import Image from "next/image";
 import { features } from "@/libs/constants";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-
+import Head from "next/head";
 
 export default function Tracks() {
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }) {
+    let { left, top } = currentTarget.getBoundingClientRect();
+
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
   return (
     <main className="bg-zinc-950 ">
-      <section className=" py-24 sm:py-32 bg-[url('/images/tracks-cover.jpg')] bg-cover backdrop-opacity-25 ">
+      <Head>
+        <title>Ghost Produced Tracks | LAP Studios</title>
+      </Head>
+      <section className=" py-24 sm:py-32 bg-[url('/images/tracks-cover.jpg')] bg-cover  bg-right-bottom">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <p className="text-base font-semibold text-teal-300">
@@ -69,13 +82,13 @@ export default function Tracks() {
           <div className="mt-10 flex items-center gap-x-6 lg:mt-0 mx-auto flex-shrink-0">
             <Link
               href="/ghost-production"
-              className="text-sm font-semibold leading-6 text-teal-300 flex gap-2 border py-2.5 px-3.5 rounded-md border-teal-300 "
+              className="text-sm px-3 py-1.5 font-semibold leading-6 border-teal-300 rounded-xl text-teal-300 flex gap-2 hover:ring-1 hover:ring-offset-1 hover:ring-teal-200 transition-all ease-out duration-300 "
             >
               <p>Learn more</p>{" "}
               <Image
                 src="/icons/right-arrow.png"
-                width={14}
-                height={14}
+                width={20}
+                height={20}
                 alt="Learn more"
               />
             </Link>
@@ -91,9 +104,24 @@ export default function Tracks() {
         </div>
       </section>
 
-      <section className="bg-zinc-950 py-16 sm:py-24 ">
-        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="relative isolate overflow-hidden bg-zinc-900/40 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
+      <section className=" py-16 sm:py-24 ">
+        <div
+          className="mx-auto max-w-7xl sm:px-6 border border-zinc-100/10  lg:px-8 relative group/newsletter"
+          onMouseMove={handleMouseMove}
+        >
+          <motion.div
+            className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover/newsletter:opacity-100 z-0 "
+            style={{
+              background: useMotionTemplate`
+            radial-gradient(
+              650px circle at ${mouseX}px ${mouseY}px,
+              rgba(45, 212, 191, 0.10),
+              transparent 80%
+            )
+          `,
+            }}
+          />
+          <div className="relative isolate overflow-hidden px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
             <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
               Be the First to Know: <br /> Secure Your Track Before It's Gone !
             </h2>
@@ -113,14 +141,16 @@ export default function Tracks() {
                 type="email"
                 autoComplete="email"
                 required
-                className="min-w-0 flex-auto rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-teal-400 sm:text-sm sm:leading-6"
+                className="min-w-0 flex-auto rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-teal-400 transition-all duration-300  sm:text-sm sm:leading-6"
                 placeholder="Enter your email"
               />
               <button
                 type="submit"
-                className="flex-none rounded-md bg-blue-700 text-zinc-100 px-3.5 py-2.5 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                className="flex-none rounded-xl px-3.5 py-2.5 text-sm font-semibold 
+                overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center relative "
               >
-                Notify me
+                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                <span className="relative">Notify me</span>
               </button>
             </form>
           </div>
