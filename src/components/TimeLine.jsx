@@ -33,7 +33,7 @@ const timelineData = [
 
 const TimeLine = () => {
   return (
-    <section className=" mt-24  ">
+    <section className=" mt-24 py-24 sm:py-32  ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 md:text-center ">
         <FadeIn>
           <h2 className=" text-zinc-100 mx-auto text-3xl font-bold tracking-tight sm:text-4xl ">
@@ -64,7 +64,7 @@ const TimeLine = () => {
                   </svg>
                 </div>
 
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] rounded-xl  p-4 border border-zinc-100/10 backdrop-blur-2xl ">
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] rounded-xl  p-4 border border-zinc-100/10 ">
                   <div className="flex items-center justify-between space-x-2 mb-1">
                     <div className="font-bold text-zinc-100">{item.status}</div>
                   </div>

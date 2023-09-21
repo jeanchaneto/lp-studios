@@ -5,74 +5,15 @@ import Image from "next/image";
 import HeroImage from "../../public/images/ghost-production-hero-image.png";
 
 
-import { RadioGroup } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/20/solid'
-
-
 import {
   BuildingOffice2Icon,
   EnvelopeIcon,
   PhoneIcon,
+  CheckIcon
 } from "@heroicons/react/24/outline";
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-} from "@heroicons/react/24/outline";
+
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { useState } from "react";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-const frequencies = [
-  { value: 'monthly', label: 'Monthly', priceSuffix: '/month' },
-  { value: 'annually', label: 'Annually', priceSuffix: '/year' },
-]
-const tiers = [
-  {
-    name: 'Freelancer',
-    id: 'tier-freelancer',
-    href: '#',
-    price: { monthly: '$15', annually: '$144' },
-    description: 'The essentials to provide your best work for clients.',
-    features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', '48-hour support response time'],
-    mostPopular: false,
-  },
-  {
-    name: 'Startup',
-    id: 'tier-startup',
-    href: '#',
-    price: { monthly: '$30', annually: '$288' },
-    description: 'A plan that scales with your rapidly growing business.',
-    features: [
-      '25 products',
-      'Up to 10,000 subscribers',
-      'Advanced analytics',
-      '24-hour support response time',
-      'Marketing automations',
-    ],
-    mostPopular: true,
-  },
-  {
-    name: 'Enterprise',
-    id: 'tier-enterprise',
-    href: '#',
-    price: { monthly: '$48', annually: '$576' },
-    description: 'Dedicated support and infrastructure for your company.',
-    features: [
-      'Unlimited products',
-      'Unlimited subscribers',
-      'Advanced analytics',
-      '1-hour, dedicated support response time',
-      'Marketing automations',
-      'Custom reporting tools',
-    ],
-    mostPopular: false,
-  },
-]
 
 
 
@@ -103,9 +44,15 @@ const features = [
   },
 ];
 
-const GhostProduction = () => {
+const pricingContent = [
+  '25 products',
+  'Up to 10,000 subscribers',
+  'Advanced analytics',
+  '24-hour support response time',
+  'Marketing automations',
+]
 
-  const [frequency, setFrequency] = useState(frequencies[0])
+const GhostProduction = () => {
 
   return (
     <main className="  py-24 sm:py-32 relative">
@@ -187,123 +134,46 @@ const GhostProduction = () => {
 
       <TimeLine />
 
-      <section className="container mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32  ">
-        <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-white/10 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-          <div className="p-8 sm:p-10 lg:flex-auto">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-              Pricing
-            </h2>
-            <p className="mt-6 text-lg text-zinc-400">
-              At LAP Studios, our focus is on delivering professional Afro
-              House, Melodic House & Techno, Organic House, or Deep House. Our
-              pricing is both transparent and fixed, mirroring our dedication to
-              quality.
-            </p>
-          </div>
-          <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-            <div className="rounded-2xl bg-teal-950/20  py-10 text-center ring-1 ring-inset ring-teal-300/50 lg:flex lg:flex-col lg:justify-center lg:py-16">
-              <div className="mx-auto max-w-xs px-8">
-                <p className="text-base font-semibold text-zinc-300">
-                  One original track
-                </p>
-                <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-zinc-100">
-                    €1499 €
-                  </span>
-                </p>
-                <a
-                  href="#contact-ghost-production"
-                  className="mt-10 block w-full rounded-md bg-blue-700 px-3 py-2 text-center text-sm font-semibold text-zinc-100 shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                >
-                  Get started
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
-
-
-
-
-
-
-
-
-      <div className="bg-gray-900 py-24 sm:py-32">
+      <section className=" py-24 sm:py-32 bg-gradient-radial from-teal-950/90 to-60% to to-transparent bg-bottom ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-400">Pricing</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Pricing plans for teams of&nbsp;all&nbsp;sizes
-          </p>
+        
+          <h2 className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
+            Pricing
+          </h2>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
-        At LAP Studios, our focus is on delivering professional Afro
-              House, Melodic House & Techno, Organic House, or Deep House. Our
-              pricing is both transparent and fixed, mirroring our dedication to
-              quality.
+        <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-300">
+        Our price is transparent and fixed.<br/> Get started now, with no payment required and zero commitments..
         </p>
-        <div className="mt-16 flex justify-center">
-          <RadioGroup
-            value={frequency}
-            onChange={setFrequency}
-            className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"
-          >
-            <RadioGroup.Label className="sr-only">Payment frequency</RadioGroup.Label>
-            {frequencies.map((option) => (
-              <RadioGroup.Option
-                key={option.value}
-                value={option}
-                className={({ checked }) =>
-                  classNames(checked ? 'bg-indigo-500' : '', 'cursor-pointer rounded-full px-2.5 py-1')
-                }
-              >
-                <span>{option.label}</span>
-              </RadioGroup.Option>
-            ))}
-          </RadioGroup>
-        </div>
-        <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {tiers.map((tier) => (
+
+        <div className=" flex justify-center mt-10 px-6  ">
+         
             <div
-              key={tier.id}
-              className={classNames(
-                tier.mostPopular ? 'bg-white/5 ring-2 ring-indigo-500' : 'ring-1 ring-white/10',
-                'rounded-3xl p-8 xl:p-10'
-              )}
+             
+              className="bg-gradient-to-b from-zinc-950  to-zinc-900 ring-1 ring-zinc-100/10 rounded-3xl p-8 xl:p-10"
             >
-              <div className="flex items-center justify-between gap-x-4">
-                <h3 id={tier.id} className="text-lg font-semibold leading-8 text-white">
-                  {tier.name}
+              <div className="flex items-center justify-center gap-x-4 ">
+                <h3  className="text-lg  font-semibold leading-8 text-zinc-100">
+                One original track
                 </h3>
-                {tier.mostPopular ? (
-                  <p className="rounded-full bg-indigo-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white">
-                    Most popular
-                  </p>
-                ) : null}
+             
               </div>
-              <p className="mt-4 text-sm leading-6 text-gray-300">{tier.description}</p>
-              <p className="mt-6 flex items-baseline gap-x-1">
-                <span className="text-4xl font-bold tracking-tight text-white">{tier.price[frequency.value]}</span>
-                <span className="text-sm font-semibold leading-6 text-gray-300">{frequency.priceSuffix}</span>
+              <p className="mt-4 text-sm leading-6 text-zinc-300 text-center ">Unique production crafted to your requirements</p>
+              <p className="mt-6  items-baseline gap-x-1 text-4xl font-bold tracking-tight text-zinc-100 text-center">
+                <span className="">1499 €</span>
+             
               </p>
               <a
-                href={tier.href}
-                aria-describedby={tier.id}
-                className={classNames(
-                  tier.mostPopular
-                    ? 'bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500'
-                    : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
-                  'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
-                )}
-              >
-                Buy plan
-              </a>
+                      href="#contact-ghost-production"
+                      className=" mt-6 relative rounded-xl px-5 py-2.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
+                    >
+                      <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-48 bg-white opacity-10 rotate-12 sm:group-hover:-translate-x-80 ease"></span>
+                      <span className="relative">Get Started</span>
+                    </a>
               <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
-                {tier.features.map((feature) => (
+                {pricingContent.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
                     <CheckIcon className="h-6 w-5 flex-none text-white" aria-hidden="true" />
                     {feature}
@@ -311,10 +181,10 @@ const GhostProduction = () => {
                 ))}
               </ul>
             </div>
-          ))}
+      
         </div>
       </div>
-    </div>
+    </section>
 
 
 
@@ -364,10 +234,14 @@ const GhostProduction = () => {
         </div>
       </section> */}
 
-      <div className="relative isolate bg-gray-900">
+      <div 
+      id="contact-ghost-production"
+      className="relative isolate bg-gray-900">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-            <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+            <div 
+            
+            className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
                 <svg
                   className="absolute inset-0 h-full w-full stroke-gray-700 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
