@@ -133,53 +133,56 @@ const GhostProduction = () => {
 
       <section className=" py-24 sm:py-32 bg-gradient-radial from-teal-950/90 to-60% to to-transparent bg-bottom ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
-              Pricing
-            </h2>
-          </div>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-300">
-            Our price is transparent and fixed.
-            <br /> Get started now, with no payment required and zero
-            commitments..
-          </p>
-
-          <div className=" flex justify-center mt-10 px-6  ">
-            <div className="bg-gradient-to-b from-zinc-950  to-zinc-900 ring-1 ring-zinc-100/10 rounded-3xl p-8 xl:p-10">
-              <div className="flex items-center justify-center gap-x-4 ">
-                <h3 className="text-lg  font-semibold leading-8 text-zinc-100">
-                  One original track
-                </h3>
-              </div>
-              <p className="mt-4 text-sm leading-6 text-zinc-300 text-center ">
-                Unique production crafted to your requirements
-              </p>
-              <p className="mt-6  items-baseline gap-x-1 text-4xl font-bold tracking-tight text-zinc-100 text-center">
-                <span className="">1499 €</span>
-              </p>
-              <a
-                href="#contact-ghost-production"
-                className=" mt-6 relative rounded-xl px-5 py-2.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
-              >
-                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-48 bg-white opacity-10 rotate-12 sm:group-hover:-translate-x-80 ease"></span>
-                <span className="relative">Get Started</span>
-              </a>
-              <ul
-                role="list"
-                className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10"
-              >
-                {pricingContent.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
-                    <CheckIcon
-                      className="h-6 w-5 flex-none text-white"
-                      aria-hidden="true"
-                    />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+          <FadeIn>
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="mt-2 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
+                Pricing
+              </h2>
             </div>
-          </div>
+            <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-300">
+              Our price is transparent and fixed.
+              <br /> Get started now, with no payment required and zero
+              commitments..
+            </p>
+          </FadeIn>
+          <FadeIn>
+            <div className=" flex justify-center mt-10 px-6  ">
+              <div className="bg-gradient-to-b from-zinc-950  to-zinc-900 ring-1 ring-zinc-100/10 rounded-3xl p-8 xl:p-10">
+                <div className="flex items-center justify-center gap-x-4 ">
+                  <h3 className="text-lg  font-semibold leading-8 text-zinc-100">
+                    One original track
+                  </h3>
+                </div>
+                <p className="mt-4 text-sm leading-6 text-zinc-300 text-center ">
+                  Unique production crafted to your requirements
+                </p>
+                <p className="mt-6  items-baseline gap-x-1 text-4xl font-bold tracking-tight text-zinc-100 text-center">
+                  <span className="">1499 €</span>
+                </p>
+                <a
+                  href="#contact-ghost-production"
+                  className=" mt-6 relative rounded-xl px-5 py-2.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
+                >
+                  <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-48 bg-white opacity-10 rotate-12 sm:group-hover:-translate-x-80 ease"></span>
+                  <span className="relative">Get Started</span>
+                </a>
+                <ul
+                  role="list"
+                  className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10"
+                >
+                  {pricingContent.map((feature) => (
+                    <li key={feature} className="flex gap-x-3">
+                      <CheckIcon
+                        className="h-6 w-5 flex-none text-white"
+                        aria-hidden="true"
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -246,8 +249,8 @@ const GhostProduction = () => {
                 Reach out to us in complete confidentiality to start your
                 project. Let’s work together to bring your unique sound to life!
               </p>
-              <dl className="mt-10 space-y-4 text-base leading-7 text-zinc-300">
-                <div className="flex gap-x-4">
+              <dl className="mt-10 space-y-4 text-base leading-7 ">
+                <div className=" mt-10 flex text-zinc-300 gap-x-4">
                   <dt className="flex-none">
                     <span className="sr-only">Email</span>
                     <EnvelopeIcon
@@ -258,13 +261,18 @@ const GhostProduction = () => {
                   <dd>
                     <a
                       className="hover:text-zinc-100"
-                      href="info@lap-studios.com"
+                      href="mailto:info@lap-studios.com"
                     >
                       info@lap-studios.com
                     </a>
                   </dd>
                 </div>
               </dl>
+              <p className="mt-10 text-xs text-zinc-400">
+                While we wish we could collaborate with everyone, our commitment
+                to quality and high demand means we can only take on a limited
+                number of projects
+              </p>
             </div>
           </div>
           <Form />
