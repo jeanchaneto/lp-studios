@@ -187,7 +187,7 @@ export default function Tracks() {
                 <button
                   type="submit"
                   className="flex-none rounded-xl px-3.5 py-2.5 text-sm font-semibold 
-                overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center relative "
+                overflow-hidden group bg-sky-500  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-800 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center relative "
                 >
                   <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                   <span className="relative">Notify me</span>

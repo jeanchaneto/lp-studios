@@ -26,7 +26,7 @@ const logos = [
 const LogoCloud = () => {
   return (
     <FadeIn>
-    <section className="relative pt-16   pb-16   overflow-hidden">
+    <section className="relative pt-16 bg-zinc-950  py-24 sm:py-32 mb-24 sm:mb-32   overflow-hidden">
       <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)] "></div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-xl font-semibold  text-zinc-400">

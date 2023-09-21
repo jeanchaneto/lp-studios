@@ -1,5 +1,8 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import LogoCloud from "@/components/LogoCloud";
 import Image from "next/image";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const values = [
   {
@@ -34,15 +37,23 @@ const values = [
   },
 ];
 
+const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+
+const imageRevealVariants = {};
+
 export default function AboutUs() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+
   return (
-    <main className=" bg-neutral-950 ">
+    <main className=" ">
       {/* Hero section */}
       <section className="relative ">
         <div className="overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 ">
+          <div className="mx-auto max-w-7xl px-6 pt-12 pb-24 sm:pb-32 lg:px-8 ">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-              <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+              <FadeIn className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <p className="text-base font-semibold  text-teal-300">
                   About us
                 </p>
@@ -52,67 +63,84 @@ export default function AboutUs() {
                 <p className="relative mt-6 text-xl leading-8 text-zinc-400 sm:max-w-md lg:max-w-none">
                   At LAP Studios, we bring more than 10 years of experience in
                   music production to the table. We are not just your average
-                  producers; we are specialized ghost producers dedicated to
+                  producers, we are specialized ghost producers dedicated to
                   delivering unparalleled quality in each track.
                 </p>
-              </div>
-              <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                  <div className="relative">
-                    <Image
-                      src={"/images/about-us-photo1.jpg"}
-                      width={176}
-                      height={264}
-                      alt="LAP Studios equipment"
-                      className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+              </FadeIn>
+              <div className=" bg-gradient-radial from-zinc-400/20 to-50% to to-transparent ">
+                <motion.div
+                  className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
+                  initial={false}
+                  animate={
+                    isLoaded && isInView
+                      ? {
+                          WebkitMaskImage: visibleMask,
+                          maskImage: visibleMask,
+                        }
+                      : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+                  }
+                  transition={{ duration: 1, delay: 0.3 }}
+                  viewport={{ once: false }}
+                  onViewportEnter={() => setIsInView(true)}
+                  onLoad={() => setIsLoaded(true)}
+                >
+                  <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                    <div className="relative">
+                      <Image
+                        src={"/images/about-us-photo1.jpg"}
+                        width={176}
+                        height={264}
+                        alt="LAP Studios equipment"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover "
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
                   </div>
-                </div>
-                <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                  <div className="relative">
-                    <Image
-                      src={"/images/about-us-photo2.jpg"}
-                      width={176}
-                      height={264}
-                      alt="LAP Studios equipment"
-                      className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                  <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                    <div className="relative">
+                      <Image
+                        src={"/images/about-us-photo2.jpg"}
+                        width={176}
+                        height={264}
+                        alt="LAP Studios equipment"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover "
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
+                    <div className="relative">
+                      <Image
+                        src={"/images/about-us-photo3.jpg"}
+                        width={176}
+                        height={264}
+                        alt="LAP Studios equipment"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover "
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
                   </div>
-                  <div className="relative">
-                    <Image
-                      src={"/images/about-us-photo3.jpg"}
-                      width={176}
-                      height={264}
-                      alt="LAP Studios equipment"
-                      className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                  <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                    <div className="relative">
+                      <Image
+                        src={"/images/about-us-photo4.jpg"}
+                        width={176}
+                        height={264}
+                        alt="LAP Studios equipment"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover "
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
+                    <div className="relative">
+                      <Image
+                        src={"/images/about-us-photo5.jpg"}
+                        width={176}
+                        height={264}
+                        alt="LAP Studios equipment"
+                        className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover "
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
                   </div>
-                </div>
-                <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                  <div className="relative">
-                    <Image
-                      src={"/images/about-us-photo4.jpg"}
-                      width={176}
-                      height={264}
-                      alt="LAP Studios equipment"
-                      className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                  </div>
-                  <div className="relative">
-                    <Image
-                      src={"/images/about-us-photo5.jpg"}
-                      width={176}
-                      height={264}
-                      alt="LAP Studios equipment"
-                      className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                    />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
-                  </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -120,25 +148,27 @@ export default function AboutUs() {
       </section>
 
       {/* Values section */}
-      <section className="mx-auto mt-24 sm:mt-32 max-w-7xl px-6  lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <section className="mx-auto mt-24 sm:mt-32 max-w-7xl px-6 pb-24 sm:pb-32  lg:px-8 bg-gradient-radial  from-zinc-700/20 to-40% to to-transparent ">
+        <FadeIn className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
             Let's Elevate Your Career
           </h2>
           <p className="mt-6 text-lg leading-8 text-zinc-400">
             Join us in crafting the track that could be your breakthrough.. Your
-            vision, combined with our expertise, will create a harmonious
-            symphony that the world needs to hear.
+            vision, combined with our expertise, will create a resonant
+            composition ready to captivate the dancefloors.
           </p>
-        </div>
-        <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {values.map((value) => (
-            <div key={value.name}>
-              <dt className="font-semibold text-teal-500">{value.name}</dt>
-              <dd className="mt-1 text-zinc-400">{value.description}</dd>
-            </div>
-          ))}
-        </dl>
+        </FadeIn>
+        <FadeInStagger faster="true">
+          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            {values.map((value) => (
+              <FadeIn key={value.name}>
+                <dt className="font-semibold text-teal-500">{value.name}</dt>
+                <dd className="mt-1 text-zinc-400">{value.description}</dd>
+              </FadeIn>
+            ))}
+          </dl>
+        </FadeInStagger>
       </section>
       <LogoCloud />
     </main>

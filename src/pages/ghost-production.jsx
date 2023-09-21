@@ -4,10 +4,7 @@ import TimeLine from "@/components/TimeLine";
 import Image from "next/image";
 import HeroImage from "../../public/images/ghost-production-hero-image.png";
 
-import {
-  EnvelopeIcon,
-  CheckIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon, CheckIcon } from "@heroicons/react/24/outline";
 
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 
@@ -159,7 +156,7 @@ const GhostProduction = () => {
                 </p>
                 <a
                   href="#contact-ghost-production"
-                  className=" mt-6 relative rounded-xl px-5 py-2.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
+                  className=" mt-6 relative rounded-xl px-5 py-2.5 overflow-hidden group bg-green-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
                 >
                   <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-48 bg-white opacity-10 rotate-12 sm:group-hover:-translate-x-80 ease"></span>
                   <span className="relative">Get Started</span>
@@ -203,37 +200,42 @@ const GhostProduction = () => {
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100">
-                Get your free demo
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-zinc-400">
-                Reach out to us in complete confidentiality to start your
-                project. Let’s work together to bring your unique sound to life!
-              </p>
-              <dl className="mt-10 space-y-4 text-base leading-7 ">
-                <div className=" mt-10 flex text-zinc-300 gap-x-4">
-                  <dt className="flex-none">
-                    <span className="sr-only">Email</span>
-                    <EnvelopeIcon
-                      className="h-7 w-6 text-zinc-400"
-                      aria-hidden="true"
-                    />
-                  </dt>
-                  <dd>
-                    <a
-                      className="hover:text-zinc-100"
-                      href="mailto:info@lap-studios.com"
-                    >
-                      info@lap-studios.com
-                    </a>
-                  </dd>
-                </div>
-              </dl>
-              <p className="mt-10 text-xs text-zinc-400">
-                While we wish we could collaborate with everyone, our commitment
-                to quality and high demand means we can only take on a limited
-                number of projects
-              </p>
+              <FadeIn>
+                <h2 className="text-3xl font-bold tracking-tight text-zinc-100">
+                  Get your free demo
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-zinc-400">
+                  Reach out to us in complete confidentiality to start your
+                  project. Let’s work together to bring your unique sound to
+                  life!
+                </p>
+              </FadeIn>
+              <FadeIn>
+                <dl className="mt-10 space-y-4 text-base leading-7 ">
+                  <div className=" mt-10 flex text-zinc-300 gap-x-4">
+                    <dt className="flex-none">
+                      <span className="sr-only">Email</span>
+                      <EnvelopeIcon
+                        className="h-7 w-6 text-zinc-400"
+                        aria-hidden="true"
+                      />
+                    </dt>
+                    <dd>
+                      <a
+                        className="hover:text-zinc-100"
+                        href="mailto:info@lap-studios.com"
+                      >
+                        info@lap-studios.com
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <p className="mt-10 text-xs text-zinc-400">
+                  While we wish we could collaborate with everyone, our
+                  commitment to quality and high demand means we can only take
+                  on a limited number of projects
+                </p>
+              </FadeIn>
             </div>
           </div>
           <Form />

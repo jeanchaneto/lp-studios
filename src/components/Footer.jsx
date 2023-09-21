@@ -53,7 +53,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-gradient-to-tr from-teal-950/10  to bg-zinc-950 border-t border-white/10 "
+      className=" border-t border-white/10 "
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
