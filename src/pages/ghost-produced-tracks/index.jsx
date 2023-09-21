@@ -49,7 +49,7 @@ export default function Tracks() {
 
         <FadeIn>
           <div className="mx-auto max-w-7xl px-6 lg:px-8 z-50 ">
-            <div className="mx-auto max-w-2xl lg:mx-0">
+            <div className="max-w-2xl lg:mx-0">
               <p className="text-base font-semibold text-teal-300">
                 Discover Your Next Hit
               </p>

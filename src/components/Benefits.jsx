@@ -18,7 +18,7 @@ const Benefits = () => {
                   height={64}
                 />
               </div>
-              <div className="mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
+              <div className="mt-4  lg:mt-6">
                 <h3 className="font-medium text-teal-400 ">{benefit.name}</h3>
                 <p className="mt-2  text-zinc-400 ">{benefit.description}</p>
               </div>
