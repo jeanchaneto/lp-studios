@@ -5,14 +5,12 @@ import Image from "next/image";
 import HeroImage from "../../public/images/ghost-production-hero-image.png";
 
 import {
-  BuildingOffice2Icon,
   EnvelopeIcon,
-  PhoneIcon,
   CheckIcon,
 } from "@heroicons/react/24/outline";
 
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
-import { useState } from "react";
+
 import ContactImage from "../../public/images/ghost-production-contact-image.png";
 
 const features = [
@@ -43,11 +41,11 @@ const features = [
 ];
 
 const pricingContent = [
-  "25 products",
-  "Up to 10,000 subscribers",
-  "Advanced analytics",
-  "24-hour support response time",
-  "Marketing automations",
+  "100% royalties",
+  "Master",
+  "Premaster",
+  "Stems",
+  "Project file",
 ];
 
 const GhostProduction = () => {
@@ -168,7 +166,7 @@ const GhostProduction = () => {
                 </a>
                 <ul
                   role="list"
-                  className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10"
+                  className="mt-8 space-y-3 flex flex-col item text-sm leading-6 text-gray-300 xl:mt-10"
                 >
                   {pricingContent.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
@@ -185,43 +183,6 @@ const GhostProduction = () => {
           </FadeIn>
         </div>
       </section>
-
-      {/* <section
-        id="contact-ghost-production"
-        className="relative  my-24 sm:my-32 "
-      >
-        <div className="lg:absolute lg:inset-0 lg:left-1/2">
-          <Image
-            src="/images/contact-photo.jpg"
-            width={707}
-            height={1000}
-            className="h-64 w-full  object-cover sm:h-80 lg:absolute lg:h-full lg:rounded-lg mix-blend-plus-lighter brightness-50 contrast-125"
-            alt="Studio headphones"
-          />
-        </div>
-        <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
-          <div className="px-6 lg:px-8">
-            <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-             
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-                Let's make some music
-              </h2>
-              <p className="mt-2 text-lg text-zinc-400">
-                Got a tune in your head? Let us bring it to life. Fill out the
-                form below and receive a free demo, no strings attached.
-              </p>
-              <Form />
-              <div className=" sm:mb-8 sm:flex pb-12 sm:pb-0 ">
-                <div className="relative rounded-full px-6 py-1 text-xs mt-6  text-yellow-500 ring-1 ring-yellow-200/30 ">
-                  While we wish we could collaborate with everyone, our
-                  commitment to quality and high demand means we can only take
-                  on a limited number of projects.{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <div
         id="contact-ghost-production"

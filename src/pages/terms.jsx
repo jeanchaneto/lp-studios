@@ -1,7 +1,9 @@
+import { FadeIn } from "@/components/FadeIn";
+
 const Terms = () => {
   return (
     <main className="bg-zinc-950 px-6 py-32 lg:px-8">
-      <div className="mx-auto max-w-3xl text-base leading-7 text-zinc-400">
+      <FadeIn className="mx-auto max-w-3xl text-base leading-7 text-zinc-400">
         <h1 className="mt-2 text-4xl font-kallisto text-zinc-100 sm:text-5xl">
           Terms and conditions
         </h1>
@@ -204,7 +206,7 @@ const Terms = () => {
             <span className="text-zinc-300 font-semibold"></span>{" "}
           </p>
         </div>
-      </div>
+      </FadeIn>
     </main>
   );
 };

@@ -1,3 +1,4 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -134,9 +135,10 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <main className="bg-zinc-950">
+    <main className="bg-zinc-950"><FadeIn>
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl ">
+          
           <h1 className="text-4xl sm:text-6xl font-kallisto text-zinc-100">
             Frequently asked questions
           </h1>
@@ -155,6 +157,7 @@ export default function Faq() {
             directly.
           </p>
           <div className="mt-10 ">
+          
             <Accordion fullWidth className="px-0">
               {faqs.map((faq, i) => (
                 <AccordionItem
@@ -179,7 +182,7 @@ export default function Faq() {
             </Accordion>
           </div>
         </div>
-      </div>
+      </div></FadeIn>
     </main>
   );
 }
