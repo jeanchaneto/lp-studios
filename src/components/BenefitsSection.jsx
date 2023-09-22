@@ -1,10 +1,17 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import BenefitsImage from "../../public/images/benefits-image.jpg";
 import Benefits from "./Benefits";
 import { FadeIn } from "./FadeIn";
+import { motion } from "framer-motion";
+
+const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
 const BenefitsSection = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+
   return (
     <section className="">
       <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
@@ -24,13 +31,28 @@ const BenefitsSection = () => {
                   leading industry DJs.
                 </p>
               </div>
-              <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg text-zinc-200 ">
+              <motion.div
+                className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg text-zinc-200 "
+                initial={false}
+                animate={
+                  isLoaded && isInView
+                    ? {
+                        WebkitMaskImage: visibleMask,
+                        maskImage: visibleMask,
+                      }
+                    : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+                }
+                transition={{ duration: 1, delay: 0.5 }}
+                viewport={{ once: true }}
+                onViewportEnter={() => setIsInView(true)}
+              >
                 <Image
                   src={BenefitsImage}
                   className="object-cover object-center"
                   alt="LAP music studio"
+                  onLoad={() => setIsLoaded(true)}
                 />
-              </div>
+              </motion.div>
             </div>{" "}
           </FadeIn>
           <Benefits />

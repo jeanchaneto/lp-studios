@@ -1,5 +1,10 @@
 import Image from "next/image";
 import { FadeIn, FadeInStagger } from "./FadeIn";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
 const features = [
   {
@@ -23,6 +28,8 @@ const features = [
 ];
 
 const ProjectFileFeatures = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   return (
     <FadeIn>
       <section className="overflow-hidden py-24 sm:py-32">
@@ -65,15 +72,30 @@ const ProjectFileFeatures = () => {
                 </FadeInStagger>
               </div>
             </div>
-            <div className="flex items-center justify-end lg:order-first">
+            <motion.div
+              className="flex items-center justify-end lg:order-first"
+              initial={false}
+              animate={
+                isLoaded && isInView
+                  ? {
+                      WebkitMaskImage: visibleMask,
+                      maskImage: visibleMask,
+                    }
+                  : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+              }
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              onViewportEnter={() => setIsInView(true)}
+            >
               <Image
                 src="/images/project-features-photo.jpeg"
                 alt="Logic Pro project screenshot"
                 className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-zinc-100/10 sm:w-[57rem] "
-                width={2432}
-                height={1442}
+                width={912}
+                height={690}
+                onLoad={() => setIsLoaded(true)}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
