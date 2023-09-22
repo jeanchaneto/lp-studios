@@ -94,13 +94,13 @@ const TrackCard = (props) => {
               <div className="w-full flex justify-end  ">
                 <Link
                   href="#"
-                  className="relative rounded-xl min-w-fit max-w-fit px-2 py-1 overflow-hidden group/button bg-sky-500  hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-400 text-zinc-800 hover:ring-1 hover:ring-offset-1 hover:ring-sky-500 transition-all ease-out duration-300"
+                  className="relative rounded-xl min-w-fit max-w-fit px-2 py-1 overflow-hidden group/button border border-teal-700  hover:bg-gradient-to-r hover:from-teal-700 hover:to-teal-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-teal-600 transition-all ease-out duration-300"
                 >
                   <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover/button:-translate-x-40 ease"></span>
                   <div className="flex items-center">
                     <svg
                       id="Layer_1"
-                      fill="#27272a"
+                      fill="#f4f4f5"
                       viewBox="0 0 24 24"
                       className="mr-1 h-4 w-4 text-zinc-950"
                       xmlns="http://www.w3.org/2000/svg"
@@ -162,12 +162,12 @@ const TrackCard = (props) => {
 
               <div className="w-full flex justify-end opacity-50">
                 <div
-                  className="relative rounded-xl min-w-fit max-w-fit px-2 py-1 overflow-hidden group/button bg-sky-900 text-zinc-950 "
+                  className="relative rounded-xl min-w-fit max-w-fit px-2 py-1 overflow-hidden  border border-teal-700 text-zinc-100 "
                 >
                   <div className="flex items-center">
                     <svg
                       id="Layer_1"
-                      fill="#27272a"
+                      fill="#f4f4f5"
                       viewBox="0 0 24 24"
                       className="mr-1 h-4 w-4 text-zinc-950"
                       xmlns="http://www.w3.org/2000/svg"
