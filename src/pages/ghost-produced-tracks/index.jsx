@@ -1,6 +1,6 @@
 import Link from "next/link";
 import TrackCard from "@/components/TrackCard";
-import { tracks } from "@/data/tracks";
+// import { tracks } from "@/data/tracks";
 import Image from "next/image";
 import { features } from "@/libs/constants";
 import {
@@ -13,8 +13,11 @@ import {
 import Head from "next/head";
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import Banner from "../../../public/images/tracks-cover.jpg";
+import { useTracks } from "@/hooks/useTracks";
 
 export default function Tracks() {
+  const { tracks, error } = useTracks();
+
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
@@ -34,8 +37,10 @@ export default function Tracks() {
         <title>Ghost Produced Tracks | LAP Studios</title>
       </Head>
 
-      <section className=" isolate py-24 sm:py-32 relative sm:h-[560px] overflow-hidden 
-      ">
+      <section
+        className=" isolate py-24 sm:py-32 relative sm:h-[560px] overflow-hidden 
+      "
+      >
         <motion.div
           style={{ y }}
           className=" absolute w-screen -top-40 inset-x-0  -z-10 h-[560px] -translate-y-52  "
@@ -81,17 +86,23 @@ export default function Tracks() {
         </FadeIn>
       </section>
       <section className=" mx-auto max-w-7xl px-6 lg:px-8 bg-zinc-950 py-24 sm:py-32 lg:pt-40 ">
-        <FadeInStagger>
-          <div className="grid grid-cols-1 min-[556px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl ">
-            {tracks.map((track) => (
-              <div key={track.id}>
-                <FadeIn>
-                  <TrackCard {...track} />
-                </FadeIn>
-              </div>
-            ))}
-          </div>
-        </FadeInStagger>
+        {error ? (
+          <p>Error loading tracks</p>
+        ) : tracks.length > 0 ? (
+          <FadeInStagger>
+            <div className="grid grid-cols-1 min-[556px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl ">
+              {tracks.map((track) => (
+                <div key={track.id}>
+                  <FadeIn>
+                    <TrackCard {...track} />
+                  </FadeIn>
+                </div>
+              ))}
+            </div>
+          </FadeInStagger>
+        ) : (
+          <p>Loading</p>
+        )}
       </section>
 
       <section className="bg-zinc-950">
@@ -187,7 +198,7 @@ export default function Tracks() {
                 <button
                   type="submit"
                   className="flex-none rounded-xl px-3.5 py-2.5 text-sm font-semibold 
-                overflow-hidden group bg-sky-500  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-800 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center relative "
+                overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-800 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center relative "
                 >
                   <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                   <span className="relative">Notify me</span>
