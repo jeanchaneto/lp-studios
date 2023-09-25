@@ -1,13 +1,15 @@
 import Link from "next/link";
 import TrackCard from "./TrackCard";
-import { tracks } from "@/data/tracks";
 import Image from "next/image";
 import { FadeIn, FadeInStagger } from "./FadeIn";
+import { useLatestTracks } from "@/hooks/useLatesttracks";
 
 const TrackShowcase = () => {
-  const latestTracks = tracks.slice(0, 4);
+  const { latestTracks, error } = useLatestTracks();
 
-  return (
+  return error ? (
+    <p>Error downloading tracks</p>
+  ) : latestTracks ? (
     <section
       role="list"
       className="space-y-3  py-24 sm:py-32 lg:py-40 "
@@ -46,6 +48,8 @@ const TrackShowcase = () => {
         </div>
       </FadeIn>
     </section>
+  ) : (
+    <p>Loading</p>
   );
 };
 
