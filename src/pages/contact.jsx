@@ -52,7 +52,7 @@ export default function Contact() {
                   {" "}
                   FAQ
                 </Link>{" "}
-                main might already have the answers.
+                page might already have the answers.
               </p>
               <dl className="mt-10 space-y-4 text-lg leading-7 text-zinc-300">
                 <div className="flex gap-x-4">
@@ -76,7 +76,7 @@ export default function Contact() {
             </div>
           </section>
           <section>
-            <Form />
+            <Form messagePlaceHolder=""/>
           </section>
         </div>
       </FadeIn>

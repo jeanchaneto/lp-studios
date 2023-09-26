@@ -238,7 +238,7 @@ const GhostProduction = () => {
               </FadeIn>
             </div>
           </div>
-          <Form />
+          <Form messagePlaceHolder="Send us at least one reference track. Feel free to share the styles, other reference tracks, labels, or artists that inspire you. What specific elements do you love in your references? The more we know, the better we can bring your musical vision to life." />
         </div>
       </div>
     </main>

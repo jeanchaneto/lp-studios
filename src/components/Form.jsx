@@ -1,11 +1,51 @@
+import { useRef, useState } from "react";
 import { FadeIn } from "./FadeIn";
+import emailjs from "@emailjs/browser";
 
-const Form = () => {
+const Form = ({messagePlaceHolder}) => {
+  const form = useRef();
+
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          setSubmitted(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setError(error.text);
+        }
+      );
+  };
+
+  if (submitted)
+    return (
+      <FadeIn className="flex justify-center items-center h-full w-full">
+        <p className=" text-teal-300 mx-auto px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48 ">
+          Thank you for your message! We will get back to you as soon as
+          possible.
+        </p>
+      </FadeIn>
+    );
+
   return (
     <form
-      action="#"
-      method="POST"
-      className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+      ref={form}
+      onSubmit={sendEmail}
+      className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48 relative"
     >
       <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -23,6 +63,7 @@ const Form = () => {
                 id="first-name"
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
+                required
               />
             </div>
           </FadeIn>
@@ -40,6 +81,7 @@ const Form = () => {
                 id="last-name"
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
+                required
               />
             </div>
           </FadeIn>
@@ -57,6 +99,7 @@ const Form = () => {
                 id="email"
                 autoComplete="email"
                 className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
+                required
               />
             </div>
           </FadeIn>
@@ -75,7 +118,8 @@ const Form = () => {
                 rows={4}
                 className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 shadow-sm ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
                 defaultValue={""}
-                placeholder="Send us at least one reference track. Feel free to share the styles, other reference tracks, labels, or artists that inspire you. What specific elements do you love in your references? The more we know, the better we can bring your musical vision to life."
+                placeholder={messagePlaceHolder}
+                required
               />
             </div>
           </FadeIn>
@@ -91,6 +135,11 @@ const Form = () => {
           </button>
         </FadeIn>
       </div>
+      {error && (
+        <p className=" text-red-400 text-sm mx-auto max-w-fit mt-6  ">
+          {error}
+        </p>
+      )}
     </form>
   );
 };
