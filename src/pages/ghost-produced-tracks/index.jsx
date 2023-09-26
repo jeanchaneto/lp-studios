@@ -14,6 +14,7 @@ import Head from "next/head";
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import Banner from "../../../public/images/tracks-cover.jpg";
 import { useTracks } from "@/hooks/useTracks";
+import SubscribeForm from "@/components/SubscribeForm";
 
 export default function Tracks() {
   const { tracks, error } = useTracks();
@@ -182,7 +183,7 @@ export default function Tracks() {
               </p>
             </FadeIn>
             <FadeIn>
-              <form className="mx-auto mt-10 flex max-w-md gap-x-4">
+              {/* <form className="mx-auto mt-10 flex max-w-md gap-x-4">
                 <label htmlFor="email-address" className="sr-only">
                   Email address
                 </label>
@@ -203,7 +204,8 @@ export default function Tracks() {
                   <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                   <span className="relative">Notify me</span>
                 </button>
-              </form>
+              </form> */}
+              <SubscribeForm />
             </FadeIn>
           </div>
         </div>

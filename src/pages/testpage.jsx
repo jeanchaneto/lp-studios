@@ -25,7 +25,8 @@ const testpage = () => {
       className=" py-32 text-zinc-100   "
     >
       {/* {tracks.length > 0 ? <h1>{tracks[0].title}</h1> : <h1 >Loading...</h1>} */}
-<AddTrackForm />
+{/* <AddTrackForm /> */}
+<a href="https://buy.stripe.com/test_5kAaGZgJtaVUetyaEE">Buy now</a>
     </div>
   );
 };
