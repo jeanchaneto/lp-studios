@@ -2,16 +2,24 @@ import { FadeIn } from "@/components/FadeIn";
 import Form from "@/components/Form";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Contact() {
+  let { scrollYProgress } = useScroll();
+  let y = useTransform(scrollYProgress, [0, 0.15], [0, 100]);
   return (
-    <main className="relative isolate bg-zinc-950"> 
-    <img src="/images/soundwaves.png" alt="" className=" absolute w-full h-full object-cover opacity-10" />
+    <main className="relative isolate bg-zinc-950">
+      <motion.div style={{ y }} className=" absolute w-full  inset-x-0 z-0  ">
+        <img
+          src="/images/soundwaves.png"
+          alt=""
+          className=" w-full object-cover opacity-10"
+        />
+      </motion.div>
       <FadeIn>
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <section className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-40">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-    
               <p className="text-base font-semibold  text-teal-300">Connect</p>
               <h1 className="text-4xl sm:text-6xl  font-kallisto text-zinc-100 ">
                 Tune In with Us
@@ -64,7 +72,7 @@ export default function Contact() {
             </div>
           </section>
           <section>
-            <Form messagePlaceHolder=""/>
+            <Form messagePlaceHolder="" />
           </section>
         </div>
       </FadeIn>

@@ -4,8 +4,6 @@ import Link from "next/link";
 import { FadeIn, FadeInStagger } from "./FadeIn";
 import {
   motion,
-  useMotionTemplate,
-  useMotionValue,
   useScroll,
   useTransform,
 } from "framer-motion";
