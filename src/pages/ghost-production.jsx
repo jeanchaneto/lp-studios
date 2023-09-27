@@ -8,8 +8,6 @@ import { EnvelopeIcon, CheckIcon } from "@heroicons/react/24/outline";
 
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 
-import ContactImage from "../../public/images/ghost-production-contact-image.png";
-
 const features = [
   {
     name: "Risk-Free Collaboration",
@@ -202,11 +200,11 @@ const GhostProduction = () => {
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <FadeIn>
                 <h2 className="text-3xl font-bold tracking-tight text-zinc-100">
-                  Get your free demo
+                  Let's make music together
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-zinc-400">
                   Reach out to us in complete confidentiality to start your
-                  project. Let’s work together to bring your unique sound to
+                  project and get a free demo. Let’s work together to bring your unique sound to
                   life!
                 </p>
               </FadeIn>

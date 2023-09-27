@@ -62,7 +62,7 @@ const Form = ({messagePlaceHolder}) => {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
-                className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
+                className="block w-full rounded-md border-0 bg-zinc-900 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
                 required
               />
             </div>
@@ -80,7 +80,7 @@ const Form = ({messagePlaceHolder}) => {
                 name="last-name"
                 id="last-name"
                 autoComplete="family-name"
-                className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
+                className="block w-full rounded-md border-0 bg-zinc-900 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
                 required
               />
             </div>
@@ -98,7 +98,7 @@ const Form = ({messagePlaceHolder}) => {
                 name="email"
                 id="email"
                 autoComplete="email"
-                className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
+                className="block w-full rounded-md border-0 bg-zinc-900 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
                 required
               />
             </div>
@@ -116,7 +116,7 @@ const Form = ({messagePlaceHolder}) => {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 shadow-sm ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
+                className="block w-full rounded-md border-0 bg-zinc-900 px-3.5 py-2 text-zinc-100 shadow-sm ring-1 ring-inset ring-zinc-100/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition-all duration-300"
                 defaultValue={""}
                 placeholder={messagePlaceHolder}
                 required
