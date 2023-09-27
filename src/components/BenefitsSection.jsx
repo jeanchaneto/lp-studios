@@ -49,7 +49,7 @@ const BenefitsSection = () => {
                 <Image
                   src={BenefitsImage}
                   className="object-cover object-center"
-                  alt="LAP music studio"
+                  alt="Moog Subsequent 37"
                   onLoad={() => setIsLoaded(true)}
                 />
               </motion.div>

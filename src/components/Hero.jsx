@@ -2,12 +2,29 @@ import Image from "next/image";
 import HeroImage from "../../public/images/heroImage.svg";
 import Link from "next/link";
 import { FadeIn, FadeInStagger } from "./FadeIn";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 const Hero = () => {
+  let { scrollYProgress } = useScroll();
+  let y = useTransform(scrollYProgress, [0, 0.15], [0, 100]);
+
   return (
     <section>
-      <div className="relative  bg-[url('/images/heroImage.svg')] bg-no-repeat bg-cover bg-opacity-40 ">
-        <div className=" z-20 mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40 ">
+      <div className="relative overflow-hidden  ">
+        <motion.div style={{ y }} className=" absolute w-screen  inset-x-0  z-0  ">
+          <Image
+            src={HeroImage}
+            className=" w-full object-cover  opacity-70  "
+            alt=""
+          />
+        </motion.div>
+        <div className=" z-20 mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40 isolate ">
           {" "}
           <FadeIn>
             <div className=" mx-auto max-w-2xl lg:mx-0 lg:flex-auto ">
@@ -53,10 +70,6 @@ const Hero = () => {
               </FadeInStagger>
             </div>
           </FadeIn>
-          <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0  ">
-            {/* IMAGE */}
-            {/* <Image src={HeroImage} className=" opacity-40 max-w-lg " /> */}
-          </div>
         </div>
       </div>
     </section>

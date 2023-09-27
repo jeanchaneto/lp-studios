@@ -72,30 +72,15 @@ const ProjectFileFeatures = () => {
                 </FadeInStagger>
               </div>
             </div>
-            <motion.div
-              className="flex items-center justify-end lg:order-first"
-              initial={false}
-              animate={
-                isLoaded && isInView
-                  ? {
-                      WebkitMaskImage: visibleMask,
-                      maskImage: visibleMask,
-                    }
-                  : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-              }
-              transition={{ duration: 1, delay: 0.5 }}
-              viewport={{ once: true }}
-              onViewportEnter={() => setIsInView(true)}
-            >
-              <Image
-                src="/images/project-features-photo.jpeg"
-                alt="Logic Pro project screenshot"
-                className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-zinc-100/10 sm:w-[57rem] "
-                width={912}
-                height={690}
-                onLoad={() => setIsLoaded(true)}
-              />
-            </motion.div>
+            <FadeIn className="flex items-center justify-end lg:order-first">
+            <Image
+              src="/images/project-features-photo.jpg"
+              alt="Product screenshot"
+              className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+              width={2432}
+              height={1442}
+            />
+          </FadeIn>
           </div>
         </div>
       </section>

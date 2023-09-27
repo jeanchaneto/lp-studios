@@ -48,7 +48,7 @@ export default function Tracks() {
         >
           <Image
             src={Banner}
-            className=" w-full  h-[900px] object-cover  opacity-70  "
+            className=" w-full  h-[900px] object-cover  opacity-40  "
             alt=""
           />
         </motion.div>
@@ -183,28 +183,6 @@ export default function Tracks() {
               </p>
             </FadeIn>
             <FadeIn>
-              {/* <form className="mx-auto mt-10 flex max-w-md gap-x-4">
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="min-w-0 flex-auto rounded-md border-0 bg-zinc-100/5 px-3.5 py-2 text-zinc-100 ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-teal-400 transition-all duration-300  sm:text-sm sm:leading-6"
-                  placeholder="Enter your email"
-                />
-                <button
-                  type="submit"
-                  className="flex-none rounded-xl px-3.5 py-2.5 text-sm font-semibold 
-                overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-800 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center relative "
-                >
-                  <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                  <span className="relative">Notify me</span>
-                </button>
-              </form> */}
               <SubscribeForm />
             </FadeIn>
           </div>
