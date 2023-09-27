@@ -176,10 +176,14 @@ export default function Tracks() {
                 !
               </h2>
               <p className="mx-auto mt-2 max-w-xl text-center leading-8 text-zinc-400 text-base">
-                We're a small team of ghost producers committed to quality over
-                quantity, which means we only release a limited number of
-                tracks. These usually get snatched up quickly! Register your
-                email now to be the first to know when a new track is released.
+                We are a dedicated team of in-demand ghost producers, with an
+                unwavering focus on quality over quantity. Consequently, we
+                release only a limited number of tracks, which typically are
+                acquired swiftly! <br />{" "}
+                <span className="text-zinc-300">
+                  Register your email to be the first to know about our new
+                  releases!
+                </span>
               </p>
             </FadeIn>
             <FadeIn>

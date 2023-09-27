@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "How much does ghost production cost?",
     answer:
-      "We provide high-quality ready-made tracks priced between €800-€1000. For a custom track tailored to your specific style, the cost is €1499. Our focus is on delivering the utmost quality for your investment.",
+      "We provide high-quality ready-made tracks priced between €800-€1000. For a custom track tailored to your specific style, the cost is €1499.",
   },
   {
     question: "Do I get the project file?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "What can I do with a track I purchase from you?",
     answer:
-      "Once you purchase a track from LAP Studios, it's yours to showcase. You can play it out at events, share it with fellow DJs, upload it on streaming platforms, or even pitch it to record labels. The world is yours",
+      "Once you purchase a track from LAP Studios, it's yours to showcase. You can play it out at events, share it with fellow DJs, upload it on streaming platforms, or even pitch it to record labels. The world is yours.",
   },
   {
     question: "What do I get with a ghost-produced track?",
     answer: 
-      "Once your purchase a track from us you will receive:The master version of the track, the mixdown version, the audio stems and the complete project file.",
+      "Once your purchase a track from us you will receive: The master version of the track, the mixdown version, the audio stems and the complete project file.",
   },
   {
     question: "What rights do I acquire after purchasing a track?",
@@ -59,18 +59,13 @@ const faqs = [
   {
     question: "How do you ensure the quality and uniqueness of each track?",
     answer:
-      "We fuse royalty-free samples with our own compositions and experience to craft unique tracks.",
-  },
-  {
-    question: "Why is exclusivity important in ghost production?",
-    answer:
-      "Exclusivity ensures that the track you purchase from us is uniquely yours. This not only gives you a competitive edge in the music industry but also protects your brand's authenticity. With an exclusive track, you can confidently promote your music, knowing it's genuinely one-of-a-kind.",
+      "We fuse our own compositions with high quality royalty-free samples to craft unique tracks.",
   },
   {
     question:
       "Can I resell the track or files on ghost production platforms or as a sample pack?",
     answer:
-      "No, reselling tracks on other ghost production platforms or repackaging them as sample packs is strictly prohibited. When you acquire a track from LAP Studios, it's tailored for your exclusive use, whether for personal listening or releasing on music platforms. Furthermore, reselling could inadvertently put you at risk of redistributing royalty-free samples, which is not permitted. Such actions compromise the unique and exclusive nature of our offerings and can lead to legal consequences. It's essential to uphold originality and adhere to the terms of our exclusivity agreement.",
+      "No, reselling tracks on other ghost production platforms or repackaging them as sample packs is strictly prohibited. When you acquire a track from us, it's licenced for your exclusive use, whether for personal listening or releasing on music platforms. Furthermore, reselling could inadvertently put you at risk of redistributing royalty-free samples, which is not permitted.",
   },
   {
     question: "Can I get a refund?",
@@ -85,7 +80,7 @@ const faqs = [
   {
     question: "I am a music producer. Can I sell some tracks on your platform?",
     answer:
-      "We appreciate your interest, but LAP Studios operates as a closed team and not a marketplace. Currently, we do not accept external tracks or collaborations.",
+      "We appreciate your interest, but LAP Studios operates as a closed team and not as a marketplace. Currently, we do not accept external tracks or collaborations but you are always welcome to get in touch with us.",
   },
   {
     question: "How can I contact you?",

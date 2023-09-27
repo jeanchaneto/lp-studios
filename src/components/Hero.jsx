@@ -2,11 +2,7 @@ import Image from "next/image";
 import HeroImage from "../../public/images/heroImage.svg";
 import Link from "next/link";
 import { FadeIn, FadeInStagger } from "./FadeIn";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
   let { scrollYProgress } = useScroll();
@@ -15,7 +11,10 @@ const Hero = () => {
   return (
     <section>
       <div className="relative overflow-hidden  ">
-        <motion.div style={{ y }} className=" absolute w-screen  inset-x-0  z-0  ">
+        <motion.div
+          style={{ y }}
+          className=" absolute w-screen  inset-x-0  z-0  "
+        >
           <Image
             src={HeroImage}
             className=" w-full object-cover  opacity-70  "
@@ -35,12 +34,12 @@ const Hero = () => {
                 Exclusive Tracks
               </h1>
               <p className="mt-6 text-xl leading-8 text-zinc-400">
-                Kickstart your career in music with tracks that the top DJs rave
-                about and that consistently top the Beatport charts. At LAP
-                Studios, we're the pulse of melodic house & techno, afro house,
-                deep house and organic house. Dive into our curated collection
-                or get a bespoke track tailored for you. Quality and vibe are
-                our game.
+                Kickstart your music career with LAP Studios. With a history of
+                chart-topping successes and support from leading DJs, we
+                specialize in Melodic House & Techno, Afro House, Deep House,
+                and Organic House. Explore our expertly curated collection or
+                collaborate with us for a custom track designed uniquely for
+                you.
               </p>
               <FadeInStagger>
                 <div className="mt-10 flex flex-col sm:flex-row gap-6">

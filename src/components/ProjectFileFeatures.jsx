@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { FadeIn, FadeInStagger } from "./FadeIn";
-import { useState } from "react";
-import { motion } from "framer-motion";
 
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
 const features = [
   {
@@ -20,7 +16,7 @@ const features = [
     icon: "/icons/mixer.png",
   },
   {
-    name: "Ready to use",
+    name: "Plug-and-Play",
     description:
       "All audio and midi tracks are frozen to ensure compatibility, letting you dissect the project even without owning every plugin used.",
     icon: "/icons/plug-and-play.png",
@@ -28,8 +24,7 @@ const features = [
 ];
 
 const ProjectFileFeatures = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+
   return (
     <FadeIn>
       <section className="overflow-hidden py-24 sm:py-32">

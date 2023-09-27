@@ -23,12 +23,12 @@ const values = [
   {
     name: "Passionate About Your Success",
     description:
-      "Our commitment to absolute customer satisfaction means we don't accept payment until you are 100% thrilled with the demo we create for you. We do more than just ghost production; we contribute to your journey towards music success.",
+      "We’re invested in your journey and success in the music industry. It’s more than just producing tracks, it’s about understanding your vision, aspirations, and the impact you want to make. We’re here to support and elevate your career.",
   },
   {
     name: "A Small Team with Big Impact",
     description:
-      "Despite being a small team, we are in high demand. This allows us to focus on each project with an unrivaled depth of understanding and skill, ensuring that you get a track that stands up to the highest standards.",
+      "Our small but sought-after team prioritizes individual attention for each project, deploying profound understanding and expertise. This ensures the delivery of tracks that meet the most elevated standards.",
   },
   {
     name: "State-of-the-Art Tools and Analog Equipment",
@@ -56,13 +56,11 @@ export default function AboutUs() {
                   About us
                 </p>
                 <h1 className=" mt-2 text-4xl font-kallisto text-zinc-100 sm:text-6xl">
-                  Your Trusted Ghost Producers
+                  Your Premier Ghost Producers
                 </h1>
                 <p className="relative mt-6 text-xl leading-8 text-zinc-400 sm:max-w-md lg:max-w-none">
                   At LAP Studios, we bring more than 10 years of experience in
-                  music production to the table. We are not just your average
-                  producers, we are specialized ghost producers dedicated to
-                  delivering unparalleled quality in each track.
+                  music production to the table. We are more than your average ghost producers, we are passionate and specialized music producers, dedicated to delivering music that makes a statement.
                 </p>
               </FadeIn>
               <div className=" bg-gradient-radial from-zinc-400/20 to-50% to to-transparent ">
@@ -152,9 +150,8 @@ export default function AboutUs() {
             Let's Elevate Your Career
           </h2>
           <p className="mt-6 text-lg leading-8 text-zinc-400">
-            Join us in crafting the track that could be your breakthrough.. Your
-            vision, combined with our expertise, will create a resonant
-            composition ready to captivate the dancefloors.
+            Join us in crafting the track that could be your breakthrough. Your
+            vision, combined with our expertise, will produce music that’s ready to get people moving on the dancefloor.
           </p>
         </FadeIn>
         <FadeInStagger faster="true">

@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Contact() {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 0.15], [0, 100]);
+  let y = useTransform(scrollYProgress, [0, 0.9], [0, 100]);
   return (
     <main className="relative isolate bg-zinc-950">
       <motion.div style={{ y }} className=" absolute w-full  inset-x-0 z-0  ">
@@ -24,18 +24,8 @@ export default function Contact() {
               <h1 className="text-4xl sm:text-6xl  font-kallisto text-zinc-100 ">
                 Tune In with Us
               </h1>
-              <p className="mt-6 text-lg  text-zinc-400">
-                At LAP Music Studios, we believe that clear communication paves
-                the way for every successful collaboration.
-              </p>
-              <p className="mt-3 text-lg text-zinc-400">
-                If you have a preference for our ready-made tracks, let us know.
-                You'll be among the first to get notified when we unveil a track
-                that matches your taste.
-              </p>
-              <p className="mt-3 text-lg  text-zinc-400">
-                Fancy a ready-made track but envision some tweaks? Reach out,
-                and we'll tailor it to perfection.
+              <p className="mt-6 text-lg text-zinc-400">
+              Interested in our ready-made tracks? Suggest one, and be the first to know when a track that aligns with your style is released.
               </p>
               <p className="mt-3 text-lg  text-zinc-400">
                 Whether you have a unique vision for a track or you're curious

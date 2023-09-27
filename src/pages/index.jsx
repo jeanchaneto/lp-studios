@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrackShowcase from "@/components/TrackShowcase";
 import BenefitsSection from "@/components/BenefitsSection";
@@ -14,7 +12,7 @@ export default function Home() {
       <Head>
       <title>LAP Studios | Ghost Production</title>
       </Head>
-      <div className="   bg-zinc-950 ">
+      <div className=" bg-zinc-950 ">
         <Hero />
         <TrackShowcase />
         <BenefitsSection />

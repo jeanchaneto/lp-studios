@@ -60,11 +60,7 @@ const GhostProduction = () => {
                 Custom Ghost Production
               </h1>
               <p className="mt-6 text-xl  text-zinc-400 ">
-                Are you aiming for unparalleled Afro House, Melodic House &
-                Techno, Organic House, or Deep House? You're in the right place.
-                Welcome to a highly exclusive opportunity offered by a small,
-                in-demand team that has enabled tracks to get signed on top
-                labels and gain recognition from leading DJs globally.
+              Looking to create distinctive tracks in Afro House, Melodic House & Techno, Organic House, or Deep House? You’ve landed in the right spot. Dive into an exclusive experience provided by our compact, sought-after team, known for elevating tracks to secure spots on top labels and earn acclaim from renowned DJs worldwide.
               </p>
             </div>
           </div>

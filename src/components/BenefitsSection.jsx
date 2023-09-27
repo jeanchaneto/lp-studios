@@ -24,11 +24,7 @@ const BenefitsSection = () => {
                   Elevate Your Sound, Achieve Your Goals
                 </h2>
                 <p className="mt-4 text-zinc-400 text-lg ">
-                  Choosing LAP Studios means you're investing in a proven path
-                  to musical success. With a decade of expertise under our belt,
-                  we've carved out a reputation for producing tracks that don't
-                  just top the Beatport charts but also gain support from
-                  leading industry DJs.
+                Choosing LAP Studios means you're investing in a proven path to musical success. Our decade of extensive experience empowers you to make a significant mark in the music industry. We've been instrumental in shaping the sounds and careers of numerous artists, fostering their growth and helping them establish a unique sonic identity.
                 </p>
               </div>
               <motion.div

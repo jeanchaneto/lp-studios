@@ -5,7 +5,7 @@ const timelineData = [
     id: 1,
     status: "Initial Contact",
     description:
-      "Reach out with your vision, be it a specific theme, a reference track, or even a particular artist or label you admire. You can contact us below.",
+      "Reach out with your vision, be it a specific theme, a reference track, or even a particular artist or label you admire. Reach out to us below to get started.",
     isActive: true,
   },
   {
@@ -19,14 +19,14 @@ const timelineData = [
     id: 3,
     status: "Satisfaction-Guaranteed Payment",
     description:
-      "Once you are completely satisfied with the composition and arrangement of the track, a secure payment link will be sent to you.",
+      "After you’re fully satisfied with the track’s composition and arrangement, we’ll send a secure payment link your way.",
     isActive: true,
   },
   {
     id: 4,
     status: "Final Delivery",
     description:
-      "Upon payment confirmation, we'll proceed with the final mix and mastering. You'll then receive all the files, perfectly polished and ready for the world to hear.",
+      "With payment confirmed, we'll finalize the mix and mastering. You'll receive all the polished files, ready to make waves in the music world.",
     isActive: true,
   },
 ];
