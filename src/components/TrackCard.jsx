@@ -86,7 +86,7 @@ const TrackCard = (props) => {
               <div className="flex text-sm bg-cyan-950 rounded-lg py-1.5 px-1.5 items-center gap-[2px] ">
                 <img
                   src="/icons/treble-clef.svg"
-                  alt="Song key"
+                  alt="Song Key"
                   className=" w-4 h-4 "
                 />
                 <p>{props.songKey}</p>
@@ -139,7 +139,7 @@ const TrackCard = (props) => {
               <div className=" flex gap-[2px] items-center text-sm bg-teal-950 rounded-lg py-1.5 px-1.5">
                 <img
                   src="/icons/metronome.svg"
-                  alt="Song key"
+                  alt="Song Bpm"
                   className=" w-4 h-4 "
                 />
                 <p>{props.bpm} Bpm</p>

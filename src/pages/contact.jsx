@@ -3,12 +3,29 @@ import Form from "@/components/Form";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Head from "next/head";
 
 export default function Contact() {
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 0.9], [0, 100]);
   return (
     <main className="relative isolate bg-zinc-950">
+       <Head>
+        <title>LAP Studios | Contact Us</title>
+        <meta
+          name="description"
+          content="Explore LAP Studios' blog for the latest insights, DJ tips, and trends in music production,  ghost producing, and the evolving music industry."
+        />
+        <meta
+          property="og:title"
+          content="LAP Studios | The Blog Music Industry Insights"
+        />
+        <meta
+          property="og:description"
+          content="Explore LAP Studios' blog for the latest insights, DJ tips, and trends in music production,  ghost producing, and the evolving music industry."
+        />
+        <meta property="og:image" content="/images/main-og-image.png" />
+      </Head>
       <motion.div style={{ y }} className=" absolute w-full  inset-x-0 z-0  ">
         <img
           src="/images/soundwaves.png"
@@ -25,12 +42,10 @@ export default function Contact() {
                 Tune In with Us
               </h1>
               <p className="mt-6 text-lg text-zinc-400">
-              Interested in our ready-made tracks? Suggest one, and be the first to know when a track that aligns with your style is released.
+              Reach out for inquiries on custom ghost production or to suggest tracks you’d like in the shop! We’re eager to hear from you!
               </p>
               <p className="mt-3 text-lg  text-zinc-400">
-                Whether you have a unique vision for a track or you're curious
-                about our ghost production services, we're here to help you
-                manifest that sound.
+              Reach out for inquiries on custom ghost production or to suggest tracks you’d like in the shop! We’re eager to hear from you!
               </p>
               <p className="mt-3 text-lg leading-8 text-zinc-400">
                 For general inquiries, our{" "}

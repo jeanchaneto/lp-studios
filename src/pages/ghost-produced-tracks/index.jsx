@@ -1,6 +1,5 @@
 import Link from "next/link";
 import TrackCard from "@/components/TrackCard";
-// import { tracks } from "@/data/tracks";
 import Image from "next/image";
 import { features } from "@/libs/constants";
 import {
@@ -35,7 +34,20 @@ export default function Tracks() {
   return (
     <main className="bg-zinc-950 relative ">
       <Head>
-        <title>Ghost Produced Tracks | LAP Studios</title>
+        <title>LAP Studios | Premium Exclusive Ghost Produced Tracks</title>
+        <meta
+          name="description"
+          content="Explore and purchase premium tracks in Afro House, Organic House, Melodic House & techno, Deep House, crafted by a small team of top ghost producers."
+        />
+        <meta
+          property="og:title"
+          content="LAP Studios: Premium Exclusive Ghost Produced Tracks"
+        />
+        <meta
+          property="og:description"
+          content="Explore and purchase premium tracks in Afro House, Organic House, Melodic House & techno, Deep House, crafted by a small team of top ghost producers."
+        />
+        <meta property="og:image" content="/images/main-og-image.png" />
       </Head>
 
       <section
@@ -49,7 +61,7 @@ export default function Tracks() {
           <Image
             src={Banner}
             className=" w-full  h-[900px] object-cover  opacity-40  "
-            alt=""
+            alt="DJ decks"
           />
         </motion.div>
 
@@ -73,7 +85,7 @@ export default function Tracks() {
                       <Image
                         src={feature.icon}
                         className=" absolute left-1 top-1 object-cover object-center"
-                        alt="LAP music studio"
+                        alt=""
                         width={20}
                         height={20}
                       />

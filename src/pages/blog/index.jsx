@@ -8,11 +8,20 @@ export default function Blog({ posts }) {
   return (
     <main className="bg-zinc-950 py-24 sm:py-32 lg:py-40">
       <Head>
-        <title>Blog | LAP Studios</title>
+        <title>LAP Studios | The Blog</title>
         <meta
           name="description"
-          content="Delve into the intricacies of the music industry, from ghost production to DJing, and discover the keys to achieving success and making a lasting impact."
+          content="Explore LAP Studios' blog for the latest insights, DJ tips, and trends in music production,  ghost producing, and the evolving music industry."
         />
+        <meta
+          property="og:title"
+          content="LAP Studios | The Blog Music Industry Insights"
+        />
+        <meta
+          property="og:description"
+          content="Explore LAP Studios' blog for the latest insights, DJ tips, and trends in music production,  ghost producing, and the evolving music industry."
+        />
+        <meta property="og:image" content="/images/main-og-image.png" />
       </Head>
       <FadeIn>
         <div className="mx-auto max-w-7xl px-6 lg:px-8  ">

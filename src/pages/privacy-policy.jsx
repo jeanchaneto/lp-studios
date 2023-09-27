@@ -1,8 +1,16 @@
 import { FadeIn } from "@/components/FadeIn";
+import Head from "next/head";
 
 const Privacy = () => {
   return (
     <main className="bg-zinc-950 px-6 py-32 lg:px-8">
+       <Head>
+        <title>LAP Studios | Privacy Policy</title>
+        <meta
+          name="description"
+          content="Review our privacy policy to understand how we manage, protect, and utilize your information."
+        />
+      </Head>
       <FadeIn className="mx-auto max-w-3xl text-base leading-7 text-zinc-400">
         <h1 className="mt-2 text-4xl font-kallisto text-zinc-100 sm:text-5xl">
           Privacy Policy

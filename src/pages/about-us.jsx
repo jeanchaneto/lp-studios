@@ -3,6 +3,7 @@ import LogoCloud from "@/components/LogoCloud";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const values = [
   {
@@ -46,6 +47,22 @@ export default function AboutUs() {
 
   return (
     <main className=" ">
+       <Head>
+        <title>LAP Studios | About Us</title>
+        <meta
+          name="description"
+          content="LAP Studios | Ghost producers with over a decade experience, dedicated to crafting sounds that resonate and make a bold statement in the industry."
+        />
+        <meta
+          property="og:title"
+          content="LAP Studios | Ghost Production & Top Ghost Producers"
+        />
+        <meta
+          property="og:description"
+          content="Discover LAP Studios, your premier ghost producers with over 10 years of experience in crafting distinctive music. Dive into our passion, specialization, and commitment to delivering sounds that resonate and make a powerful statement in the industry."
+        />
+        <meta property="og:image" content="/images/main-og-image.png" />
+      </Head>
       {/* Hero section */}
       <section className="relative ">
         <div className="overflow-hidden">

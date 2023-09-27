@@ -1,8 +1,16 @@
 import { FadeIn } from "@/components/FadeIn";
+import Head from "next/head";
 
 const Terms = () => {
   return (
     <main className="bg-zinc-950 px-6 py-32 lg:px-8">
+      <Head>
+        <title>LAP Studios | Terms</title>
+        <meta
+          name="description"
+          content="Review LAP Studios' terms for clear insights into our services, policies, and guidelines to ensure a seamless collaboration"
+        />
+      </Head>
       <FadeIn className="mx-auto max-w-3xl text-base leading-7 text-zinc-400">
         <h1 className="mt-2 text-4xl font-kallisto text-zinc-100 sm:text-5xl">
           Terms and conditions
@@ -29,27 +37,65 @@ const Terms = () => {
             2. Protection of Buyer Information
           </h2>
           <p className="mt-6">
-            <span className="text-zinc-300 font-semibold">Commitment to Confidentiality: </span> LAP Studios recognizes the importance of maintaining the confidentiality of our buyers. We are committed to ensuring that all information related to the buyer, including personal details, transaction history, and any other related data, remains strictly confidential.
+            <span className="text-zinc-300 font-semibold">
+              Commitment to Confidentiality:{" "}
+            </span>{" "}
+            LAP Studios recognizes the importance of maintaining the
+            confidentiality of our buyers. We are committed to ensuring that all
+            information related to the buyer, including personal details,
+            transaction history, and any other related data, remains strictly
+            confidential.
           </p>
           <p className="mt-6">
-            <span className="text-zinc-300 font-semibold">Non-disclosure:</span> We will not disclose, distribute, or share any information about the buyer to third parties unless required by law or with the explicit consent of the buyer.
+            <span className="text-zinc-300 font-semibold">Non-disclosure:</span>{" "}
+            We will not disclose, distribute, or share any information about the
+            buyer to third parties unless required by law or with the explicit
+            consent of the buyer.
           </p>
           <p className="mt-6">
             <span className="text-zinc-300 font-semibold">Data Security: </span>
-            We employ advanced security measures to protect the buyer's information against unauthorized access, alteration, disclosure, or destruction. These measures include, but are not limited to, secure servers, encrypted communications, and regular reviews of our data collection, storage, and processing practices. 
+            We employ advanced security measures to protect the buyer's
+            information against unauthorized access, alteration, disclosure, or
+            destruction. These measures include, but are not limited to, secure
+            servers, encrypted communications, and regular reviews of our data
+            collection, storage, and processing practices.
           </p>
           <p className="mt-6">
-            <span className="text-zinc-300 font-semibold">Limited Access: </span>
-            Access to buyer information within LAP Studios is restricted to employees, contractors, and agents who need to know that information to process it for us. These individuals are bound by strict confidentiality obligations and may be subject to discipline, including termination, if they fail to meet these obligations. 
+            <span className="text-zinc-300 font-semibold">
+              Limited Access:{" "}
+            </span>
+            Access to buyer information within LAP Studios is restricted to
+            employees, contractors, and agents who need to know that information
+            to process it for us. These individuals are bound by strict
+            confidentiality obligations and may be subject to discipline,
+            including termination, if they fail to meet these obligations.
           </p>
           <p className="mt-6">
-            <span className="text-zinc-300 font-semibold">Review and Correction:</span> Buyers have the right to review their information stored with us and can request corrections or deletions as necessary.
+            <span className="text-zinc-300 font-semibold">
+              Review and Correction:
+            </span>{" "}
+            Buyers have the right to review their information stored with us and
+            can request corrections or deletions as necessary.
           </p>
           <p className="mt-6">
-            <span className="text-zinc-300 font-semibold">Exclusion to Confidentiality Commitment:</span> Notwithstanding the above, if a buyer initiates a credit chargeback or engages in actions that result in financial disputes or losses to LAP Studios, we reserve the right to not honor the non-disclosure agreement in order to recover our costs or defend our rights. This may involve sharing relevant buyer information with financial institutions, legal entities, or other necessary parties.
+            <span className="text-zinc-300 font-semibold">
+              Exclusion to Confidentiality Commitment:
+            </span>{" "}
+            Notwithstanding the above, if a buyer initiates a credit chargeback
+            or engages in actions that result in financial disputes or losses to
+            LAP Studios, we reserve the right to not honor the non-disclosure
+            agreement in order to recover our costs or defend our rights. This
+            may involve sharing relevant buyer information with financial
+            institutions, legal entities, or other necessary parties.
           </p>
           <p className="mt-6">
-            <span className="text-zinc-300 font-semibold">Updates to this Commitment: </span> We may occasionally update this confidentiality commitment to reflect changes in our practices and services. When we post changes to this statement, we will revise the "last updated" date at the bottom of this statement.
+            <span className="text-zinc-300 font-semibold">
+              Updates to this Commitment:{" "}
+            </span>{" "}
+            We may occasionally update this confidentiality commitment to
+            reflect changes in our practices and services. When we post changes
+            to this statement, we will revise the "last updated" date at the
+            bottom of this statement.
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
@@ -68,7 +114,8 @@ const Terms = () => {
             </span>{" "}
             In the event of an inadvertent or mistaken purchase, and if a refund
             request is made before the transfer of files, a 5% fee will be
-            deducted from the refund amount to cover the non refundable payment gateway fees.
+            deducted from the refund amount to cover the non refundable payment
+            gateway fees.
           </p>
 
           <h2 className=" mt-10 text-2xl font-bold tracking-tight text-zinc-300">
@@ -122,10 +169,10 @@ const Terms = () => {
           <p className="mt-6">
             <span className="text-zinc-300 font-semibold">Ownership:</span>{" "}
             Until full payment of our fee has been made, LAP Studios remains the
-            sole owner of the music produced, regardless of any contributions from the user. Upon completion of the
-            transaction and full payment, the intellectual property rights will
-            be transferred to the client, unless otherwise specified in a
-            separate agreement.
+            sole owner of the music produced, regardless of any contributions
+            from the user. Upon completion of the transaction and full payment,
+            the intellectual property rights will be transferred to the client,
+            unless otherwise specified in a separate agreement.
           </p>
           <p className="mt-6">
             <span className="text-zinc-300 font-semibold">

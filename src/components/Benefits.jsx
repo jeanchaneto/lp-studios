@@ -13,7 +13,7 @@ const Benefits = () => {
                 <Image
                   src={benefit.icon}
                   className="object-cover object-center"
-                  alt="LAP music studio"
+                  alt="Moog Subsequent 37"
                   width={64}
                   height={64}
                 />

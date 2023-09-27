@@ -7,6 +7,7 @@ import HeroImage from "../../public/images/ghost-production-hero-image.png";
 import { EnvelopeIcon, CheckIcon } from "@heroicons/react/24/outline";
 
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import Head from "next/head";
 
 const features = [
   {
@@ -46,6 +47,22 @@ const pricingContent = [
 const GhostProduction = () => {
   return (
     <main className="  py-24 sm:py-32 relative">
+      <Head>
+        <title>LAP Studios | Custom Music by Elite Ghost Producers</title>
+        <meta
+          name="description"
+          content="Custom music production service. Renowned ghost producers at your service, crafting music designed to elevate your presence in the industry!"
+        />
+        <meta
+          property="og:title"
+          content="LAP Studios | Ghost Production & Top Ghost Producers"
+        />
+        <meta
+          property="og:description"
+          content="Custom music production service. Renowned ghost producers at your service, crafting music designed to elevate your presence in the industry!"
+        />
+        <meta property="og:image" content="/images/main-og-image.png" />
+      </Head>
       <FadeIn>
         <section className=" pb-24 sm:pb-32 z-20 isolate lg:flex gap-16 justify-between max-w-7xl mx-auto">
           <div className="  px-6 lg:px-8 rounded-xl flex-shrink-0 ">
@@ -180,17 +197,7 @@ const GhostProduction = () => {
         className="relative isolate bg-zinc-950 "
       >
         {" "}
-        {/* <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden  ">
-          <div
-            className="absolute inset-0 h-full w-full  [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-            aria-hidden="true"
-          >
-            <Image
-              src={ContactImage}
-              className="object-cover w-full object-center -z-10"
-            />
-          </div>
-        </div> */}
+       
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
