@@ -6,6 +6,7 @@ import ProjectFileFeatures from "@/components/ProjectFileFeatures";
 import LogoCloud from "@/components/LogoCloud";
 import Head from "next/head";
 
+
 export default function Home() {
   return (
     <main className=" bg-zinc-950 ">

@@ -94,8 +94,8 @@ const TrackCard = (props) => {
             </div>
 
             <div className="w-full flex justify-end  ">
-              <Link
-                href="#"
+              <a
+                href={props.paymentLink}
                 className="relative rounded-xl min-w-fit max-w-fit px-2 py-1 overflow-hidden group/button border border-teal-700  hover:bg-gradient-to-r hover:from-teal-700 hover:to-teal-600 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-teal-600 transition-all ease-out duration-300"
               >
                 <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover/button:-translate-x-40 ease"></span>
@@ -109,7 +109,7 @@ const TrackCard = (props) => {
                     {props.price} €
                   </span>
                 </div>
-              </Link>
+              </a>
             </div>
           </CardBody>
         </Card>

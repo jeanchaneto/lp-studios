@@ -12,7 +12,7 @@ const TrackShowcase = () => {
   ) : latestTracks ? (
     <section
       role="list"
-      className="space-y-3  py-24 sm:py-32 lg:py-40 "
+      className="space-y-3  py-24 sm:py-32 lg:py-40"
       id="latest-tracks"
     >
       <FadeIn>
