@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Providers } from "@/context/Providers";
+import { Providers } from "@/context/providers";
 import { MDXProvider } from "@mdx-js/react";
 import MDXComponents from "@/components/MDXComponents";
 import { AudioProvider } from "@/context/audioContext";
