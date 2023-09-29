@@ -114,7 +114,7 @@ const TrackCard = (props) => {
           </CardBody>
         </Card>
       ) : (
-        <Card className=" sm:max-w-xs  bg-zinc-900/50 text-zinc-100 relative group/card ">
+        <Card className=" mx-auto max-w-xs  bg-zinc-900/50 text-zinc-100 relative group/card ">
           <CardBody className=" ">
             <div className="relative mb-2 min-[340px]:mb-6 z-20 bg-zinc-950 rounded-xl group/image ">
               <div className=" relative">
