@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className=" bg-zinc-950 ">
       <Head>
-        <title>LAP Studios | Ghost Production & Top Ghost Producers</title>
+        <title>LAP Studios | Ghost Production Afro House, Melodic House & techno</title>
         <meta
           name="description"
           content="Afro House, Melodic House & Techno, Organic House and Deep House ghost producers. Buy exclusive tracks to elevate your presence in the music industry."
