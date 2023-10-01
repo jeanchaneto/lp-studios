@@ -15,7 +15,7 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="Afro House, Melodic House & Techno, Organic House and Deep House ghost producers. Buy exclusive tracks to elevate your presence in the music industry."
+          content="Afro House, Melodic House & Techno, Organic House and Deep House ghost producer. Buy ghost produced tracks to elevate your presence in the music industry."
         />
         <meta
           property="og:title"
@@ -23,7 +23,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Afro House, Melodic House & Techno, Organic House and Deep House ghost producers. Buy exclusive tracks to elevate your presence in the music industry."
+          content="Afro House, Melodic House & Techno, Organic House and Deep House ghost producer. Buy ghost produced tracks to elevate your presence in the music industry."
         />
         <meta property="og:image" content="/images/main-og-image.png" />
         <meta
