@@ -43,5 +43,15 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [require("@tailwindcss/forms"), nextui()],
+  plugins: [require("@tailwindcss/forms"), nextui({
+    themes: {
+      dark: {
+        colors: {
+          primary: {
+            DEFAULT: "#14b8a6"
+          }
+        }
+      }
+    }
+  })],
 };

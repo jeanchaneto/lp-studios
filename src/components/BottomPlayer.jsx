@@ -5,6 +5,7 @@ import { PlayIcon, PauseIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { Spinner } from "@nextui-org/react";
 
 const variants = {
   hidden: {
@@ -66,6 +67,7 @@ const WaveSurferPlayer = React.memo((props) => {
   const wavesurfer = useWavesurfer(containerRef, props);
   const [volume, setVolume] = useState(1);
   const { contextTrack } = useAudio();
+  const [loading, setLoading] = useState(true);
 
   //Volume
   const handleVolumeChange = (e) => {
@@ -90,6 +92,8 @@ const WaveSurferPlayer = React.memo((props) => {
       wavesurfer.on("play", () => setIsPlaying(true)),
       wavesurfer.on("pause", () => setIsPlaying(false)),
       wavesurfer.on("timeupdate", (currentTime) => setCurrentTime(currentTime)),
+      wavesurfer.on("loading", () => setLoading(true)),
+      wavesurfer.on("ready", () => setLoading(false)),
       wavesurfer.on("ready", () => wavesurfer.play()), // Auto play when ready
     ];
 
@@ -106,7 +110,7 @@ const WaveSurferPlayer = React.memo((props) => {
           className=" relative flex-shrink-0 w-16 h-16 cursor-pointer group"
         >
           <Image
-            src={ `/images/covers/${contextTrack.id}.jpg`}
+            src={`/images/covers/${contextTrack.id}.jpg`}
             alt="album cover"
             width={64}
             height={64}
@@ -147,7 +151,9 @@ const WaveSurferPlayer = React.memo((props) => {
             >
               <path d="m22.294 7.827a1.622 1.622 0 0 0 -1.314-.674h-13.924l-.837-2.4a2 2 0 0 0 -1.891-1.345h-2.328a.6.6 0 0 0 0 1.2h2.328a.8.8 0 0 1 .758.539l.972 2.792.009.025 2.246 6.463a3.407 3.407 0 0 0 3.217 2.289h6.044a3.4 3.4 0 0 0 3.226-2.323l1.714-5.1a1.626 1.626 0 0 0 -.22-1.466zm-.916 1.08-1.713 5.1a2.206 2.206 0 0 1 -2.092 1.5h-6.044a2.207 2.207 0 0 1 -2.084-1.482l-1.972-5.671h13.506a.42.42 0 0 1 .4.554zm-8.457 10.44a1.275 1.275 0 1 1 -1.275-1.275 1.275 1.275 0 0 1 1.275 1.276zm6.26 0a1.275 1.275 0 1 1 -1.275-1.275 1.275 1.275 0 0 1 1.275 1.276z" />
             </svg>
-            <span className="relative whitespace-nowrap">{contextTrack.price} €</span>
+            <span className="relative whitespace-nowrap">
+              {contextTrack.price} €
+            </span>
           </div>
         </a>
         <input
@@ -161,7 +167,13 @@ const WaveSurferPlayer = React.memo((props) => {
         />
       </div>
       <div className="flex  items-center gap-8 w-full mt-2 md:mt-0 ">
-        <div className="w-full flex-shrink-1 " ref={containerRef} />
+        <div className="relative w-full flex-shrink-1">
+          {" "}
+          {loading && (
+            <Spinner className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+          )}
+          <div ref={containerRef} />
+        </div>
         <a
           href={contextTrack.paymentLink}
           className=" hidden md:block relative rounded min-w-fit max-w-fit px-2 py-1 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 text-zinc-100 hover:ring-1 hover:ring-offset-1 hover:ring-blue-600 transition-all ease-out duration-300"

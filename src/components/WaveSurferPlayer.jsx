@@ -6,6 +6,7 @@ import { useAudio } from "@/context/audioContext";
 import WaveSurfer from "wavesurfer.js";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Spinner } from "@nextui-org/react";
 
 //format time
 const formatTime = (seconds) => {
@@ -54,6 +55,7 @@ const WaveSurferPlayer = React.memo((props) => {
   const [currentTime, setCurrentTime] = useState(0);
   const wavesurfer = useWavesurfer(containerRef, props);
   const { setBottomPlayerOn } = useAudio();
+  const [loading, setLoading] = useState(true);
 
   // On play button click
   const onPlayClick = useCallback(() => {
@@ -72,6 +74,8 @@ const WaveSurferPlayer = React.memo((props) => {
     const subscriptions = [
       wavesurfer.on("play", () => setIsPlaying(true)),
       wavesurfer.on("pause", () => setIsPlaying(false)),
+      wavesurfer.on("loading", () => setLoading(true)),
+      wavesurfer.on("ready", () => setLoading(false)),
       wavesurfer.on("timeupdate", (currentTime) => setCurrentTime(currentTime)),
     ];
 
@@ -104,7 +108,13 @@ const WaveSurferPlayer = React.memo((props) => {
           <PlayIcon className="absolute top-1/2 left-1/2 z-20 text-zinc-100 -translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-300 w-16 h-16" />
         )}
       </div>
-      <div ref={containerRef} className="w-full flex-shrink-1 " />
+      <div className="relative w-full flex-shrink-1">
+          {" "}
+          {loading && (
+            <Spinner className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" size="lg" />
+          )}
+          <div ref={containerRef} />
+        </div>
     </div>
   );
 });
