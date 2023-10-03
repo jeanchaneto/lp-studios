@@ -1,13 +1,16 @@
+import { Spinner } from "@nextui-org/react";
 import { useState } from "react";
 
 const SubscribeForm = () => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
     try {
       const response = await fetch("/api/subscribe", {
         body: JSON.stringify({
@@ -26,15 +29,20 @@ const SubscribeForm = () => {
     } catch (error) {
       console.log(error);
       setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
+
 
   return (
     <form
       onSubmit={handleSubmit}
       className="mx-auto mt-10 flex max-w-md gap-x-4 relative"
     >
-      {subscribed ? <p className=" text-teal-300 mx-auto " >Keep an eye on your inbox for the latest tracks!</p> : (
+      {loading ? <Spinner
+        className="  mx-auto h-11 "
+      /> : subscribed ? <p className=" text-teal-300 mx-auto " >Keep an eye on your inbox for the latest tracks!</p> : (
         <>
           <label htmlFor="email-address" className="sr-only">
             Email address

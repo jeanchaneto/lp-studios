@@ -1,15 +1,18 @@
 import { useRef, useState } from "react";
 import { FadeIn } from "./FadeIn";
 import emailjs from "@emailjs/browser";
+import { Spinner } from "@nextui-org/react";
 
-const Form = ({messagePlaceHolder}) => {
+const Form = ({ messagePlaceHolder }) => {
   const form = useRef();
 
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -28,8 +31,20 @@ const Form = ({messagePlaceHolder}) => {
           console.log(error.text);
           setError(error.text);
         }
-      );
+      )
+      .finally(() => setLoading(false));
   };
+
+  if (loading)
+    return (
+      <div className="flex justify-center items-center h-full w-full">
+        <Spinner
+          className="  mx-auto px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48 "
+          size="lg"
+          label="Sending..."
+        />
+      </div>
+    );
 
   if (submitted)
     return (
