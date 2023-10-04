@@ -27,7 +27,7 @@ const TrackCard = (props) => {
   }
 
   return (
-    <FadeIn>
+    <>
       {props.inStock ? (
         <Card
           className=" mx-auto max-w-xs bg-zinc-900/50  text-zinc-100 relative group/card "
@@ -169,7 +169,7 @@ const TrackCard = (props) => {
           </CardBody>
         </Card>
       )}
-    </FadeIn>
+    </>
   );
 };
 

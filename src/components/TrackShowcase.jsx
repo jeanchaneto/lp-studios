@@ -22,15 +22,17 @@ const TrackShowcase = () => {
           </h2>
         </div>
       </FadeIn>
-      <FadeInStagger>
-        <div className="grid grid-cols-1 min-[556px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl px-6 lg:px-8 ">
-          {latestTracks.map((track) => (
-            <div key={track.id}>
+
+      <div className="grid grid-cols-1 min-[556px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl px-6 lg:px-8 ">
+        {latestTracks.map((track) => (
+          <div key={track.id}>
+            <FadeIn>
               <TrackCard {...track} />
-            </div>
-          ))}
-        </div>
-      </FadeInStagger>
+            </FadeIn>
+          </div>
+        ))}
+      </div>
+
       <FadeIn>
         <div className=" flex justify-center pt-6">
           <Link
