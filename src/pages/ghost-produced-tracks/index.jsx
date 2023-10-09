@@ -11,7 +11,7 @@ import {
 } from "framer-motion";
 import Head from "next/head";
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
-import Banner from "../../../public/images/tracks-cover.jpg";
+import Banner from "../../../public/images/tracks-cover.jpeg";
 import { useTracks } from "@/hooks/useTracks";
 import SubscribeForm from "@/components/SubscribeForm";
 
@@ -61,7 +61,7 @@ export default function Tracks() {
           <Image
             src={Banner}
             className=" w-full  h-[900px] object-cover  opacity-40  "
-            alt="DJ decks"
+            alt="Music producer composing"
           />
         </motion.div>
 

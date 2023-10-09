@@ -2,7 +2,7 @@ import Form from "@/components/Form";
 import TimeLine from "@/components/TimeLine";
 
 import Image from "next/image";
-import HeroImage from "../../public/images/ghost-production-hero-image.png";
+import HeroImage from "../../public/images/ghost-production-hero-image.jpeg";
 
 import { EnvelopeIcon, CheckIcon } from "@heroicons/react/24/outline";
 
@@ -77,16 +77,22 @@ const GhostProduction = () => {
                 Custom Ghost Production
               </h1>
               <p className="mt-6 text-xl  text-zinc-400 ">
-              Looking to create distinctive tracks in Afro House, Melodic House & Techno, Organic House, or Deep House? You’ve landed in the right spot. Dive into an exclusive experience provided by our compact, sought-after team, known for elevating tracks to secure spots on top labels and earn acclaim from renowned DJs worldwide.
+                Looking to create distinctive tracks in Afro House, Melodic
+                House & Techno, Organic House, or Deep House? You’ve landed in
+                the right spot. Dive into an exclusive experience provided by
+                our compact, sought-after team, known for elevating tracks to
+                secure spots on top labels and earn acclaim from renowned DJs
+                worldwide.
               </p>
             </div>
           </div>
-
-          <Image
-            src={HeroImage}
-            alt=""
-            className=" px-6 lg:px-0 mx-auto mt-24 md:max-w-xl lg:max-w-4xl flex-shrink bg-gradient-radial from-teal-950/80   to-70% to-transparent "
-          />
+          <div className="px-6 lg:px-0 flex-shrink">
+            <Image
+              src={HeroImage}
+              alt="Reverb audio plugin"
+              className=" mx-auto mt-24 md:max-w-xl lg:max-w-xl  bg-gradient-radial from-teal-950/80   to-70% to-transparent rounded-lg"
+            />
+          </div>
         </section>
       </FadeIn>
 
@@ -197,7 +203,6 @@ const GhostProduction = () => {
         className="relative isolate bg-zinc-950 "
       >
         {" "}
-       
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -207,8 +212,8 @@ const GhostProduction = () => {
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-zinc-400">
                   Reach out to us in complete confidentiality to start your
-                  project and get a free demo. Let’s work together to bring your unique sound to
-                  life!
+                  project and get a free demo. Let’s work together to bring your
+                  unique sound to life!
                 </p>
               </FadeIn>
               <FadeIn>

@@ -100,7 +100,7 @@ export default function AboutUs() {
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <Image
-                        src={"/images/about-us-photo1.jpg"}
+                        src={"/images/about-us-photo1.jpeg"}
                         width={176}
                         height={264}
                         alt="LAP Studios equipment"
@@ -112,7 +112,7 @@ export default function AboutUs() {
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <Image
-                        src={"/images/about-us-photo2.jpg"}
+                        src={"/images/about-us-photo2.jpeg"}
                         width={176}
                         height={264}
                         alt="LAP Studios equipment"
@@ -122,7 +122,7 @@ export default function AboutUs() {
                     </div>
                     <div className="relative">
                       <Image
-                        src={"/images/about-us-photo3.jpg"}
+                        src={"/images/about-us-photo3.jpeg"}
                         width={176}
                         height={264}
                         alt="LAP Studios equipment"
@@ -134,7 +134,7 @@ export default function AboutUs() {
                   <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                     <div className="relative">
                       <Image
-                        src={"/images/about-us-photo4.jpg"}
+                        src={"/images/about-us-photo4.jpeg"}
                         width={176}
                         height={264}
                         alt="LAP Studios equipment"
@@ -144,7 +144,7 @@ export default function AboutUs() {
                     </div>
                     <div className="relative">
                       <Image
-                        src={"/images/about-us-photo5.jpg"}
+                        src={"/images/about-us-photo5.jpeg"}
                         width={176}
                         height={264}
                         alt="LAP Studios equipment"

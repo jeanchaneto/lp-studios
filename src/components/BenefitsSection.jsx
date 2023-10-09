@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import BenefitsImage from "../../public/images/benefits-image.jpg";
+import BenefitsImage from "../../public/images/benefits-image.jpeg";
 import Benefits from "./Benefits";
 import { FadeIn } from "./FadeIn";
 import { motion } from "framer-motion";
@@ -45,7 +45,7 @@ const BenefitsSection = () => {
                 <Image
                   src={BenefitsImage}
                   className="object-cover object-center"
-                  alt="Moog Subsequent 37"
+                  alt="Ghost producer producing music"
                   onLoad={() => setIsLoaded(true)}
                 />
               </motion.div>
