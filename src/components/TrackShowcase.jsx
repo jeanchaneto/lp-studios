@@ -1,8 +1,9 @@
 import Link from "next/link";
 import TrackCard from "./TrackCard";
 import Image from "next/image";
-import { FadeIn, FadeInStagger } from "./FadeIn";
+import { FadeIn } from "./FadeIn";
 import { useLatestTracks } from "@/hooks/useLatesttracks";
+import { motion } from "framer-motion";
 
 const TrackShowcase = () => {
   const { latestTracks, error } = useLatestTracks();
@@ -23,15 +24,26 @@ const TrackShowcase = () => {
         </div>
       </FadeIn>
 
-      <div className="grid grid-cols-1 min-[556px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl px-6 lg:px-8 ">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 24 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, delay: 0.2 },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-1 min-[556px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto max-w-7xl px-6 lg:px-8 relative"
+      >
         {latestTracks.map((track) => (
-          <div key={track.id}>
-            <FadeIn>
-              <TrackCard {...track} />
-            </FadeIn>
-          </div>
+          <motion.div key={track.id}>
+            <TrackCard {...track} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <FadeIn>
         <div className=" flex justify-center pt-6">

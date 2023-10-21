@@ -62,7 +62,7 @@ const TrackPage = () => {
                 >
                   <li>
                     <div>
-                      <Link href="/" className=" hover:text-gray-500">
+                      <Link href="/" className=" hover:text-gray-200 transition-colors duration-300">
                         <HomeIcon
                           className="h-5 w-5 flex-shrink-0"
                           aria-hidden="true"
@@ -84,7 +84,7 @@ const TrackPage = () => {
                         </svg>
                         <a
                           href={page.href}
-                          className="ml-4 text-sm text-zinc-500 "
+                          className="ml-4 text-sm text-zinc-500 hover:text-gray-200 transition-colors duration-300"
                           aria-current={page.current ? "page" : undefined}
                         >
                           {page.name}
@@ -101,7 +101,7 @@ const TrackPage = () => {
                   </h1>
                   <Link
                     href="#"
-                    className="relative rounded min-w-fit max-w-fit py-1.5 px-1.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-800 text-zinc-100 hover:ring-1 hover:ring-offset-1 hover:ring-blue-600 transition-all ease-out duration-300"
+                    className="relative rounded min-w-fit max-w-fit py-1.5 px-1.5 overflow-hidden group bg-gradient-to-r   hover:bg-gradient-to-r from-teal-900 to-teal-800 hover:from-teal-700 hover:to-teal-600 text-zinc-100 hover:ring-1 hover:ring-offset-1 hover:ring-teal-600 transition-all ease-out duration-300"
                   >
                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                     <div className="flex items-center">

@@ -66,6 +66,7 @@ const Header = () => {
                     <AnimatePresence>
                       {pathname === item.href && (
                         <motion.span
+                        key="marker"
                           layoutId="bubble"
                           className="absolute inset-0 -z-10 bg-teal-950/70 "
                           style={{ borderRadius: 9999 }}

@@ -46,17 +46,17 @@ const Hero = () => {
                   <FadeIn>
                     <Link
                       href="/ghost-produced-tracks"
-                      className="relative rounded-xl px-5 py-2.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-800 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
+                      className="relative rounded-xl px-5 py-2.5 overflow-hidden group bg-gradient-to-r   hover:bg-gradient-to-r from-teal-900 to-teal-800 hover:from-teal-700 hover:to-teal-600 text-zinc-100 hover:ring-1 hover:ring-offset-1 hover:ring-teal-600 transition-all ease-out duration-300 flex justify-center"
                     >
                       <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 sm:group-hover:-translate-x-40 ease"></span>
-                      <span className="relative">Browse tracks</span>
+                      <span className="relative ">Browse tracks</span>
                     </Link>
                   </FadeIn>
                   <FadeIn>
                     <Link
                       href="/ghost-production"
-                      className="relative rounded-xl px-5 py-[8px] overflow-hidden group border border-zinc-100 text-zinc-100 hover:ring-2 hover:ring-offset-2 
-                      hover:bg-gradient-to-r hover:from-zinc-950 hover:to-zinc-800
+                      className="relative rounded-xl px-5 py-[8px] overflow-hidden group border border-zinc-100 text-zinc-100 hover:ring-1 hover:ring-offset-1
+                      hover:bg-gradient-to-r hover:from-zinc-900 hover:to-zinc-800
                       hover:ring-zinc-100 transition-all ease-out duration-300 flex justify-center"
                     >
                       <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 sm:group-hover:-translate-x-60 ease"></span>

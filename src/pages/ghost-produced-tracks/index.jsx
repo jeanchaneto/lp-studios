@@ -60,7 +60,7 @@ export default function Tracks() {
         >
           <Image
             src={Banner}
-            className=" w-full  h-[900px] object-cover  opacity-40  "
+            className=" w-full  h-[900px] object-cover object-left-top  opacity-40  "
             alt="Music producer composing"
           />
         </motion.div>

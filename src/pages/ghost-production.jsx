@@ -173,7 +173,7 @@ const GhostProduction = () => {
                 </p>
                 <a
                   href="#contact-ghost-production"
-                  className=" mt-6 relative rounded-xl px-5 py-2.5 overflow-hidden group bg-blue-700  hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-800 text-zinc-100 hover:ring-2 hover:ring-offset-2 hover:ring-blue-600 transition-all ease-out duration-300 flex justify-center"
+                  className=" mt-6 relative rounded-xl px-5 py-2.5 overflow-hidden group bg-gradient-to-r   hover:bg-gradient-to-r from-teal-900 to-teal-800 hover:from-teal-700 hover:to-teal-600 text-zinc-100 hover:ring-1 hover:ring-offset-1 hover:ring-teal-600  transition-all ease-out duration-300 flex justify-center"
                 >
                   <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-48 bg-white opacity-10 rotate-12 sm:group-hover:-translate-x-80 ease"></span>
                   <span className="relative">Get Started</span>
