@@ -29,14 +29,14 @@ export default function App({ Component, pageProps }) {
             <>
               <Script
                 strategy="afterInteractive"
-                src="https://www.googletagmanager.com/gtag/js?id=G-1L4MQ4Q6JZ"
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
               />
               <Script strategy="afterInteractive" id="google-analytics">
                 {` 
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', 'G-1L4MQ4Q6JZ');
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
                 `}
               </Script>
             </>
