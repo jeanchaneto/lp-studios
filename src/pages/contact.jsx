@@ -9,7 +9,7 @@ export default function Contact() {
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 0.9], [0, 100]);
   return (
-    <main className="relative isolate bg-zinc-950">
+    <main className="relative isolate bg-zinc-950 min-h-screen">
        <Head>
         <title>LAP Studios | Contact Us</title>
         <meta
